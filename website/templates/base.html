@@ -5,11 +5,12 @@
         <title>Raozhon Sorcers</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+        <link rel="stylesheet" href="{{STATIC_URL}}/website/css/w3.css">
+        <link rel="stylesheet" href="{{STATIC_URL}}/website/css/w3-theme-black.css">
+        <link rel="stylesheet" href="{{STATIC_URL}}/website/css/website.css">
+
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="{{STATIC_URL}}/website/css/website.css">
 
         {% block app.headstyles %}{% endblock %}
         {% block app.headscripts %}{% endblock %}
@@ -40,14 +41,23 @@
                 </div>
             </div>
             <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Vidéos</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
         </div>
         <!-- Navbar on small screens -->
         <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-            <a href="#team" class="w3-bar-item w3-button">Team</a>
-            <a href="#work" class="w3-bar-item w3-button">Work</a>
-            <a href="#pricing" class="w3-bar-item w3-button">Price</a>
-            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-            <a href="#" class="w3-bar-item w3-button">Search</a>
+            <a href="#" class="w3-bar-item w3-button">Accueil</a>
+            <a href="#" class="w3-bar-item w3-button">Équipe</a>
+            <a href="#" class="w3-bar-item w3-button">News</a>
+            <div class="w3-dropdown-hover w3-bar-item">
+                <button class="w3-button" title="Notifications">Articles <i class="fa fa-caret-down"></i></button>     
+                <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                    <a href="#" class="w3-bar-item w3-button">Tournois</a>
+                    <a href="#" class="w3-bar-item w3-button">Deck Teck</a>
+                    <a href="#" class="w3-bar-item w3-button">...</a>
+                </div>
+            </div>
+            <a href="#" class="w3-bar-item w3-button">Tournois</a>
+            <a href="#" class="w3-bar-item w3-button">Contact</a>
         </div>
 
         {% block app.header %}{% endblock %}
@@ -255,11 +265,8 @@
         </div>
         <!-- Footer -->
         <footer class="w3-container w3-theme-d3 w3-padding-16">
-            <h5>Footer</h5>
-        </footer>
-
-        <footer class="w3-container w3-theme-d5">
-            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+            <h5>Mettre tous les liens des réseaux ici</h5>
+            <p>Sponsor <a href="#" target="_blank">Ultimate Guard</a></p>
         </footer>
 
 
