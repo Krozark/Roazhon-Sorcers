@@ -10,4 +10,8 @@ html,body,h1,h2,h3,h4,h5 {
 #content {
     max-width: inherit;
     padding-top:10px;
+
+    .article {
+        //max-height: 200px;
+    }
 }
