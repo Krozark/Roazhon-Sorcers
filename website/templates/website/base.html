@@ -2,14 +2,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Raozhon Sorcers</title>
+        <title>W3.CSS Template</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="{{STATIC_URL}}/website/css/website.css">
 
         {% block app.headstyles %}{% endblock %}
         {% block app.headscripts %}{% endblock %}
@@ -19,45 +18,43 @@
             <link rel="icon" type="image/png" href="{{STATIC_URL}}website/img/icon.png" />
         {% endblock%}
 
+        <style>
+            html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+        </style>
     </head>
 
-    <body>
+    <body class="w3-theme-l5">
 
         <!-- Navbar -->
-        <div class="w3-bar w3-theme w3-left-align">
-            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-white">
-                <i class="fa fa-home w3-margin-right"></i>Accueil
-            </a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Équipe</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
-            <div class="w3-dropdown-hover w3-hide-small">
-                <button class="w3-button" title="Notifications">Articles <i class="fa fa-caret-down"></i></button>     
-                <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-                    <a href="#" class="w3-bar-item w3-button">Tournois</a>
-                    <a href="#" class="w3-bar-item w3-button">Deck Teck</a>
-                    <a href="#" class="w3-bar-item w3-button">...</a>
+        <div class="w3-top">
+            <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+                <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Logo</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
+                <div class="w3-dropdown-hover w3-hide-small">
+                    <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>     
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+                        <a href="#" class="w3-bar-item w3-button">One new friend request</a>
+                        <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
+                        <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
+                    </div>
                 </div>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account"><img src="/w3images/avatar2.png" class="w3-circle" style="height:25px;width:25px" alt="Avatar"></a>
             </div>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Vidéos</a>
-        </div>
-        <!-- Navbar on small screens -->
-        <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-            <a href="#team" class="w3-bar-item w3-button">Team</a>
-            <a href="#work" class="w3-bar-item w3-button">Work</a>
-            <a href="#pricing" class="w3-bar-item w3-button">Price</a>
-            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-            <a href="#" class="w3-bar-item w3-button">Search</a>
         </div>
 
-        {% block app.header %}{% endblock %}
-        <div id="content" class="w3-theme-l1">
-            {% block app.content %}{% endblock %}
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
         </div>
 
         <!-- Page Container -->
-        {% comment %}
-        <div class="w3-container w3-content" id="content" style="max-width:1400px;margin-top:80px">    
+        <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
             <!-- The Grid -->
             <div class="w3-row">
                 <!-- Left Column -->
@@ -249,10 +246,11 @@
 
                 <!-- End Grid -->
             </div>
-            {% endcomment %}
 
             <!-- End Page Container -->
         </div>
+        <br>
+
         <!-- Footer -->
         <footer class="w3-container w3-theme-d3 w3-padding-16">
             <h5>Footer</h5>

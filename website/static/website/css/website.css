@@ -1,0 +1,12 @@
+html, body, h1, h2, h3, h4, h5 {
+  font-family: "Open Sans", sans-serif; }
+
+#header {
+  padding: 75px;
+  margin: 0px; }
+
+#content {
+  max-width: inherit;
+  padding-top: 10px; }
+
+/*# sourceMappingURL=website.css.map */
