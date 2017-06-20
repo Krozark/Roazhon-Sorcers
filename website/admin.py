@@ -12,6 +12,7 @@ admin.site.register(ArticleCategory, ArticleCategoryAdmin)
 
 class ArticleAdmin(admin.ModelAdmin, AdminThumbnailMixin):
     list_display = ["title", "date", "thumbnail"]
+    list_filter = ["M2M_category"]
     readonly_fields = ('date',)
     filter_horizontal = ["M2M_category"]
     thumbnail_image_field_name = 'image'

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load easy_thumbnails_tags %}
 
 {% block app.header %}
 <div class="w3-display-container w3-animate-opacity">
@@ -11,16 +12,19 @@
 {% endblock%}
 
 {% block app.content %}
+
+{% with object=last_article %}
 <div class="w3-card-4 w3-white" style="margin: 16px;">
-    <img src="{{STATIC_URL}}/website/img/woods.jpg" alt="Nature" style="width:100%">
+    {% if object.image %}
+        <img src="{% thumbnail object.image 900x280 crop %}" alt="{{object}}" style="width:100%">
+    {% endif %}
     <div class="w3-container">
-        <h3><b>Dernier article</b></h3>
-        <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
+        <h3><b>{{object}}</b></h3>
+        <h5>{{object.M2M_category.all|join:", "}}, <span class="w3-opacity">{{object.date}}</span></h5>
     </div>
 
     <div class="w3-container">
-        <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
-        tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        {{object.content|truncatewords_html:100|safe}}
         <div class="w3-row">
             <div class="w3-col m8 s12">
                 <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
@@ -31,18 +35,24 @@
         </div>
     </div>
 </div>
+{% endwith %}
 
+{% for object in articles_list %}
+{% if forloop.first %}
 <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom w3-white w3-padding">
-        <img src="{{STATIC_URL}}/website/img/woods.jpg" alt="Nature" style="width:100%">
+{% endif%}
+    <div class="w3-third w3-container w3-margin-bottom w3-padding-8">
+        {% if object.image %}
+            <img src="{% thumbnail object.image 700x220 crop %}" alt="{{object}}" style="width:100%">
+        {% endif %}
+        <div class="w3-white">
         <div class="w3-container">
-            <h3><b>TITLE HEADING</b></h3>
-            <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
+            <h3><b>{{object}}</b></h3>
+            <h5>{{object.M2M_category.all|join:", "}}, <span class="w3-opacity">{{object.date}}</span></h5>
         </div>
 
         <div class="w3-container">
-            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
-            tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+            {{object.content|truncatewords_html:20|safe}}
             <div class="w3-row">
                 <div class="w3-col m8 s12">
                     <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
@@ -51,48 +61,15 @@
                     <p><span class="w3-padding-large w3-right"><b>Comments &nbsp;</b> <span class="w3-tag">0</span></span></p>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom w3-white w3-padding">
-        <img src="{{STATIC_URL}}/website/img/woods.jpg" alt="Nature" style="width:100%">
-        <div class="w3-container">
-            <h3><b>TITLE HEADING</b></h3>
-            <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
-        </div>
-
-        <div class="w3-container">
-            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
-            tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-            <div class="w3-row">
-                <div class="w3-col m8 s12">
-                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
-                </div>
-                <div class="w3-col m4 w3-hide-small">
-                    <p><span class="w3-padding-large w3-right"><b>Comments &nbsp;</b> <span class="w3-tag">0</span></span></p>
-                </div>
             </div>
         </div>
     </div>
-    <div class="w3-third w3-container w3-margin-bottom w3-white w3-padding">
-        <img src="{{STATIC_URL}}/website/img/woods.jpg" alt="Nature" style="width:100%">
-        <div class="w3-container">
-            <h3><b>TITLE HEADING</b></h3>
-            <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
-        </div>
-
-        <div class="w3-container">
-            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
-            tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-            <div class="w3-row">
-                <div class="w3-col m8 s12">
-                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
-                </div>
-                <div class="w3-col m4 w3-hide-small">
-                    <p><span class="w3-padding-large w3-right"><b>Comments &nbsp;</b> <span class="w3-tag">0</span></span></p>
-                </div>
-            </div>
-        </div>
-    </div>
+{% if forloop.counter|divisibleby:3 %}
 </div>
+{% if not forloop.last %}
+<div class="w3-row-padding">
+{% endif %}
+{% endif %}
+{% endfor %}
 
 {% endblock %}
