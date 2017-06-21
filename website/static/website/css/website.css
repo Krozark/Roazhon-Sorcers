@@ -1,3 +1,25 @@
+/*
+SCSS3 (c) 2011 Maxime Barbier
+Inspired by http://css3please.com/
+*/
+.clearfix, #content .article-line {
+  zoom: 1; }
+  .clearfix:before, #content .article-line:before, .clearfix:after, #content .article-line:after {
+    content: '.';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0; }
+  .clearfix:after, #content .article-line:after {
+    clear: both; }
+
+.reset-box {
+  margin: 0;
+  padding: 0; }
+
 html, body, h1, h2, h3, h4, h5 {
   font-family: "Open Sans", sans-serif; }
 
@@ -5,8 +27,20 @@ html, body, h1, h2, h3, h4, h5 {
   padding: 75px;
   margin: 0px; }
 
-#content {
+.w3-content {
   max-width: inherit;
-  padding-top: 10px; }
+  padding: 8px; }
+
+#right-column div {
+  margin-bottom: 8px; }
+
+#content {
+  padding-right: 8px; }
+  #content .article-line {
+    margin-bottom: 8px; }
+    #content .article-line div {
+      padding-left: 8px; }
+    #content .article-line div:first-child {
+      padding-left: 0px; }
 
 /*# sourceMappingURL=website.css.map */

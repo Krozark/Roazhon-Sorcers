@@ -23,3 +23,9 @@
 
 *.vim
 *.pyc
+
+# others
+*/migrations
+*.map
+website/static/website/.sass-cache/
+public/
