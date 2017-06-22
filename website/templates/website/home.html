@@ -1,9 +1,8 @@
 {% extends "base.html" %}
-{% load easy_thumbnails_tags %}
 
 {% block app.header %}
-<div class="w3-display-container w3-animate-opacity">
-    <img src="{{STATIC_URL}}/website/img/home.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+<div class="w3-display-container w3-animate-opacity" id="header-img">
+    <img src="{{STATIC_URL}}/website/img/team.jpg" id="header-cover">
     <div class="w3-container w3-display-middle w3-margin-bottom">  
         <h1 class="w3-margin w3-jumbo">Raozhon Sorcers</h1>
         <p class="w3-xlarge">Équipe Legacy Rennes <i>Magic: the Gathering</i></p>
@@ -14,9 +13,9 @@
 {% block app.content %}
 
 {% with object=last_article %}
-<div class="w3-card-4 article-line w3-theme-l5">
+<div class="w3-card-4 article w3-theme-l5">
     {% if object.image %}
-        <img src="{% thumbnail object.image 900x280 crop %}" alt="{{object}}" style="width:100%">
+    <img src="{{object.image.url}}" alt="{{object}}">
     {% endif %}
     <div class="w3-container">
         <h3><b>{{object}}</b></h3>
@@ -34,36 +33,38 @@
 </div>
 {% endwith %}
 
+<div class="w3-row article-row">
 {% for object in articles_list %}
 {% if forloop.first %}
-<div class="article-line">
+    <div class="w3-third">
 {% endif%}
-    <div class="w3-third theme">
-        {% if object.image %}
-            <img src="{% thumbnail object.image 700x220 crop %}" alt="{{object}}" style="width:100%">
-        {% endif %}
-        <div class="w3-theme-l5">
-            <div class="w3-container">
-                <h3><b>{{object}}</b></h3>
-                <h5>{{object.M2M_category.all|join:", "}}, <span class="w3-opacity">{{object.date}}</span></h5>
-                {{object.content|truncatewords_html:20|safe}}
-                <div class="w3-row">
-                    <div class="w3-col m8 s12">
-                        <p><button class="w3-button w3-padding-large w3-theme-l4 w3-border"><b>READ MORE »</b></button></p>
-                    </div>
-                    <div class="w3-col m4 w3-hide-small">
-                        <p><span class="w3-padding-large w3-right"><b>Comments &nbsp;</b> <span class="w3-tag">0</span></span></p>
+        <div class="article">
+            {% if object.image %}
+            <img src="{{object.image.url}}" alt="{{object}}">
+            {% endif %}
+            <div class="w3-theme-l5">
+                <div class="w3-container">
+                    <h3><b>{{object}}</b></h3>
+                    <h5>{{object.M2M_category.all|join:", "}}, <span class="w3-opacity">{{object.date}}</span></h5>
+                    {{object.content|truncatewords_html:20|safe}}
+                    <div class="w3-row">
+                        <div class="w3-col m8 s12">
+                            <p><button class="w3-button w3-padding-large w3-theme-l4 w3-border"><b>READ MORE »</b></button></p>
+                        </div>
+                        <div class="w3-col m4 w3-hide-small">
+                            <p><span class="w3-padding-large w3-right"><b>Comments &nbsp;</b> <span class="w3-tag">0</span></span></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 {% if forloop.counter|divisibleby:3 %}
-</div>
+    </div>
 {% if not forloop.last %}
-<div class="article-line">
+    <div class="w3-third">
 {% endif %}
 {% endif %}
 {% endfor %}
+</div>
 
 {% endblock %}

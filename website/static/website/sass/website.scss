@@ -15,6 +15,19 @@ html,body,h1,h2,h3,h4,h5 {
     padding:8px;
 }
 
+#header-img {
+    #header-cover {
+        width:100%;
+        min-height:350px;
+        max-height:600px;
+        object-fit: cover;
+        object-position: top;
+    }
+    #header-logo {
+        height: 50%;
+    }
+}
+
 #right-column {
     div {
         margin-bottom:8px;
@@ -23,18 +36,33 @@ html,body,h1,h2,h3,h4,h5 {
 
 #content {
     padding-right: 8px;
-    .article-line {
-        @extend .clearfix;
+
+    .article {
         margin-bottom: 8px;
-        //max-height: 200px;
+        //@extend .clearfix;
 
-        div {
-            padding-left:8px;
+        img {
+            object-fit: cover;
+            object-position: top 75%;
+            width:100%;
+            //min-height:200px;
+            max-height:480px;
+            //background-position: top;
+        } 
+    }
+
+    .article-row {
+        .w3-third {
+            padding-left : 8px;
         }
-
-        div:first-child {
+        .w3-third:first-child {
             padding-left : 0px;
         }
 
+        .article {
+            img {
+                max-height:220px;
+            }
+        }
     }
 }

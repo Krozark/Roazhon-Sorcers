@@ -43,8 +43,6 @@ INSTALLED_APPS = [
 
     'froala_editor',
     'sorl.thumbnail',    
-    'easy_thumbnails',
-
 
     'website',
 ]

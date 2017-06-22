@@ -2,9 +2,9 @@
 SCSS3 (c) 2011 Maxime Barbier
 Inspired by http://css3please.com/
 */
-.clearfix, #content .article-line {
+.clearfix {
   zoom: 1; }
-  .clearfix:before, #content .article-line:before, .clearfix:after, #content .article-line:after {
+  .clearfix:before, .clearfix:after {
     content: '.';
     display: block;
     overflow: hidden;
@@ -13,7 +13,7 @@ Inspired by http://css3please.com/
     line-height: 0;
     width: 0;
     height: 0; }
-  .clearfix:after, #content .article-line:after {
+  .clearfix:after {
     clear: both; }
 
 .reset-box {
@@ -31,16 +31,32 @@ html, body, h1, h2, h3, h4, h5 {
   max-width: inherit;
   padding: 8px; }
 
+#header-img #header-cover {
+  width: 100%;
+  min-height: 350px;
+  max-height: 600px;
+  object-fit: cover;
+  object-position: top; }
+#header-img #header-logo {
+  height: 50%; }
+
 #right-column div {
   margin-bottom: 8px; }
 
 #content {
   padding-right: 8px; }
-  #content .article-line {
+  #content .article {
     margin-bottom: 8px; }
-    #content .article-line div {
-      padding-left: 8px; }
-    #content .article-line div:first-child {
-      padding-left: 0px; }
+    #content .article img {
+      object-fit: cover;
+      object-position: top 75%;
+      width: 100%;
+      max-height: 480px; }
+  #content .article-row .w3-third {
+    padding-left: 8px; }
+  #content .article-row .w3-third:first-child {
+    padding-left: 0px; }
+  #content .article-row .article img {
+    max-height: 220px; }
 
 /*# sourceMappingURL=website.css.map */
