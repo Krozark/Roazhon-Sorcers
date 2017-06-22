@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block app.header %}
+{% if object.image %}
+<div class="w3-display-container w3-animate-opacity" id="header-img">
+    <img src="{{object.image.url}}" id="header-cover">
+    <div class="w3-container w3-display-middle w3-margin-bottom">  
+        <h1 class="w3-margin w3-jumbo">{{object}}</h1>
+        <p class="w3-xlarge">{{object.date}}</i></p>
+    </div>
+</div>
+{% endif %}
+{% endblock%}
+
+{% block app.content %}
+{{object.content|safe}}
+{% endblock %}
