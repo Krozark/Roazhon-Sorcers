@@ -3,6 +3,7 @@ from datetime import datetime
 from django.db import models
 from froala_editor.fields import FroalaField
 from django.utils.translation import ugettext_lazy as _
+from django.core.urlresolvers import reverse
 
 class ArticleCategory(models.Model):
     title = models.CharField(_('Title'), max_length=255, unique=True)
@@ -26,4 +27,4 @@ class Article(models.Model):
         return "%s" % self.title
 
     def get_absolute_url(self):
-        return "%s" % self.pk
+        return reverse("website-article", kwargs={"pk": self.pk})

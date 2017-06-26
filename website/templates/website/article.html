@@ -3,15 +3,25 @@
 {% block app.header %}
 {% if object.image %}
 <div class="w3-display-container w3-animate-opacity" id="header-img">
-    <img src="{{object.image.url}}" id="header-cover">
-    <div class="w3-container w3-display-middle w3-margin-bottom">  
-        <h1 class="w3-margin w3-jumbo">{{object}}</h1>
-        <p class="w3-xlarge">{{object.date}}</i></p>
+    <img src="{{object.image.url}}">
+    <div class="black-hoverlay w3-container w3-display-middle">
+        <div class="w3-display-middle w3-margin-bottom">
+            <h1 class="w3-margin w3-jumbo">{{object}}</h1>
+            <p class="w3-xlarge">{{object.date}}</i></p>
+        </div>
     </div>
 </div>
 {% endif %}
 {% endblock%}
 
 {% block app.content %}
-{{object.content|safe}}
+<div class="article">
+    <div class="w3-theme-l5">
+        <div class="w3-container">
+            <h3><b>{{object}}</b></h3>
+            <h5>{{object.M2M_category.all|join:", "}}, <span class="w3-opacity">{{object.date}}</span></h5>
+            {{object.content|safe}}
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -23,7 +23,6 @@
     </head>
 
     <body>
-
         <!-- Navbar -->
         <div class="w3-bar w3-theme w3-left-align">
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
@@ -60,10 +59,11 @@
             <a href="#" class="w3-bar-item w3-button">Contact</a>
         </div>
 
-        {% block app.header %}{% endblock %}
 
         <!-- Page Container -->
-        <div class="w3-container w3-content w3-theme-l1">
+        <div class="w3-content w3-theme-l1" id="app-body">
+            {% block app.header %}{% endblock %}
+
             <!-- The Grid -->
             <div class="w3-row">
                 <div class="w3-col m10 " id="content">
@@ -90,14 +90,14 @@
                 </div>
             </div>
             <!-- End Grid -->
+            <!-- Footer -->
+            <footer class="w3-container w3-theme-d3">
+                <h5>Mettre tous les liens des réseaux ici</h5>
+                <p>Sponsor <a href="#" target="_blank">Ultimate Guard</a></p>
+            </footer>
         </div>
         <!-- End Page Container -->
 
-        <!-- Footer -->
-        <footer class="w3-container w3-theme-d3 w3-padding-16">
-            <h5>Mettre tous les liens des réseaux ici</h5>
-            <p>Sponsor <a href="#" target="_blank">Ultimate Guard</a></p>
-        </footer>
 
 
         <script>
