@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load comments %}
+
 {% block app.header %}
 {% if object.image %}
 <div class="w3-display-container w3-animate-opacity" id="header-img">
@@ -24,4 +26,40 @@
         </div>
     </div>
 </div>
+
+{% comment %}
+{% if user.is_authenticated %}
+    {% get_comment_form for object as form %}
+    <form action="{% comment_form_target %}" method="POST">
+    {% csrf_token %}
+    {{ form.comment }}
+    {{ form.honeypot }}
+    {{ form.content_type }}
+    {{ form.object_pk }}
+    {{ form.timestamp }}
+    {{ form.security_hash }}
+    <input type="hidden" name="next" value="{{ object.get_absolute_url }}" />
+    <input type="submit" value="Add comment" id="id_submit" />
+    </form>
+{% else %}
+{% endcomment %}
+
+{% get_comment_form for object as form %}
+<table>
+  <form action="{% comment_form_target %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ object.get_absolute_url }}" />
+    {{ form }}
+    <tr>
+      <td colspan="2">
+        <input type="submit" name="submit" value="Post">
+        <input type="submit" name="preview" value="Preview">
+      </td>
+    </tr>
+  </form>
+</table>
+{#% endif %#}
+
+
+{% render_comment_list for object %}
 {% endblock %}
