@@ -2,18 +2,18 @@
 
 {% if is_paginated %}
 {% mkrange 1 page_obj.paginator.num_pages|add:"1" as range %}
-<div class="w3-center w3-padding-32">
-    <div class="w3-bar">
+<div id="pagination">
+    <div>
         {% if page_obj.has_previous %}
-        <a href="{% url "website-home" %}?page={{page_obj.previous_page_number}}" class="w3-bar-item w3-button w3-hover-theme">«</a>
+        <a href="{% url "website-home" %}?page={{page_obj.previous_page_number}}">«</a>
         {% endif %}
         
         {% for i in range %}
-        <a href="{% url "website-home" %}?page={{i}}" class="w3-bar-item w3-button {% if i == page_obj.number %}w3-theme{% endif %} w3-hover-theme">{{i}}</a>
+        <a href="{% url "website-home" %}?page={{i}}" {% if i == page_obj.number %}class="w3-theme"{% endif %}>{{i}}</a>
         {% endfor %}
 
         {% if page_obj.has_next %}
-        <a href="{% url "website-home" %}?page={{page_obj.next_page_number}}" class="w3-bar-item w3-button w3-hover-theme">»</a>
+        <a href="{% url "website-home" %}?page={{page_obj.next_page_number}}">»</a>
         {% endif %}
     </div>
 </div>

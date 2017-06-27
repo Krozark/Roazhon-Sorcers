@@ -4,12 +4,12 @@
 
 {% block app.header %}
 {% if object.image %}
-<div class="w3-display-container w3-animate-opacity" id="header-img">
+<div id="header-img">
     <img src="{{object.image.url}}">
-    <div class="black-hoverlay w3-container w3-display-middle">
-        <div class="w3-display-middle w3-margin-bottom">
-            <h1 class="w3-margin w3-jumbo">{{object}}</h1>
-            <p class="w3-xlarge">{{object.date}}</i></p>
+    <div>
+        <div>
+            <h1>{{object}}</h1>
+            <p>{{object.date}}</i></p>
         </div>
     </div>
 </div>
@@ -18,12 +18,10 @@
 
 {% block app.content %}
 <div class="article">
-    <div class="w3-theme-l5">
-        <div class="w3-container">
-            <h3><b>{{object}}</b></h3>
-            <h5>{{object.M2M_category.all|join:", "}}, <span class="w3-opacity">{{object.date}}</span></h5>
-            {{object.content|safe}}
-        </div>
+    <div>
+        <h3><b>{{object}}</b></h3>
+        <h5>{{object.M2M_category.all|join:", "}}, <span class="w3-opacity">{{object.date}}</span></h5>
+        {{object.content|safe}}
     </div>
 </div>
 
@@ -45,21 +43,33 @@
 {% endcomment %}
 
 {% get_comment_form for object as form %}
-<table>
-  <form action="{% comment_form_target %}" method="post">
-    {% csrf_token %}
-    <input type="hidden" name="next" value="{{ object.get_absolute_url }}" />
-    {{ form }}
-    <tr>
-      <td colspan="2">
-        <input type="submit" name="submit" value="Post">
-        <input type="submit" name="preview" value="Preview">
-      </td>
-    </tr>
-  </form>
-</table>
+<div class="w3-container w3-theme-l2">
+    <form action="{% comment_form_target %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ object.get_absolute_url }}" />
+        <div class="w3-section">
+            <label>Nom</label>
+            <input name="name" id="id_name" maxlength="50" required="" type="text">
+        </div>
+        <div class="w3-section">
+            <label>Email</label>
+            <input name="email" id="id_email" required="" type="email">
+        </div>
+        <div class="w3-section">
+            <label>Message</label>
+            <textarea name="comment" id="id_comment" maxlength="3000" rows="10" cols="40" required=""></textarea>
+        </div>
+        {{ form.honeypot }}
+        {{ form.content_type }}
+        {{ form.object_pk }}
+        {{ form.timestamp }}
+        {{ form.security_hash }}
+        <button type="submit" class="w3-button w3-black w3-margin-bottom" value="Post">
+            <i class="fa fa-paper-plane w3-margin-right"></i>Envoyer
+        </button>
+    </form>
+</div>
 {#% endif %#}
-
 
 {% render_comment_list for object %}
 {% endblock %}

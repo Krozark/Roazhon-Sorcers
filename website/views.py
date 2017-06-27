@@ -5,11 +5,6 @@ from django.views.generic import TemplateView, DetailView, ListView
 from website.models import ArticleCategory, Article
 
 
-class WebsiteMixin(object):
-    def get_navigation(self):
-        return ArticleCategory.object.all()
-
-
 class HomeView(ListView):
     template_name = "website/home.html"
     model = Article

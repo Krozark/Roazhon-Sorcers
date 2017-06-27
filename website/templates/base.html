@@ -26,11 +26,9 @@
         <!-- Navbar -->
         <div class="w3-bar w3-theme w3-left-align">
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-white">
+            <a href="{% url "website-home" %}" class="w3-bar-item w3-button w3-hover-white">
                 <i class="fa fa-home w3-margin-right"></i>Accueil
             </a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Équipe</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
             <div class="w3-dropdown-hover w3-hide-small">
                 <button class="w3-button" title="Notifications">Articles <i class="fa fa-caret-down"></i></button>     
                 <div class="w3-dropdown-content w3-card-4 w3-bar-block">
@@ -39,14 +37,12 @@
                     <a href="#" class="w3-bar-item w3-button">...</a>
                 </div>
             </div>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Vidéos</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Équipe</a>
             <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
         </div>
         <!-- Navbar on small screens -->
         <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-            <a href="#" class="w3-bar-item w3-button">Accueil</a>
-            <a href="#" class="w3-bar-item w3-button">Équipe</a>
-            <a href="#" class="w3-bar-item w3-button">News</a>
+            <a href="{% url "website-home" %}" class="w3-bar-item w3-button">Accueil</a>
             <div class="w3-dropdown-hover w3-bar-item">
                 <button class="w3-button" title="Notifications">Articles <i class="fa fa-caret-down"></i></button>     
                 <div class="w3-dropdown-content w3-card-4 w3-bar-block">
@@ -55,48 +51,41 @@
                     <a href="#" class="w3-bar-item w3-button">...</a>
                 </div>
             </div>
-            <a href="#" class="w3-bar-item w3-button">Tournois</a>
+            <a href="#" class="w3-bar-item w3-button">Équipe</a>
             <a href="#" class="w3-bar-item w3-button">Contact</a>
         </div>
 
 
         <!-- Page Container -->
-        <div class="w3-content w3-theme-l1" id="app-body">
+        <div id="app-body">
             {% block app.header %}{% endblock %}
 
-            <!-- The Grid -->
-            <div class="w3-row">
-                <div class="w3-col m10 " id="content">
-                    {% block app.content %}{% endblock %}
-                </div>
+            <div id="content">
+                {% block app.content %}{% endblock %}
+            </div>
 
-                <!-- Right Column -->
-                <div class="w3-col m2">
-                    <div class="w3-card-2 w3-round w3-theme-l5 w3-center" id="right-column">
-                        <div class="w3-container">
-                            <p>Upcoming Events:</p>
-                            <img src="{{STATIC_URL}}/website/img/lights.jpg" alt="event" style="width:100%;">
-                            <p><strong>Holiday</strong></p>
-                            <p>Friday 15:00</p>
-                            <p><button class="w3-button w3-block w3-theme-l4 w3-hover-white">Info</button></p>
-                        </div>
-                    </div>
-                    <div class="w3-card-2 w3-round w3-theme-l5 w3-center">
-                        <div class="w3-container">
-                            <p>ADS</p>
-                        </div>
-                    </div>
-                    <!-- End Right Column -->
+            <div id="right-column">
+                <div>
+                    <p>Upcoming Events:</p>
+                    <img src="{{STATIC_URL}}/website/img/lights.jpg" alt="event">
+                    <p><strong>Holiday</strong></p>
+                    <p>Friday 15:00</p>
+                    <p>
+                    <button>Info</button>
+                    </p>
+                </div>
+                <div>
+                    <p>ADS</p>
                 </div>
             </div>
-            <!-- End Grid -->
-            <!-- Footer -->
-            <footer class="w3-container w3-theme-d3">
-                <h5>Mettre tous les liens des réseaux ici</h5>
-                <p>Sponsor <a href="#" target="_blank">Ultimate Guard</a></p>
-            </footer>
         </div>
         <!-- End Page Container -->
+
+        <!-- Footer -->
+        <footer>
+            <h5>Mettre tous les liens des réseaux ici</h5>
+            <p>Sponsor <a href="#" target="_blank">Ultimate Guard</a></p>
+        </footer>
 
 
 
