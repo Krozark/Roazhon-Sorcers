@@ -14,19 +14,19 @@
 
 {% block app.content %}
 
-{% with object=last_article %}
+{% with object=last_object %}
 <div class="w3-card-4 article w3-theme-l5">
     {% include "website/include/article.html" %}
 </div>
 {% endwith %}
 
 <div class="w3-row article-row">
-{% for object in articles_list %}
+{% for object in object_list %}
 {% if forloop.first %}
     <div class="w3-third">
 {% endif%}
     {% include "website/include/article.html" %}
-{% if forloop.counter|divisibleby:3 %}
+{% if forloop.counter|divisibleby:number_per_row %}
     </div>
 {% if not forloop.last %}
     <div class="w3-third">
@@ -34,5 +34,8 @@
 {% endif %}
 {% endfor %}
 </div>
+
+{% include "website/include/pagination.html" %}
+
 
 {% endblock %}

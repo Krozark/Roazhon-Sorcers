@@ -1,17 +1,26 @@
+import math
 from django.shortcuts import render
-from django.views.generic import TemplateView, DetailView
+from django.views.generic import TemplateView, DetailView, ListView
 
-from website.models import Article
+from website.models import ArticleCategory, Article
 
 
-class HomeView(TemplateView):
+class WebsiteMixin(object):
+    def get_navigation(self):
+        return ArticleCategory.object.all()
+
+
+class HomeView(ListView):
     template_name = "website/home.html"
+    model = Article
+    paginate_by = 10
 
     def get_context_data(self, **kwargs):
         # top bar
         context = super(HomeView, self).get_context_data(**kwargs)
-        context['last_article'] = Article.objects.all()[0]
-        context['articles_list'] = Article.objects.all()[1:10]
+        context['last_object'] = context["object_list"][0]
+        context['object_list'] = context["object_list"][1:]
+        context["number_per_row"] = math.ceil(context["object_list"].count() / 3)
         return context
 
 class ArticleDetailView(DetailView):
