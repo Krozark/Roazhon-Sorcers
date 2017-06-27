@@ -456,7 +456,7 @@ a {
 .w3-responsive {
   overflow-x: auto; }
 
-.w3-container:after, #app-body #header-img > div:after, #app-body #content .article > div:after, #app-body #right-column div:after, footer:after, .w3-container:before, #app-body #header-img > div:before, #app-body #content .article > div:before, #app-body #right-column div:before, footer:before, .w3-panel:after, .w3-panel:before, .w3-row:after, #app-body:after, #app-body #content .article > div > div:after, .w3-row:before, #app-body:before, #app-body #content .article > div > div:before, .w3-row-padding:after, .w3-row-padding:before,
+.w3-container:after, #app-body #header-img > div:after, #app-body #content .article > div:after, #app-body #content .comment:after, #app-body #right-column div:after, footer:after, .w3-container:before, #app-body #header-img > div:before, #app-body #content .article > div:before, #app-body #content .comment:before, #app-body #right-column div:before, footer:before, .w3-panel:after, .w3-panel:before, .w3-row:after, #app-body:after, #app-body #content .article > div > div:after, .w3-row:before, #app-body:before, #app-body #content .article > div > div:before, .w3-row-padding:after, .w3-row-padding:before,
 .w3-cell-row:before, .w3-cell-row:after, .w3-clear:after, .w3-clear:before, .w3-bar:before, #app-body #content #pagination > div:before, .w3-bar:after, #app-body #content #pagination > div:after {
   content: "";
   display: table;
@@ -744,7 +744,7 @@ a {
 .w3-display-position {
   position: absolute; }
 
-.w3-circle {
+.w3-circle, #app-body #content .comment img {
   border-radius: 50%; }
 
 .w3-round-small {
@@ -765,7 +765,7 @@ a {
 .w3-row-padding, .w3-row-padding > .w3-half, .w3-row-padding > .w3-third, .w3-row-padding > .w3-twothird, .w3-row-padding > .w3-threequarter, .w3-row-padding > .w3-quarter, .w3-row-padding > .w3-col, #app-body .w3-row-padding > #content, #app-body #content .article > div > div .w3-row-padding > div, #app-body .w3-row-padding > #right-column {
   padding: 0 8px; }
 
-.w3-container, #app-body #header-img > div, #app-body #content .article > div, #app-body #right-column div, footer, .w3-panel {
+.w3-container, #app-body #header-img > div, #app-body #content .article > div, #app-body #content .comment, #app-body #right-column div, footer, .w3-panel {
   padding: 0.01em 16px; }
 
 .w3-panel {
@@ -790,7 +790,7 @@ a {
   padding-right: 4px;
   font-size: 110%; }
 
-.w3-card, .w3-card-2, #app-body #right-column div {
+.w3-card, .w3-card-2, #app-body #content .comment, #app-body #right-column div {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 .w3-card-4, .w3-hover-shadow:hover {
@@ -880,7 +880,7 @@ a {
 .w3-animate-input:focus {
   width: 100% !important; }
 
-.w3-opacity, .w3-hover-opacity:hover {
+.w3-opacity, #app-body #content .comment span, .w3-hover-opacity:hover {
   opacity: 0.60; }
 
 .w3-opacity-off, .w3-hover-opacity-off:hover {
@@ -992,7 +992,7 @@ a {
 .w3-margin-left {
   margin-left: 16px !important; }
 
-.w3-margin-right {
+.w3-margin-right, #app-body #content .comment img {
   margin-right: 16px !important; }
 
 .w3-padding-small {
@@ -1024,10 +1024,10 @@ a {
   padding-top: 64px !important;
   padding-bottom: 64px !important; }
 
-.w3-left {
+.w3-left, #app-body #content .comment img {
   float: left !important; }
 
-.w3-right {
+.w3-right, #app-body #content .comment span {
   float: right !important; }
 
 .w3-button:hover, #app-body button:hover, #app-body #content #pagination a:hover {
@@ -1125,7 +1125,7 @@ a {
   color: #000 !important;
   background-color: #ffeb3b !important; }
 
-.w3-white, .w3-hover-white:hover, #app-body button:hover, #app-body #content #pagination a:hover {
+.w3-white, #app-body #content .comment, .w3-hover-white:hover, #app-body button:hover, #app-body #content #pagination a:hover {
   color: #000 !important;
   background-color: #fff !important; }
 
@@ -1342,42 +1342,48 @@ html, body, h1, h2, h3, h4, h5 {
 .w3-content, #app-body {
   max-width: inherit; }
 
-#app-body #header-img {
+#app-body {
   padding-bottom: 8px; }
-  #app-body #header-img img {
-    width: 100%;
-    min-height: 350px;
-    max-height: 900px;
-    object-fit: cover; }
-  #app-body #header-img > div {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
-    text-align: center; }
-#app-body #content {
-  padding-right: 8px; }
-  #app-body #content .article {
-    margin-bottom: 8px; }
-    #app-body #content .article .article-img {
-      object-fit: cover;
+  #app-body #header-img {
+    padding-bottom: 8px; }
+    #app-body #header-img img {
       width: 100%;
-      max-height: 480px; }
-    #app-body #content .article > div img {
-      display: block;
-      margin: 0 auto; }
-  #app-body #content .article-row .w3-third {
-    padding-left: 8px; }
-  #app-body #content .article-row .w3-third:first-child {
-    padding-left: 0px; }
-  #app-body #content .article-row .article img {
-    max-height: 220px; }
-  #app-body #content form {
-    padding: 8px; }
-    #app-body #content form #id_honeypot {
-      display: none; }
-#app-body #right-column div {
-  margin-bottom: 8px; }
-  #app-body #right-column div img {
-    width: 100%; }
+      min-height: 350px;
+      max-height: 900px;
+      object-fit: cover; }
+    #app-body #header-img > div {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+      text-align: center; }
+  #app-body #content {
+    padding-right: 8px; }
+    #app-body #content .article {
+      margin-bottom: 8px; }
+      #app-body #content .article .article-img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 480px; }
+      #app-body #content .article > div img {
+        display: block;
+        margin: 0 auto; }
+    #app-body #content .article-row .w3-third {
+      padding-left: 8px; }
+    #app-body #content .article-row .w3-third:first-child {
+      padding-left: 0px; }
+    #app-body #content .article-row .article img {
+      max-height: 220px; }
+    #app-body #content form {
+      padding: 8px; }
+      #app-body #content form #id_honeypot {
+        display: none; }
+    #app-body #content .comment {
+      margin-top: 8px; }
+      #app-body #content .comment img {
+        width: 60px; }
+  #app-body #right-column div {
+    margin-bottom: 8px; }
+    #app-body #right-column div img {
+      width: 100%; }
 
 /*# sourceMappingURL=website.css.map */

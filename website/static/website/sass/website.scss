@@ -23,6 +23,7 @@ html,body,h1,h2,h3,h4,h5 {
     @extend .w3-content;
     @extend .w3-theme-l1;
     @extend .w3-row;
+    padding-bottom: 8px;
 
     button {
         @extend .w3-button;
@@ -151,6 +152,28 @@ html,body,h1,h2,h3,h4,h5 {
                 @extend .w3-hover-white;
             }
         }
+
+        .comment {
+            @extend .w3-container;
+            @extend .w3-card-2;
+            @extend .w3-white;
+
+            margin-top:8px;
+
+            img {
+                @extend .w3-left;
+                @extend .w3-circle;
+                @extend .w3-margin-right;
+
+                width: 60px;
+            }
+
+            span {
+               @extend .w3-right;
+               @extend .w3-opacity;
+            }
+        }
+
     }
 
     #right-column {
