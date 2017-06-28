@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 
     'django_comments',
-
+    'django_generic_flatblocks',
+    'django_generic_flatblocks.contrib.gblocks',
     'froala_editor',
     'sorl.thumbnail',    
 

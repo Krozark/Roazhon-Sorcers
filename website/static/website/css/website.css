@@ -1349,7 +1349,7 @@ html, body, h1, h2, h3, h4, h5 {
     #app-body #header-img img {
       width: 100%;
       min-height: 350px;
-      max-height: 900px;
+      max-height: 500px;
       object-fit: cover; }
     #app-body #header-img > div {
       width: 100%;
@@ -1365,6 +1365,9 @@ html, body, h1, h2, h3, h4, h5 {
         width: 100%;
         max-height: 480px; }
       #app-body #content .article > div img {
+        display: block;
+        margin: 0 auto; }
+      #app-body #content .article > div iframe {
         display: block;
         margin: 0 auto; }
     #app-body #content .article-row .w3-third {
