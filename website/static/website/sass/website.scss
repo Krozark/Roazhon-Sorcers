@@ -40,8 +40,8 @@ html,body,h1,h2,h3,h4,h5 {
 
         img {
             width:100%;
-            min-height:350px;
-            max-height:900px;
+            min-height: 350px;
+            max-height: 500px;
             object-fit: cover;
             //object-position: top;
         }
@@ -96,6 +96,11 @@ html,body,h1,h2,h3,h4,h5 {
                 @extend .w3-container;
 
                 img {
+                    display: block;
+                    margin: 0 auto;
+                }
+
+                iframe {
                     display: block;
                     margin: 0 auto;
                 }

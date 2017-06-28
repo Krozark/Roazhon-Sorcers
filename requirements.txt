@@ -1,6 +1,7 @@
 Django==1.11.2
 django-contrib-comments==1.8.0
 django-froala-editor==2.6.1
+django-generic-flatblocks==1.1.1
 olefile==0.44
 Pillow==4.1.1
 pytz==2017.2

@@ -1,12 +1,16 @@
 {% extends "base.html" %}
+{% load generic_flatblocks %}
+
 
 {% block app.header %}
 <div id="header-img">
-    <img src="{{STATIC_URL}}/website/img/team.jpg">
+    {% gblock "home-image" for "gblocks.TitleTextAndImage" into "home_image" %}
+    <img src="{{MEDIA_URL}}{{home_image.image}}">
     <div>
         <div>  
-            <h1>Raozhon Sorcers</h1>
-            <p>Équipe Legacy Rennes <i>Magic: the Gathering</i></p>
+            <h1>{{home_image.title}}</h1>
+            <p>{{home_image.text|safe}}</p>
+            {% if home_image_admin_url %}<p><a href="{{ home_image_admin_url }}">edit</a></p>{% endif %}
         </div>
     </div>
 </div>
