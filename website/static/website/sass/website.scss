@@ -179,11 +179,10 @@ html,body,h1,h2,h3,h4,h5 {
     #right-column {
         @extend .w3-col;
         @extend .m2;
+        @extend .w3-card-2;
+        @extend .w3-theme-l5;
         
         div {
-            @extend .w3-card-2;
-            @extend .w3-center;
-            @extend .w3-theme-l5;
             @extend .w3-container;
             margin-bottom:8px;
 

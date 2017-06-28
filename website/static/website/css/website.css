@@ -417,7 +417,7 @@ a {
   width: 100%;
   overflow: hidden; }
 
-.w3-center .w3-bar, #app-body #content #pagination .w3-bar, #app-body #right-column div .w3-bar, #app-body #content .w3-center #pagination > div, #app-body #content #pagination > div, #app-body #content #right-column div #pagination > div {
+.w3-center .w3-bar, #app-body #content #pagination .w3-bar, #app-body #content .w3-center #pagination > div, #app-body #content #pagination > div {
   display: inline-block;
   width: auto; }
 
@@ -446,7 +446,7 @@ a {
   white-space: normal;
   float: none; }
 
-.w3-bar-block.w3-center .w3-bar-item, #app-body #content .w3-bar-block#pagination .w3-bar-item, #app-body #right-column div.w3-bar-block .w3-bar-item, .w3-bar-block.w3-center #app-body #content #pagination a, #app-body #content #pagination .w3-bar-block.w3-center a, #app-body #content .w3-bar-block#pagination a, #app-body #right-column div.w3-bar-block #content #pagination a, #app-body #content #pagination #right-column div.w3-bar-block a {
+.w3-bar-block.w3-center .w3-bar-item, #app-body #content .w3-bar-block#pagination .w3-bar-item, .w3-bar-block.w3-center #app-body #content #pagination a, #app-body #content #pagination .w3-bar-block.w3-center a, #app-body #content .w3-bar-block#pagination a {
   text-align: center; }
 
 .w3-block, #app-body button {
@@ -790,7 +790,7 @@ a {
   padding-right: 4px;
   font-size: 110%; }
 
-.w3-card, .w3-card-2, #app-body #content .comment, #app-body #right-column div {
+.w3-card, .w3-card-2, #app-body #content .comment, #app-body #right-column {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 .w3-card-4, .w3-hover-shadow:hover {
@@ -943,7 +943,7 @@ a {
 .w3-justify {
   text-align: justify !important; }
 
-.w3-center, #app-body #content #pagination, #app-body #right-column div {
+.w3-center, #app-body #content #pagination {
   text-align: center !important; }
 
 .w3-border-0 {
@@ -1260,7 +1260,7 @@ a {
 .w3-border-grey, .w3-hover-border-grey:hover, .w3-border-gray, .w3-hover-border-gray:hover {
   border-color: #bbb !important; }
 
-.w3-theme-l5, #app-body #content .article > div, #app-body #right-column div {
+.w3-theme-l5, #app-body #content .article > div, #app-body #right-column {
   color: #000 !important;
   background-color: #f0f0f0 !important; }
 
