@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import json
+import os
 
 from django.utils.translation import ugettext_lazy as _
 from django.utils.safestring import mark_safe
@@ -32,3 +33,18 @@ class AdminThumbnailMixin(object):
         return self._thumb(getattr(obj, self.thumbnail_image_field_name), self.thumbnail_size)
     thumbnail.allow_tags = True
     thumbnail.short_description = _('Thumbnail')
+
+def file_cleanup(sender, **kwargs):
+    for fieldname in sender._meta.get_all_field_names():
+        field = sender._meta.get_field(fieldname)
+        if isinstance(field, FileField):
+            inst = kwargs['instance']
+            f = getattr(inst, fieldname)
+            m = inst.__class__._default_manager
+            if os.path.exists(f.path) \
+                and not m.filter(**{'%s__exact' % fieldname: getattr(inst, fieldname)}).exclude(pk=inst._get_pk_val()):
+                    try:
+                        os.remove(f.path)
+                    except:
+                        pass
+

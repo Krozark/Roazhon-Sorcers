@@ -2,6 +2,9 @@ from django import template
 from django.template import Library
 import urllib, hashlib,json
 from django.contrib.sites.models import Site
+from datetime import datetime, timedelta
+
+from website.models import Event
 
 register = Library()
 ######################### GRAVATAR ############################
@@ -64,3 +67,33 @@ def gravatar_profile(parser, token):
         raise template.TemplateSyntaxError("%r tag requires a single argument" % token.contents.split()[0])
  
     return GravatarProfileNode(email)
+
+
+class GetEventsNode(template.Node):
+    def __init__(self, parser, context_name):
+        self.template_parser = parser
+        self.context_name = context_name
+
+    def render(self, context):
+        context[self.context_name] = Event.objects.filter(date=None) | Event.objects.filter(date__gte= datetime.now() - timedelta(days=7))[:4]
+        return ""
+        
+@register.tag
+def GetEvents(parser, token):
+
+    tokens = token.split_contents()
+    fnctl = tokens.pop(0)
+
+    def error():
+        raise TemplateSyntaxError("GetEvents accepts the syntax: {%% GetEvents as context_name %%}")
+
+    while True:
+        if len(tokens) < 2:
+            error()
+        token = tokens.pop(0)
+        if token == "as":
+            break
+    if len(tokens) != 1:
+        error()
+    context_name = tokens.pop()
+    return GetEventsNode(parser, context_name)

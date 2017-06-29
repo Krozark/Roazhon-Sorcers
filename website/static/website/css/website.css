@@ -2,9 +2,9 @@
 SCSS3 (c) 2011 Maxime Barbier
 Inspired by http://css3please.com/
 */
-.clearfix {
+.clearfix, #app-body #content .article > div p {
   zoom: 1; }
-  .clearfix:before, .clearfix:after {
+  .clearfix:before, #app-body #content .article > div p:before, .clearfix:after, #app-body #content .article > div p:after {
     content: '.';
     display: block;
     overflow: hidden;
@@ -13,7 +13,7 @@ Inspired by http://css3please.com/
     line-height: 0;
     width: 0;
     height: 0; }
-  .clearfix:after {
+  .clearfix:after, #app-body #content .article > div p:after {
     clear: both; }
 
 .reset-box {
@@ -417,7 +417,7 @@ a {
   width: 100%;
   overflow: hidden; }
 
-.w3-center .w3-bar, #app-body #content #pagination .w3-bar, #app-body #content .w3-center #pagination > div, #app-body #content #pagination > div {
+.w3-center .w3-bar, #app-body #content #pagination .w3-bar, #app-body #right-column div .w3-bar, #app-body #content .w3-center #pagination > div, #app-body #content #pagination > div, #app-body #content #right-column div #pagination > div {
   display: inline-block;
   width: auto; }
 
@@ -446,7 +446,7 @@ a {
   white-space: normal;
   float: none; }
 
-.w3-bar-block.w3-center .w3-bar-item, #app-body #content .w3-bar-block#pagination .w3-bar-item, .w3-bar-block.w3-center #app-body #content #pagination a, #app-body #content #pagination .w3-bar-block.w3-center a, #app-body #content .w3-bar-block#pagination a {
+.w3-bar-block.w3-center .w3-bar-item, #app-body #content .w3-bar-block#pagination .w3-bar-item, #app-body #right-column div.w3-bar-block .w3-bar-item, .w3-bar-block.w3-center #app-body #content #pagination a, #app-body #content #pagination .w3-bar-block.w3-center a, #app-body #content .w3-bar-block#pagination a, #app-body #right-column div.w3-bar-block #content #pagination a, #app-body #content #pagination #right-column div.w3-bar-block a {
   text-align: center; }
 
 .w3-block, #app-body button {
@@ -943,7 +943,7 @@ a {
 .w3-justify {
   text-align: justify !important; }
 
-.w3-center, #app-body #content #pagination {
+.w3-center, #app-body #content #pagination, #app-body #right-column div {
   text-align: center !important; }
 
 .w3-border-0 {
@@ -1024,7 +1024,7 @@ a {
   padding-top: 64px !important;
   padding-bottom: 64px !important; }
 
-.w3-left, #app-body #content .comment img {
+.w3-left, #app-body #content .article > div p img, #app-body #content .comment img {
   float: left !important; }
 
 .w3-right, #app-body #content .comment span {
@@ -1260,7 +1260,7 @@ a {
 .w3-border-grey, .w3-hover-border-grey:hover, .w3-border-gray, .w3-hover-border-gray:hover {
   border-color: #bbb !important; }
 
-.w3-theme-l5, #app-body #content .article > div, #app-body #right-column {
+.w3-theme-l5, #app-body #content .article > div, #app-body #right-column div {
   color: #000 !important;
   background-color: #f0f0f0 !important; }
 
@@ -1349,8 +1349,9 @@ html, body, h1, h2, h3, h4, h5 {
     #app-body #header-img img {
       width: 100%;
       min-height: 350px;
-      max-height: 500px;
-      object-fit: cover; }
+      max-height: 600px;
+      object-fit: cover;
+      object-position: 50% 20%; }
     #app-body #header-img > div {
       width: 100%;
       height: 100%;
@@ -1361,12 +1362,16 @@ html, body, h1, h2, h3, h4, h5 {
     #app-body #content .article {
       margin-bottom: 8px; }
       #app-body #content .article .article-img {
-        object-fit: cover;
         width: 100%;
-        max-height: 480px; }
-      #app-body #content .article > div img {
+        min-height: 200px;
+        max-height: 480px;
+        object-fit: cover;
+        object-position: 50% 20%; }
+      #app-body #content .article > div p img {
+        padding: 8px;
         display: block;
-        margin: 0 auto; }
+        width: 50% !important;
+        height: 50% !important; }
       #app-body #content .article > div iframe {
         display: block;
         margin: 0 auto; }
@@ -1386,7 +1391,15 @@ html, body, h1, h2, h3, h4, h5 {
         width: 60px; }
   #app-body #right-column div {
     margin-bottom: 8px; }
+    #app-body #right-column div h4 {
+      font-weight: bold; }
+    #app-body #right-column div .info {
+      font-weight: bold; }
+      #app-body #right-column div .info span {
+        display: block; }
     #app-body #right-column div img {
       width: 100%; }
+  #app-body #right-column div:last-child {
+    margin-bottom: 0px; }
 
 /*# sourceMappingURL=website.css.map */

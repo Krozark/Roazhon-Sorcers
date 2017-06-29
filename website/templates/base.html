@@ -1,4 +1,5 @@
-{# spaceless #}
+{% load website_tags humanize %}
+{% spaceless %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -65,15 +66,18 @@
             </div>
 
             <div id="right-column">
+                {% GetEvents as event_list %}
+                {% for event in event_list %}
                 <div>
-                    <p>Upcoming Events:</p>
-                    <img src="{{STATIC_URL}}/website/img/lights.jpg" alt="event">
-                    <p><strong>Holiday</strong></p>
-                    <p>Friday 15:00</p>
-                    <p>
-                    <button>Info</button>
-                    </p>
+                    <h4>{{event.title}}</h4>
+                    {% if event.image %}<img src="{{ event.image.url}}" alt="event">{% endif %}
+                    <div class="info">
+                        {% if event.place %}<span>{{event.place}}</span>{% endif %}
+                        <span>{% if event.date %}{{event.date|naturalday}}&nbsp;{% endif %}{% if event.frequency %}{{event.frequency}}&nbsp;{% endif %}à {{event.time|time:"H\hi"}}</span>
+                    </div>
+                    {{event.content|safe}}
                 </div>
+                {% endfor %}
             </div>
         </div>
         <!-- End Page Container -->
@@ -114,4 +118,4 @@
         {% block app.scripts %}{% endblock %}
     </body>
 </html> 
-{# endspaceless #}
+{% endspaceless %}

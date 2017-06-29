@@ -41,9 +41,9 @@ html,body,h1,h2,h3,h4,h5 {
         img {
             width:100%;
             min-height: 350px;
-            max-height: 500px;
+            max-height: 600px;
             object-fit: cover;
-            //object-position: top;
+            object-position: 50% 20%;
         }
 
         & > div {
@@ -83,11 +83,11 @@ html,body,h1,h2,h3,h4,h5 {
             //@extend .clearfix;
 
             .article-img {
-                object-fit: cover;
-                //object-position: top 75%;
                 width:100%;
-                //min-height:200px;
+                min-height:200px;
                 max-height:480px;
+                object-fit: cover;
+                object-position: 50% 20%;
                 //background-position: top;
             } 
 
@@ -95,9 +95,17 @@ html,body,h1,h2,h3,h4,h5 {
                 @extend .w3-theme-l5;
                 @extend .w3-container;
 
-                img {
-                    display: block;
-                    margin: 0 auto;
+                p {
+                    @extend .clearfix;
+
+                    img {
+                        padding: 8px;
+                        @extend .w3-left;
+                        display: block;
+                        //margin: 0 auto;
+                        width : 50%!important;
+                        height : 50%!important;
+                    }
                 }
 
                 iframe {
@@ -185,16 +193,32 @@ html,body,h1,h2,h3,h4,h5 {
         @extend .w3-col;
         @extend .m2;
         @extend .w3-card-2;
-        @extend .w3-theme-l5;
         
         div {
             @extend .w3-container;
-            margin-bottom:8px;
+            @extend .w3-theme-l5;
+            @extend .w3-center;
+
+            margin-bottom: 8px;
+
+            h4 {
+                font-weight: bold;
+            }
+
+            .info {
+                font-weight: bold;
+                span {
+                   display: block;
+                }
+            }
 
             img {
                 width: 100%;
             }
+        }
 
+        div:last-child {
+            margin-bottom: 0px;
         }
     }
 

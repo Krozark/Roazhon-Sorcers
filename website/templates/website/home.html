@@ -19,9 +19,7 @@
 {% block app.content %}
 
 {% with object=last_object %}
-<div class="w3-card-4 article w3-theme-l5">
-    {% include "website/include/article.html" %}
-</div>
+{% include "website/include/article.html" %}
 {% endwith %}
 
 <div class="w3-row article-row">
