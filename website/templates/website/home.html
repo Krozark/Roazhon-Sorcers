@@ -18,9 +18,11 @@
 
 {% block app.content %}
 
+{% if last_object %}
 {% with object=last_object %}
 {% include "website/include/article.html" %}
 {% endwith %}
+{% endif %}
 
 <div class="w3-row article-row">
 {% for object in object_list %}

@@ -9,7 +9,7 @@
     <div>
         <h3><b>{{object}}</b></h3>
         <h5>{{object.M2M_category.all|join:", "}}, <span class="w3-opacity">{{object.date}}</span></h5>
-        {{object.content|truncatewords_html:20|safe}}
+        {{object.content|truncatewords_html:15|safe}}
         <div class="w3-row">
             <div class="w3-col m8 s12">
                 <p><a class="w3-button w3-padding-large w3-theme-l4 w3-border w3-hover-white" href="{{object.get_absolute_url}}"><b>READ MORE »</b></a></p>

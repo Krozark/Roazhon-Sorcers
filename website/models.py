@@ -15,6 +15,9 @@ class ArticleCategory(models.Model):
     def __str__(self):
         return "%s" % self.title
 
+    def get_absolute_url(self):
+        return reverse("website-home")+"?category="+self.slug
+
 
 class Article(models.Model):
     title = models.CharField(_('Title'), max_length=255)

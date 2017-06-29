@@ -4,7 +4,7 @@ import urllib, hashlib,json
 from django.contrib.sites.models import Site
 from datetime import datetime, timedelta
 
-from website.models import Event
+from website.models import Event, ArticleCategory
 
 register = Library()
 ######################### GRAVATAR ############################
@@ -97,3 +97,43 @@ def GetEvents(parser, token):
         error()
     context_name = tokens.pop()
     return GetEventsNode(parser, context_name)
+
+@register.tag
+def gravatar_profile(parser, token):
+    try:
+        tag_name, email = token.split_contents()
+ 
+    except ValueError:
+        raise template.TemplateSyntaxError("%r tag requires a single argument" % token.contents.split()[0])
+ 
+    return GravatarProfileNode(email)
+
+
+class GetNavigationNode(template.Node):
+    def __init__(self, parser, context_name):
+        self.template_parser = parser
+        self.context_name = context_name
+
+    def render(self, context):
+        context[self.context_name] = ArticleCategory.objects.exclude(article=None)
+        return ""
+        
+@register.tag
+def GetNavigation(parser, token):
+
+    tokens = token.split_contents()
+    fnctl = tokens.pop(0)
+
+    def error():
+        raise TemplateSyntaxError("GetNavigation accepts the syntax: {%% GetNavigation as context_name %%}")
+
+    while True:
+        if len(tokens) < 2:
+            error()
+        token = tokens.pop(0)
+        if token == "as":
+            break
+    if len(tokens) != 1:
+        error()
+    context_name = tokens.pop()
+    return GetNavigationNode(parser, context_name)
