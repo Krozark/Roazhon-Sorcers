@@ -39,7 +39,7 @@ post_delete.connect(file_cleanup, sender=Article, dispatch_uid="Article.file_cle
 class Event(models.Model):
     title = models.CharField(_('Title'), max_length=255)
 
-    date = models.DateField(_('Date'), blank=True)
+    date = models.DateField(_('Date'), blank=True, null=True)
     time = models.TimeField(_('Time'))
     frequency = models.CharField(_('frequence'), max_length=255, blank=True)
 

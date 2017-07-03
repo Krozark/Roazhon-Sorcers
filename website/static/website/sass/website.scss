@@ -226,4 +226,35 @@ html,body,h1,h2,h3,h4,h5 {
     footer {
         @extend .w3-container;
         @extend .w3-theme-d3;
+        @extend .clearfix;
+
+        padding-bottom : 8px;
+
+        .logo {
+            @extend .m2;
+            @extend .w3-center;
+            @extend .w3-right;
+
+            @extend .w3-section;
+            @extend .w3-col;
+
+            a {
+                @extend .w3-xlarge;
+                @extend .w3-hover-opacity;
+                text-decoration: none;
+                padding : 0 8px;
+            }
+        }
+
+        .sponsor {
+            @extend .w3-col;
+            @extend .m2;
+            @extend .w3-center;
+            @extend .w3-left;
+
+            img {
+                height: 64px;
+            }
+        }
+
     }
