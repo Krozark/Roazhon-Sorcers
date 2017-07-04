@@ -1,9 +1,10 @@
-import math
 from django.shortcuts import render
+from django.template.context import RequestContext
 from django.views.generic import TemplateView, DetailView, ListView
+from django.core.mail import send_mail
 
 from website.models import ArticleCategory, Article
-
+from website.forms import ContactForm
 
 class ArticleListView(ListView):
     template_name = "website/home.html"
@@ -40,3 +41,33 @@ class ArticleDetailView(DetailView):
         context = super(ArticleDetailView, self).get_context_data(**kwargs)
         return context
 
+def contactView(request):
+    form = None
+    sent = False
+    if request.method == 'POST':
+        form = ContactForm (request.POST)
+
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            email_from = form.cleaned_data['email_from']
+            message = form.cleaned_data['message']
+            cc_myself = form.cleaned_data['cc_myself']
+
+            #TODO email_to= [User.objects.get(username="Admin").email,]
+
+            if cc_myself :
+                email_to.append(email_from)
+
+            send_mail(subject,message,email_from,email_to)
+
+            form = ContactForm()
+            sent = True
+
+    else:
+        form = ContactForm()
+
+
+    return render(request, "website/contact.html", {
+            "form" : form,
+            "sent" : sent,
+        }, content_type='text/html')

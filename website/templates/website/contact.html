@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% load generic_flatblocks %}
+
+
+{% block app.content %}
+{% if sent %}
+<h2> Your message have been sent. </h2>
+{% else %}
+
+{% gblock "contact-text" for "gblocks.TitleAndText" into "block" %}
+
+<h2>{{block.title}}</h2>
+{{block.text|linebreaks}}
+{% if home_image_admin_url %}<p><a href="{{ home_image_admin_url }}">edit</a></p>{% endif %}
+<div class="w3-container w3-theme-l2">
+    
+    <form action="{{ request.path }}" method="post">
+        {% csrf_token %}
+
+        <div class="w3-section">
+        {{form.subject.errors}}
+        <label for="{{form.subject.id_for_label}}">Subject</label>
+        {{form.subject}}
+        </div>
+
+        <div class="w3-section">
+        {{form.email_from.errors}}
+        <label for="{{form.email_from.id_for_label}}">email</label>
+        {{form.email_from}}
+        </div>
+
+        <div class="w3-section">
+        {{form.message.errors}}
+        {{form.message}}
+        {#<label for="{{form.message.id_for_label}}">message</label>#}
+        </div>
+
+        <div class="w3-section">
+        {{form.cc_myself.errors}}
+        <label for="{{form.cc_myself.id_for_label}}">send a copy to myself</label>
+        {{form.cc_myself}}
+        </div>
+
+        <button type="submit" class="w3-button w3-black w3-margin-bottom" value="Post">
+            <i class="fa fa-paper-plane w3-margin-right"></i>Envoyer
+        </button>
+
+        <button name="reset" type="reset" id="reset" tabindex="5" value="Reset">
+            Effacer
+        </button>
+    </form>
+</div>
+{% endif %}
+
+{% endblock %}
+

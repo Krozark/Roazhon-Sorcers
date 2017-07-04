@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django_generic_flatblocks.contrib.gblocks',
     'froala_editor',
     'sorl.thumbnail',    
+    'django_resized',
 
     'website',
 ]
