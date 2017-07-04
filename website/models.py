@@ -1,11 +1,16 @@
 from datetime import datetime
 
 from django.db import models
-from froala_editor.fields import FroalaField
-from django.utils.translation import ugettext_lazy as _
-from django.core.urlresolvers import reverse
 from django.db.models.signals import post_delete
+from django.core.files.uploadedfile import InMemoryUploadedFile
+from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext_lazy as _
+
+from froala_editor.fields import FroalaField
+from django_resized import ResizedImageField
+
 from website.utils import file_cleanup
+
 
 
 class ArticleCategory(models.Model):
@@ -22,7 +27,7 @@ class ArticleCategory(models.Model):
 class Article(models.Model):
     title = models.CharField(_('Title'), max_length=255)
     date    = models.DateTimeField(_('Date'), default=datetime.now())
-    image  = models.ImageField(upload_to='uploads/article',blank=True)    
+    image  = ResizedImageField(upload_to='uploads/article',blank=True, size=[1920, 1080], crop=['middle', 'center'], quality=75)
     M2M_category = models.ManyToManyField(ArticleCategory)
     content = FroalaField()
 
@@ -44,7 +49,7 @@ class Event(models.Model):
     frequency = models.CharField(_('frequence'), max_length=255, blank=True)
 
     place = models.CharField(_('Place'), max_length=255, blank=True)
-    image = models.ImageField(upload_to='uploads/realisation', blank=True)
+    image  = ResizedImageField(upload_to='uploads/article',blank=True, size=[350, 300], crop=['middle', 'center'], quality=75)
     content = FroalaField(blank=True)
 
     class Meta:
