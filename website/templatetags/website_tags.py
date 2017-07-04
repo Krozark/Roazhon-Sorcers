@@ -1,3 +1,5 @@
+import math
+
 from django import template
 from django.template import Library
 import urllib, hashlib,json
@@ -137,3 +139,12 @@ def GetNavigation(parser, token):
         error()
     context_name = tokens.pop()
     return GetNavigationNode(parser, context_name)
+
+
+@register.filter
+def even_divide(lst, index):
+    num_piece = 3
+    return [
+        [lst[i] for i in range(len(lst)) if (i % num_piece) == r]
+        for r in range(num_piece)
+    ][index]

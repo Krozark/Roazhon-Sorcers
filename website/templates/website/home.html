@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load generic_flatblocks %}
+{% load website_tags generic_flatblocks mkrange %}
 
 
 {% block app.header %}
@@ -25,18 +25,14 @@
 {% endif %}
 
 <div class="w3-row article-row">
-{% for object in object_list %}
-{% if forloop.first %}
-    <div class="w3-third">
-{% endif%}
-    {% include "website/include/article.html" %}
-{% if forloop.counter|divisibleby:number_per_row %}
-    </div>
-{% if not forloop.last %}
-    <div class="w3-third">
-{% endif %}
-{% endif %}
-{% endfor %}
+    {% mkrange 0 3 as range %}
+    {% for i in range %}
+        <div class="w3-third">
+        {% for object in object_list|even_divide:i %}
+            {% include "website/include/article.html" %}
+        {% endfor %}
+        </div>
+    {% endfor %}
 </div>
 
 {% include "website/include/pagination.html" %}

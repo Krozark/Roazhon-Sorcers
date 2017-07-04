@@ -22,7 +22,6 @@ class ArticleListView(ListView):
         if object_list.count() > 1:
             context['object_list'] = object_list[1:]
 
-        context["number_per_row"] = math.ceil((object_list.count() -1) / 3)
         return context
 
     def get_queryset(self):
