@@ -59,7 +59,7 @@ def contactView(request):
             if cc_myself :
                 email_to.append(email_from)
 
-            send_mail(subject,message,email_from,email_to)
+            send_mail(subject, message, email_from, email_to, fail_silently=False)
 
             form = ContactForm()
             sent = True
