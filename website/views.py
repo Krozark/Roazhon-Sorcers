@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.template.context import RequestContext
 from django.views.generic import TemplateView, DetailView, ListView
 from django.core.mail import send_mail
+from django.contrib.auth.models import User
 
 from website.models import ArticleCategory, Article
 from website.forms import ContactForm
@@ -53,7 +54,7 @@ def contactView(request):
             message = form.cleaned_data['message']
             cc_myself = form.cleaned_data['cc_myself']
 
-            #TODO email_to= [User.objects.get(username="Admin").email,]
+            email_to = [User.objects.get(username="admin").email,]
 
             if cc_myself :
                 email_to.append(email_from)
