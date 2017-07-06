@@ -36,7 +36,8 @@ to change :
 sudo apt-get install nginx
 sudo pip3 install uwsgi
 sudo adduser ubuntu www-data
-sudo adduser www-data ubuntu
+sudo adduser www-data ubuntus
+udo mkdir -p /etc/uwsgi/vassals
 sudo ln -s /home/ubuntu/Documents/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_nginx.conf  /etc/nginx/sites-enabled/
 sudo ln -s /home/ubuntu/Documents/Roazhon-Sorcer/roazhon_sorcers_uwsgi.ini /etc/uwsgi/vassals/
 sudo /etc/init.d/nginx restart
