@@ -26,22 +26,28 @@ python manage.py createsuperuser
 # Deploy on a server using nginx + uWSGI
 
 edit files 
-* ```Raozhon-Sorcers/roazhon_sorcers/roazhon_sorcers_nginx.conf```
+* ```Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_nginx.conf```
 
 to change :
-* ```/home/ubuntu/Documents/Raozhon-Sorcers``` with your project path
+* ```/home/ubuntu/Documents/Roazhon-Sorcers``` with your project path
 
 ```
 sudo apt-get install nginx
 sudo pip install uwsgi
 sudo adduser ubuntu www-data
 sudo adduser www-data ubuntu
-sudo ln -s /home/ubuntu/Documents/Raozhon-Sorcers/roazhon_sorcers/roazhon_sorcers_nginx.conf  /etc/nginx/sites-enabled/
+sudo ln -s /home/ubuntu/Documents/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_nginx.conf  /etc/nginx/sites-enabled/
+sudo ln -s /home/ubuntu/Documents/Roazhon-Sorcer/roazhon_sorcers_uwsgi.ini /etc/uwsgi/vassals/
 sudo /etc/init.d/nginx restart
 ```
 
 check url http://localhost:8000/static/website/img/icon.png
 
+add this line to ```/etc/rc.local```
+
+```
+sudo /usr/local/bin/uwsgi --emperor /etc/uwsgi/vassals --uid www-data --gid www-data --daemonize /var/log/uwsgi-emperor.log
+```
 
 ## informations
 
