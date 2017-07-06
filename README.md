@@ -34,7 +34,7 @@ to change :
 
 ```
 sudo apt-get install nginx
-sudo pip install uwsgi
+sudo pip3 install uwsgi
 sudo adduser ubuntu www-data
 sudo adduser www-data ubuntu
 sudo ln -s /home/ubuntu/Documents/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_nginx.conf  /etc/nginx/sites-enabled/
