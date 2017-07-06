@@ -39,7 +39,7 @@ sudo adduser ubuntu www-data
 sudo adduser www-data ubuntus
 sudo mkdir -p /etc/uwsgi/vassals
 sudo ln -s /home/ubuntu/Documents/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_nginx.conf  /etc/nginx/sites-enabled/
-sudo ln -s /home/ubuntu/Documents/Roazhon-Sorcer/roazhon_sorcers_uwsgi.ini /etc/uwsgi/vassals/
+sudo ln -s /home/ubuntu/Documents/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_uwsgi.ini /etc/uwsgi/vassals/
 sudo /etc/init.d/nginx restart
 ```
 
