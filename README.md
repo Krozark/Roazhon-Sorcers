@@ -1,5 +1,5 @@
-# Raozhon-Sorcers
-Raozhon-Sorcers website
+# Roazhon-Sorcers
+Roazhon-Sorcers website
 
 Install
 =======
