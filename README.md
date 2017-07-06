@@ -27,6 +27,7 @@ python manage.py createsuperuser
 
 edit files 
 * ```Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_nginx.conf```
+* ```Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_uwsgi.conf```
 
 to change :
 * ```/home/ubuntu/Documents/Roazhon-Sorcers``` with your project path
