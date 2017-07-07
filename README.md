@@ -63,9 +63,10 @@ sudo /usr/local/bin/uwsgi --emperor /etc/uwsgi/vassals --uid www-data --gid www-
 sudo /etc/init.d/nginx restart
 ```
 ## Make some checks
-check url http://localhost:80
-check url http://localhost:80/static/website/img/icon.png
-check url http://localhost:80/admin
+
+* check url http://localhost:80
+* check url http://localhost:80/static/website/img/icon.png
+* check url http://localhost:80/admin
 
 ## Update rc.local
 
