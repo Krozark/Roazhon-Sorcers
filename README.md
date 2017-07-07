@@ -74,8 +74,9 @@ Add the line use in section _Start uwsgi_ to ```/etc/rc.local```
 ```
 uwsgi --ini /home/user/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_uwsgi.ini
 # OR
-sudo /usr/local/bin/uwsgi --emperor /etc/uwsgi/vassals --uid www-data --gid www-data --daemonize /var/log/uwsgi-emperor.log```
+sudo /usr/local/bin/uwsgi --emperor /etc/uwsgi/vassals --uid www-data --gid www-data --daemonize /var/log/uwsgi-emperor.log
+```
 
-## informations
+## More installation informations
 
 You can find some installation infornation on this page : http://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html
