@@ -880,7 +880,7 @@ a {
 .w3-animate-input:focus {
   width: 100% !important; }
 
-.w3-opacity, #app-body #content .comment span, .w3-hover-opacity:hover, footer .logo a:hover {
+.w3-opacity, #app-body #content .comment span, .w3-hover-opacity:hover, footer .logo a:hover, footer .sponsor a:hover {
   opacity: 0.60; }
 
 .w3-opacity-off, .w3-hover-opacity-off:hover {

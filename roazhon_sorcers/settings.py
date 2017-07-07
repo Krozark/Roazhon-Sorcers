@@ -23,12 +23,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '6)9!5x!bmk9s_5%8*tn$2uin0i6v2y34b7!ainw$yd^wfd_6$&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEV = True
+DEV = False
 DEBUG = DEV
 DEBUG_PROPAGATE_EXCEPTIONS = DEBUG
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ["roazhonsorcers.lpache.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "roazhonsorcers.lpache.com"]
 
 SITE_ID = 1
 
