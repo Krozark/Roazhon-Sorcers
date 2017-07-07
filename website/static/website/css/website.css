@@ -506,10 +506,10 @@ a {
   .w3-col.m1, #app-body .m1#content, #app-body #content .article > div > div div.m1, #app-body .m1#right-column, footer .m1.logo, footer .m1.sponsor {
     width: 8.33333%; }
 
-  .w3-col.m2, #app-body .m2#content, #app-body footer #content.logo, footer #app-body #content.logo, #app-body footer #content.sponsor, footer #app-body #content.sponsor, #app-body #content .article > div > div div.m2, #app-body #content .article > div > div div#right-column, #app-body #content .article > div > div footer div.logo, footer #app-body #content .article > div > div div.logo, #app-body #content .article > div > div footer div.sponsor, footer #app-body #content .article > div > div div.sponsor, #app-body #right-column, footer .logo, footer .sponsor {
+  .w3-col.m2, #app-body .m2#content, #app-body footer #content.logo, footer #app-body #content.logo, #app-body footer #content.sponsor, footer #app-body #content.sponsor, #app-body #content .article > div > div div.m2, #app-body #content .article > div > div footer div.logo, footer #app-body #content .article > div > div div.logo, #app-body #content .article > div > div footer div.sponsor, footer #app-body #content .article > div > div div.sponsor, #app-body .m2#right-column, #app-body footer #right-column.logo, footer #app-body #right-column.logo, #app-body footer #right-column.sponsor, footer #app-body #right-column.sponsor, footer .logo, footer .sponsor {
     width: 16.66666%; }
 
-  .w3-col.m3, #app-body .m3#content, #app-body #content .article > div > div div.m3, #app-body .m3#right-column, footer .m3.logo, footer .m3.sponsor, .w3-quarter {
+  .w3-col.m3, #app-body .m3#content, #app-body #content .article > div > div div.m3, #app-body #content .article > div > div div#right-column, #app-body #right-column, footer .m3.logo, footer .m3.sponsor, .w3-quarter {
     width: 24.99999%; }
 
   .w3-col.m4, #app-body .m4#content, #app-body #content .article > div > div div.m4, #app-body .m4#right-column, footer .m4.logo, footer .m4.sponsor, .w3-third {
@@ -527,10 +527,10 @@ a {
   .w3-col.m8, #app-body .m8#content, #app-body #content .article > div > div div.m8, #app-body .m8#right-column, footer .m8.logo, footer .m8.sponsor, .w3-twothird {
     width: 66.66666%; }
 
-  .w3-col.m9, #app-body .m9#content, #app-body #content .article > div > div div.m9, #app-body .m9#right-column, footer .m9.logo, footer .m9.sponsor, .w3-threequarter {
+  .w3-col.m9, #app-body #content, #app-body #content .article > div > div div.m9, #app-body #content .article > div > div div#content, #app-body .m9#right-column, footer .m9.logo, footer .m9.sponsor, .w3-threequarter {
     width: 74.99999%; }
 
-  .w3-col.m10, #app-body #content, #app-body #content .article > div > div div.m10, #app-body #content .article > div > div div#content, #app-body .m10#right-column, footer .m10.logo, footer .m10.sponsor {
+  .w3-col.m10, #app-body .m10#content, #app-body #content .article > div > div div.m10, #app-body .m10#right-column, footer .m10.logo, footer .m10.sponsor {
     width: 83.33333%; }
 
   .w3-col.m11, #app-body .m11#content, #app-body #content .article > div > div div.m11, #app-body .m11#right-column, footer .m11.logo, footer .m11.sponsor {
@@ -1407,8 +1407,6 @@ footer {
   footer .logo a {
     text-decoration: none;
     padding: 0 8px; }
-  footer .sponsor a {
-    text-decoration: none; }
   footer .sponsor img {
     height: 64px; }
 

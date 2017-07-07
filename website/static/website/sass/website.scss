@@ -74,7 +74,7 @@ html,body,h1,h2,h3,h4,h5 {
 
     #content {
         @extend .w3-col;
-        @extend .m10;
+        @extend .m9;
 
         padding-right: 8px;
 
@@ -191,7 +191,7 @@ html,body,h1,h2,h3,h4,h5 {
 
     #right-column {
         @extend .w3-col;
-        @extend .m2;
+        @extend .m3;
         @extend .w3-card-2;
         
         div {
