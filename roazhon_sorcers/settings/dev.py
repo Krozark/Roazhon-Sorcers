@@ -4,7 +4,6 @@ from roazhon_sorcers.settings.base import *
 
 SECRET_KEY = '6)9!5x!bmk9s_5%8*tn$2uin0i6v2y34b7!ainw$yd^wfd_6$&'
 
-
 DEV = True
 DEBUG = DEV
 DEBUG_PROPAGATE_EXCEPTIONS = DEBUG
@@ -23,5 +22,5 @@ DATABASES = {
 }
 
 
-EMAIL_HOST = "smtp.alwaysdata.com"
+EMAIL_HOST = "127.0.0.1"
 EMAIL_PORT = 25

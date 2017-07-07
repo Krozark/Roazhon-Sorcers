@@ -8,6 +8,7 @@ For developers only
 
 ```
 gem install sass
+python manage.py runserver --settings=roazhon_rcers.settings.dev
 ```
 
 # For everyone
@@ -34,6 +35,7 @@ to change :
 
 
 ## Prepare the server
+
 ```
 sudo apt-get install nginx
 sudo pip3 install uwsgi
@@ -47,6 +49,13 @@ sudo mkdir -p /etc/uwsgi/vassals
 sudo ln -s /home/user/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_nginx.conf  /etc/nginx/sites-enabled/
 sudo ln -s /home/user/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_uwsgi.ini /etc/uwsgi/vassals/
 ```
+
+copy file ```roazhon_sorcers/settings/dev.py``` into ```roazhon_sorcers/settings/prod.py``` and change value of
+* DEV to False
+* SECRET_KEY to a new one
+* fill ALLOWED_HOSTS
+* fill DATABASES dict
+
 
 ## Start uwsgi
 
