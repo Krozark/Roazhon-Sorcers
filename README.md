@@ -30,7 +30,7 @@ edit files
 * ```Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_uwsgi.conf```
 
 to change :
-* ```/home/ubuntu/Documents/Roazhon-Sorcers``` with your project path
+* ```/home/user/Roazhon-Sorcers``` with your project path
 
 ```
 sudo apt-get install nginx
@@ -38,12 +38,14 @@ sudo pip3 install uwsgi
 sudo adduser ubuntu www-data
 sudo adduser www-data ubuntus
 sudo mkdir -p /etc/uwsgi/vassals
-sudo ln -s /home/ubuntu/Documents/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_nginx.conf  /etc/nginx/sites-enabled/
-sudo ln -s /home/ubuntu/Documents/Roazhon-Sorcer/roazhon_sorcers_uwsgi.ini /etc/uwsgi/vassals/
+sudo ln -s /home/user/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_nginx.conf  /etc/nginx/sites-enabled/
+sudo ln -s /home/user/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_uwsgi.ini /etc/uwsgi/vassals/
 sudo /etc/init.d/nginx restart
 ```
 
-check url http://localhost:8000/static/website/img/icon.png
+check url http://localhost:80
+check url http://localhost:80/static/website/img/icon.png
+check url http://localhost:80/admin
 
 add this line to ```/etc/rc.local```
 
