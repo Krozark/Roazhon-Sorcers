@@ -32,32 +32,51 @@ edit files
 to change :
 * ```/home/user/Roazhon-Sorcers``` with your project path
 
+
+## Prepare the server
 ```
 sudo apt-get install nginx
 sudo pip3 install uwsgi
 sudo adduser ubuntu www-data
-sudo adduser www-data ubuntus
+sudo adduser www-data ubuntu
 sudo mkdir -p /etc/uwsgi/vassals
-sudo ln -s /home/user/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_nginx.conf  /etc/nginx/sites-enabled/
-sudo ln -s /home/user/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_uwsgi.ini /etc/uwsgi/vassals/
-sudo /etc/init.d/nginx restart
 ```
 
+## Add new site + configuration
+```
+sudo ln -s /home/user/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_nginx.conf  /etc/nginx/sites-enabled/
+sudo ln -s /home/user/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_uwsgi.ini /etc/uwsgi/vassals/
+```
+
+## Start uwsgi
+
+ use ONE of those commande to start uwsgi
+```
+uwsgi --ini /home/user/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_uwsgi.ini
+# OR
+sudo /usr/local/bin/uwsgi --emperor /etc/uwsgi/vassals --uid www-data --gid www-data --daemonize /var/log/uwsgi-emperor.log
+```
+
+## Restart ngnix
+
+```
+sudo /etc/init.d/nginx restart
+```
+## Make some checks
 check url http://localhost:80
 check url http://localhost:80/static/website/img/icon.png
 check url http://localhost:80/admin
 
-add this line to ```/etc/rc.local```
+## Update rc.local
+
+Add the line use in section _Start uwsgi_ to ```/etc/rc.local```
 
 ```
+uwsgi --ini /home/user/Roazhon-Sorcers/roazhon_sorcers/roazhon_sorcers_uwsgi.ini
+# OR
 sudo /usr/local/bin/uwsgi --emperor /etc/uwsgi/vassals --uid www-data --gid www-data --daemonize /var/log/uwsgi-emperor.log
 ```
 
-## informations
+## More installation informations
 
 You can find some installation infornation on this page : http://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html
-
-
-
-
-
