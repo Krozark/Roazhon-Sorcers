@@ -251,6 +251,10 @@ html,body,h1,h2,h3,h4,h5 {
             @extend .m2;
             @extend .w3-center;
             @extend .w3-left;
+            
+             a {
+                @extend .w3-hover-opacity;
+             }
 
             img {
                 height: 64px;
