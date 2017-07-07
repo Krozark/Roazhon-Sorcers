@@ -1407,6 +1407,8 @@ footer {
   footer .logo a {
     text-decoration: none;
     padding: 0 8px; }
+  footer .sponsor a {
+    text-decoration: none; }
   footer .sponsor img {
     height: 64px; }
 
