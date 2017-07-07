@@ -13,14 +13,11 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '6)9!5x!bmk9s_5%8*tn$2uin0i6v2y34b7!ainw$yd^wfd_6$&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEV = False
@@ -28,7 +25,7 @@ DEBUG = DEV
 DEBUG_PROPAGATE_EXCEPTIONS = DEBUG
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ["127.0.0.1", "roazhonsorcers.lpache.com"]
+ALLOWED_HOSTS = []
 
 SITE_ID = 1
 
@@ -90,16 +87,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'roazhon_sorcers.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -153,6 +140,3 @@ FILE_UPLOAD_PATH = os.path.join(MEDIA_ROOT, 'uploads/')
 ADMINS = (
         ('maxime BARBIER', 'maxime.barbier1991@gmail.com'),
 )
-
-EMAIL_HOST = "smtp.alwaysdata.com"
-EMAIL_PORT = 25

@@ -23,9 +23,12 @@
 
 *.vim
 *.pyc
+*.zip
+*.sqlite3
 
 # others
 */migrations
 *.map
 website/static/website/.sass-cache/
 public/
+roazhon_sorcers/settings/prod.py
