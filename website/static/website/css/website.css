@@ -980,7 +980,7 @@ a {
   margin-top: 16px !important;
   margin-bottom: 16px !important; }
 
-.w3-margin, #app-body #header-img > div div h1 {
+.w3-margin, #app-body #header-img > div div h1, #app-body #header-img > div div h2 {
   margin: 16px !important; }
 
 .w3-margin-top {

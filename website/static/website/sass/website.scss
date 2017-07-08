@@ -63,8 +63,14 @@ html,body,h1,h2,h3,h4,h5 {
                     @extend .w3-jumbo;
                 }
 
+                h2 {
+                    @extend .w3-margin;
+                }
+
+
                 p {
                     @extend .w3-xlarge;
+
                 }
             }
         }
