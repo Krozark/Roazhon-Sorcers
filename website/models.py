@@ -52,7 +52,7 @@ class Event(models.Model):
     frequency = models.CharField(_('frequence'), max_length=255, blank=True, help_text=_("Use thi field or date but not both"))
 
     place = models.CharField(_('Place'), max_length=255, blank=True)
-    image  = ResizedImageField(upload_to='uploads/article',blank=True, size=[350, 300], crop=['middle', 'center'], quality=75)
+    image  = ResizedImageField(upload_to='uploads/article', blank=True, size=[350, 300], quality=75)
     content = FroalaField(blank=True)
 
     class Meta:
