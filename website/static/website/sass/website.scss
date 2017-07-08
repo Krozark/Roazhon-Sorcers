@@ -14,7 +14,6 @@ html,body,h1,h2,h3,h4,h5 {
 
 .w3-content {
     max-width: inherit;
-    //padding:8px;
 }
 
 
@@ -80,7 +79,12 @@ html,body,h1,h2,h3,h4,h5 {
 
         .article {
             margin-bottom: 8px;
-            //@extend .clearfix;
+
+            h5 {
+                a {
+                    text-decoration: none;
+                }
+            }
 
             .article-img {
                 width:100%;
@@ -88,7 +92,6 @@ html,body,h1,h2,h3,h4,h5 {
                 max-height:480px;
                 object-fit: cover;
                 object-position: 50% 20%;
-                //background-position: top;
             } 
 
             & > div {
@@ -98,15 +101,14 @@ html,body,h1,h2,h3,h4,h5 {
                 p {
                     @extend .clearfix;
 
+                }
                     img {
                         padding: 8px;
-                        @extend .w3-left;
                         display: block;
-                        //margin: 0 auto;
-                        width : 50%!important;
-                        height : 50%!important;
+                        margin: 0 auto;
+                        max-width : 75%!important;
+                        height : auto!important;
                     }
-                }
 
                 iframe {
                     display: block;
@@ -230,34 +232,35 @@ html,body,h1,h2,h3,h4,h5 {
 
         padding-bottom : 8px;
 
-        .logo {
-            @extend .m2;
+        div {
             @extend .w3-center;
-            @extend .w3-right;
-
             @extend .w3-section;
             @extend .w3-col;
 
             a {
-                @extend .w3-xlarge;
                 @extend .w3-hover-opacity;
                 text-decoration: none;
+            }
+        }
+
+        .logo {
+            @extend .m3;
+
+            a {
+                @extend .w3-xlarge;
                 padding : 0 8px;
             }
         }
 
-        .sponsor {
-            @extend .w3-col;
-            @extend .m2;
-            @extend .w3-center;
-            @extend .w3-left;
-            
-             a {
-                @extend .w3-hover-opacity;
-             }
+        .juridic {
+            @extend .m6;
+        }
 
+        .sponsor {
+            @extend .m3;
+            
             img {
-                height: 64px;
+                width: 50%;
             }
         }
 

@@ -1,4 +1,4 @@
-{% load website_tags humanize %}
+{% load website_tags humanize generic_flatblocks %}
 {% spaceless %}
 <!DOCTYPE html>
 <html>
@@ -92,6 +92,12 @@
             <div class="sponsor">
                 <p>Équipe sponsorisée par Ultimate Guard. Retrouvez tous leur produts sur leur site</p>
                 <a href="http://www.ultimateguard.com/" target="_blank"><img src="{{STATIC_URL}}/website/img/UltimateGuard.png"/></a>
+            </div>
+
+            <div class="juridic">
+                {% gblock "home-juridic" for "gblocks.Text" into "block" %}
+                <p>{{block.text|safe}}</p>
+                {% if block_admin_url %}<p><a href="{{ block_admin_url }}">edit</a></p>{% endif %}
             </div>
 
             <div class="logo">

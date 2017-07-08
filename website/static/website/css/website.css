@@ -417,7 +417,7 @@ a {
   width: 100%;
   overflow: hidden; }
 
-.w3-center .w3-bar, #app-body #content #pagination .w3-bar, #app-body #right-column div .w3-bar, footer .logo .w3-bar, footer .sponsor .w3-bar, #app-body #content .w3-center #pagination > div, #app-body #content #pagination > div, #app-body #content #right-column div #pagination > div, #app-body #content footer .logo #pagination > div, #app-body #content footer .sponsor #pagination > div {
+.w3-center .w3-bar, #app-body #content #pagination .w3-bar, #app-body #right-column div .w3-bar, footer div .w3-bar, #app-body #content .w3-center #pagination > div, #app-body #content #pagination > div, #app-body #content #right-column div #pagination > div, #app-body #content footer div #pagination > div {
   display: inline-block;
   width: auto; }
 
@@ -446,7 +446,7 @@ a {
   white-space: normal;
   float: none; }
 
-.w3-bar-block.w3-center .w3-bar-item, #app-body #content .w3-bar-block#pagination .w3-bar-item, #app-body #right-column div.w3-bar-block .w3-bar-item, footer .w3-bar-block.logo .w3-bar-item, footer .w3-bar-block.sponsor .w3-bar-item, .w3-bar-block.w3-center #app-body #content #pagination a, #app-body #content #pagination .w3-bar-block.w3-center a, #app-body #content .w3-bar-block#pagination a, #app-body #right-column div.w3-bar-block #content #pagination a, #app-body #content #pagination #right-column div.w3-bar-block a, footer .w3-bar-block.logo #app-body #content #pagination a, #app-body #content #pagination footer .w3-bar-block.logo a, footer .w3-bar-block.sponsor #app-body #content #pagination a, #app-body #content #pagination footer .w3-bar-block.sponsor a {
+.w3-bar-block.w3-center .w3-bar-item, #app-body #content .w3-bar-block#pagination .w3-bar-item, #app-body #right-column div.w3-bar-block .w3-bar-item, footer div.w3-bar-block .w3-bar-item, .w3-bar-block.w3-center #app-body #content #pagination a, #app-body #content #pagination .w3-bar-block.w3-center a, #app-body #content .w3-bar-block#pagination a, #app-body #right-column div.w3-bar-block #content #pagination a, #app-body #content #pagination #right-column div.w3-bar-block a, footer div.w3-bar-block #app-body #content #pagination a, #app-body #content #pagination footer div.w3-bar-block a {
   text-align: center; }
 
 .w3-block, #app-body button {
@@ -462,117 +462,117 @@ a {
   display: table;
   clear: both; }
 
-.w3-col, #app-body #content, #app-body #content .article > div > div div, #app-body #right-column, footer .logo, footer .sponsor, .w3-half, .w3-third, .w3-twothird, .w3-threequarter, .w3-quarter {
+.w3-col, #app-body #content, #app-body #content .article > div > div div, #app-body #right-column, footer div, .w3-half, .w3-third, .w3-twothird, .w3-threequarter, .w3-quarter {
   float: left;
   width: 100%; }
 
-.w3-col.s1, #app-body .s1#content, #app-body #content .article > div > div div.s1, #app-body .s1#right-column, footer .s1.logo, footer .s1.sponsor {
+.w3-col.s1, #app-body .s1#content, #app-body #content .article > div > div div.s1, #app-body .s1#right-column, footer div.s1 {
   width: 8.33333%; }
 
-.w3-col.s2, #app-body .s2#content, #app-body #content .article > div > div div.s2, #app-body .s2#right-column, footer .s2.logo, footer .s2.sponsor {
+.w3-col.s2, #app-body .s2#content, #app-body #content .article > div > div div.s2, #app-body .s2#right-column, footer div.s2 {
   width: 16.66666%; }
 
-.w3-col.s3, #app-body .s3#content, #app-body #content .article > div > div div.s3, #app-body .s3#right-column, footer .s3.logo, footer .s3.sponsor {
+.w3-col.s3, #app-body .s3#content, #app-body #content .article > div > div div.s3, #app-body .s3#right-column, footer div.s3 {
   width: 24.99999%; }
 
-.w3-col.s4, #app-body .s4#content, #app-body #content .article > div > div div.s4, #app-body .s4#right-column, footer .s4.logo, footer .s4.sponsor {
+.w3-col.s4, #app-body .s4#content, #app-body #content .article > div > div div.s4, #app-body .s4#right-column, footer div.s4 {
   width: 33.33333%; }
 
-.w3-col.s5, #app-body .s5#content, #app-body #content .article > div > div div.s5, #app-body .s5#right-column, footer .s5.logo, footer .s5.sponsor {
+.w3-col.s5, #app-body .s5#content, #app-body #content .article > div > div div.s5, #app-body .s5#right-column, footer div.s5 {
   width: 41.66666%; }
 
-.w3-col.s6, #app-body .s6#content, #app-body #content .article > div > div div.s6, #app-body .s6#right-column, footer .s6.logo, footer .s6.sponsor {
+.w3-col.s6, #app-body .s6#content, #app-body #content .article > div > div div.s6, #app-body .s6#right-column, footer div.s6 {
   width: 49.99999%; }
 
-.w3-col.s7, #app-body .s7#content, #app-body #content .article > div > div div.s7, #app-body .s7#right-column, footer .s7.logo, footer .s7.sponsor {
+.w3-col.s7, #app-body .s7#content, #app-body #content .article > div > div div.s7, #app-body .s7#right-column, footer div.s7 {
   width: 58.33333%; }
 
-.w3-col.s8, #app-body .s8#content, #app-body #content .article > div > div div.s8, #app-body .s8#right-column, footer .s8.logo, footer .s8.sponsor {
+.w3-col.s8, #app-body .s8#content, #app-body #content .article > div > div div.s8, #app-body .s8#right-column, footer div.s8 {
   width: 66.66666%; }
 
-.w3-col.s9, #app-body .s9#content, #app-body #content .article > div > div div.s9, #app-body .s9#right-column, footer .s9.logo, footer .s9.sponsor {
+.w3-col.s9, #app-body .s9#content, #app-body #content .article > div > div div.s9, #app-body .s9#right-column, footer div.s9 {
   width: 74.99999%; }
 
-.w3-col.s10, #app-body .s10#content, #app-body #content .article > div > div div.s10, #app-body .s10#right-column, footer .s10.logo, footer .s10.sponsor {
+.w3-col.s10, #app-body .s10#content, #app-body #content .article > div > div div.s10, #app-body .s10#right-column, footer div.s10 {
   width: 83.33333%; }
 
-.w3-col.s11, #app-body .s11#content, #app-body #content .article > div > div div.s11, #app-body .s11#right-column, footer .s11.logo, footer .s11.sponsor {
+.w3-col.s11, #app-body .s11#content, #app-body #content .article > div > div div.s11, #app-body .s11#right-column, footer div.s11 {
   width: 91.66666%; }
 
-.w3-col.s12, #app-body .s12#content, #app-body #content .article > div > div div.s12, #app-body .s12#right-column, footer .s12.logo, footer .s12.sponsor {
+.w3-col.s12, #app-body .s12#content, #app-body #content .article > div > div div.s12, #app-body .s12#right-column, footer div.s12 {
   width: 99.99999%; }
 
 @media (min-width: 601px) {
-  .w3-col.m1, #app-body .m1#content, #app-body #content .article > div > div div.m1, #app-body .m1#right-column, footer .m1.logo, footer .m1.sponsor {
+  .w3-col.m1, #app-body .m1#content, #app-body #content .article > div > div div.m1, #app-body .m1#right-column, footer div.m1 {
     width: 8.33333%; }
 
-  .w3-col.m2, #app-body .m2#content, #app-body footer #content.logo, footer #app-body #content.logo, #app-body footer #content.sponsor, footer #app-body #content.sponsor, #app-body #content .article > div > div div.m2, #app-body #content .article > div > div div#right-column, #app-body #content .article > div > div footer div.logo, footer #app-body #content .article > div > div div.logo, #app-body #content .article > div > div footer div.sponsor, footer #app-body #content .article > div > div div.sponsor, #app-body #right-column, footer .logo, footer .sponsor {
+  .w3-col.m2, #app-body .m2#content, #app-body #content .article > div > div div.m2, #app-body #content .article > div > div div#right-column, #app-body #right-column, footer div.m2 {
     width: 16.66666%; }
 
-  .w3-col.m3, #app-body .m3#content, #app-body #content .article > div > div div.m3, #app-body .m3#right-column, footer .m3.logo, footer .m3.sponsor, .w3-quarter {
+  .w3-col.m3, #app-body .m3#content, #app-body footer #content.logo, footer #app-body #content.logo, #app-body footer #content.sponsor, footer #app-body #content.sponsor, #app-body #content .article > div > div div.m3, #app-body #content .article > div > div footer div.logo, footer #app-body #content .article > div > div div.logo, #app-body #content .article > div > div footer div.sponsor, footer #app-body #content .article > div > div div.sponsor, #app-body .m3#right-column, #app-body footer #right-column.logo, footer #app-body #right-column.logo, #app-body footer #right-column.sponsor, footer #app-body #right-column.sponsor, footer div.m3, footer div.logo, footer div.sponsor, footer .w3-col.logo, footer .w3-col.sponsor, .w3-quarter {
     width: 24.99999%; }
 
-  .w3-col.m4, #app-body .m4#content, #app-body #content .article > div > div div.m4, #app-body .m4#right-column, footer .m4.logo, footer .m4.sponsor, .w3-third {
+  .w3-col.m4, #app-body .m4#content, #app-body #content .article > div > div div.m4, #app-body .m4#right-column, footer div.m4, .w3-third {
     width: 33.33333%; }
 
-  .w3-col.m5, #app-body .m5#content, #app-body #content .article > div > div div.m5, #app-body .m5#right-column, footer .m5.logo, footer .m5.sponsor {
+  .w3-col.m5, #app-body .m5#content, #app-body #content .article > div > div div.m5, #app-body .m5#right-column, footer div.m5 {
     width: 41.66666%; }
 
-  .w3-col.m6, #app-body .m6#content, #app-body #content .article > div > div div.m6, #app-body .m6#right-column, footer .m6.logo, footer .m6.sponsor, .w3-half {
+  .w3-col.m6, #app-body .m6#content, #app-body footer #content.juridic, footer #app-body #content.juridic, #app-body #content .article > div > div div.m6, #app-body #content .article > div > div footer div.juridic, footer #app-body #content .article > div > div div.juridic, #app-body .m6#right-column, #app-body footer #right-column.juridic, footer #app-body #right-column.juridic, footer div.m6, footer div.juridic, footer .w3-col.juridic, .w3-half {
     width: 49.99999%; }
 
-  .w3-col.m7, #app-body .m7#content, #app-body #content .article > div > div div.m7, #app-body .m7#right-column, footer .m7.logo, footer .m7.sponsor {
+  .w3-col.m7, #app-body .m7#content, #app-body #content .article > div > div div.m7, #app-body .m7#right-column, footer div.m7 {
     width: 58.33333%; }
 
-  .w3-col.m8, #app-body .m8#content, #app-body #content .article > div > div div.m8, #app-body .m8#right-column, footer .m8.logo, footer .m8.sponsor, .w3-twothird {
+  .w3-col.m8, #app-body .m8#content, #app-body #content .article > div > div div.m8, #app-body .m8#right-column, footer div.m8, .w3-twothird {
     width: 66.66666%; }
 
-  .w3-col.m9, #app-body .m9#content, #app-body #content .article > div > div div.m9, #app-body .m9#right-column, footer .m9.logo, footer .m9.sponsor, .w3-threequarter {
+  .w3-col.m9, #app-body .m9#content, #app-body #content .article > div > div div.m9, #app-body .m9#right-column, footer div.m9, .w3-threequarter {
     width: 74.99999%; }
 
-  .w3-col.m10, #app-body #content, #app-body #content .article > div > div div.m10, #app-body #content .article > div > div div#content, #app-body .m10#right-column, footer .m10.logo, footer .m10.sponsor {
+  .w3-col.m10, #app-body #content, #app-body #content .article > div > div div.m10, #app-body #content .article > div > div div#content, #app-body .m10#right-column, footer div.m10 {
     width: 83.33333%; }
 
-  .w3-col.m11, #app-body .m11#content, #app-body #content .article > div > div div.m11, #app-body .m11#right-column, footer .m11.logo, footer .m11.sponsor {
+  .w3-col.m11, #app-body .m11#content, #app-body #content .article > div > div div.m11, #app-body .m11#right-column, footer div.m11 {
     width: 91.66666%; }
 
-  .w3-col.m12, #app-body .m12#content, #app-body #content .article > div > div div.m12, #app-body .m12#right-column, footer .m12.logo, footer .m12.sponsor {
+  .w3-col.m12, #app-body .m12#content, #app-body #content .article > div > div div.m12, #app-body .m12#right-column, footer div.m12 {
     width: 99.99999%; } }
 @media (min-width: 993px) {
-  .w3-col.l1, #app-body .l1#content, #app-body #content .article > div > div div.l1, #app-body .l1#right-column, footer .l1.logo, footer .l1.sponsor {
+  .w3-col.l1, #app-body .l1#content, #app-body #content .article > div > div div.l1, #app-body .l1#right-column, footer div.l1 {
     width: 8.33333%; }
 
-  .w3-col.l2, #app-body .l2#content, #app-body #content .article > div > div div.l2, #app-body .l2#right-column, footer .l2.logo, footer .l2.sponsor {
+  .w3-col.l2, #app-body .l2#content, #app-body #content .article > div > div div.l2, #app-body .l2#right-column, footer div.l2 {
     width: 16.66666%; }
 
-  .w3-col.l3, #app-body .l3#content, #app-body #content .article > div > div div.l3, #app-body .l3#right-column, footer .l3.logo, footer .l3.sponsor {
+  .w3-col.l3, #app-body .l3#content, #app-body #content .article > div > div div.l3, #app-body .l3#right-column, footer div.l3 {
     width: 24.99999%; }
 
-  .w3-col.l4, #app-body .l4#content, #app-body #content .article > div > div div.l4, #app-body .l4#right-column, footer .l4.logo, footer .l4.sponsor {
+  .w3-col.l4, #app-body .l4#content, #app-body #content .article > div > div div.l4, #app-body .l4#right-column, footer div.l4 {
     width: 33.33333%; }
 
-  .w3-col.l5, #app-body .l5#content, #app-body #content .article > div > div div.l5, #app-body .l5#right-column, footer .l5.logo, footer .l5.sponsor {
+  .w3-col.l5, #app-body .l5#content, #app-body #content .article > div > div div.l5, #app-body .l5#right-column, footer div.l5 {
     width: 41.66666%; }
 
-  .w3-col.l6, #app-body .l6#content, #app-body #content .article > div > div div.l6, #app-body .l6#right-column, footer .l6.logo, footer .l6.sponsor {
+  .w3-col.l6, #app-body .l6#content, #app-body #content .article > div > div div.l6, #app-body .l6#right-column, footer div.l6 {
     width: 49.99999%; }
 
-  .w3-col.l7, #app-body .l7#content, #app-body #content .article > div > div div.l7, #app-body .l7#right-column, footer .l7.logo, footer .l7.sponsor {
+  .w3-col.l7, #app-body .l7#content, #app-body #content .article > div > div div.l7, #app-body .l7#right-column, footer div.l7 {
     width: 58.33333%; }
 
-  .w3-col.l8, #app-body .l8#content, #app-body #content .article > div > div div.l8, #app-body .l8#right-column, footer .l8.logo, footer .l8.sponsor {
+  .w3-col.l8, #app-body .l8#content, #app-body #content .article > div > div div.l8, #app-body .l8#right-column, footer div.l8 {
     width: 66.66666%; }
 
-  .w3-col.l9, #app-body .l9#content, #app-body #content .article > div > div div.l9, #app-body .l9#right-column, footer .l9.logo, footer .l9.sponsor {
+  .w3-col.l9, #app-body .l9#content, #app-body #content .article > div > div div.l9, #app-body .l9#right-column, footer div.l9 {
     width: 74.99999%; }
 
-  .w3-col.l10, #app-body .l10#content, #app-body #content .article > div > div div.l10, #app-body .l10#right-column, footer .l10.logo, footer .l10.sponsor {
+  .w3-col.l10, #app-body .l10#content, #app-body #content .article > div > div div.l10, #app-body .l10#right-column, footer div.l10 {
     width: 83.33333%; }
 
-  .w3-col.l11, #app-body .l11#content, #app-body #content .article > div > div div.l11, #app-body .l11#right-column, footer .l11.logo, footer .l11.sponsor {
+  .w3-col.l11, #app-body .l11#content, #app-body #content .article > div > div div.l11, #app-body .l11#right-column, footer div.l11 {
     width: 91.66666%; }
 
-  .w3-col.l12, #app-body .l12#content, #app-body #content .article > div > div div.l12, #app-body .l12#right-column, footer .l12.logo, footer .l12.sponsor {
+  .w3-col.l12, #app-body .l12#content, #app-body #content .article > div > div div.l12, #app-body .l12#right-column, footer div.l12 {
     width: 99.99999%; } }
 .w3-content, #app-body {
   max-width: 980px;
@@ -762,7 +762,7 @@ a {
 .w3-round-xxlarge {
   border-radius: 32px; }
 
-.w3-row-padding, .w3-row-padding > .w3-half, .w3-row-padding > .w3-third, .w3-row-padding > .w3-twothird, .w3-row-padding > .w3-threequarter, .w3-row-padding > .w3-quarter, .w3-row-padding > .w3-col, #app-body .w3-row-padding > #content, #app-body #content .article > div > div .w3-row-padding > div, #app-body .w3-row-padding > #right-column, footer .w3-row-padding > .logo, footer .w3-row-padding > .sponsor {
+.w3-row-padding, .w3-row-padding > .w3-half, .w3-row-padding > .w3-third, .w3-row-padding > .w3-twothird, .w3-row-padding > .w3-threequarter, .w3-row-padding > .w3-quarter, .w3-row-padding > .w3-col, #app-body .w3-row-padding > #content, #app-body #content .article > div > div .w3-row-padding > div, #app-body .w3-row-padding > #right-column, footer .w3-row-padding > div {
   padding: 0 8px; }
 
 .w3-container, #app-body #header-img > div, #app-body #content .article > div, #app-body #content .comment, #app-body #right-column div, footer, .w3-panel {
@@ -880,7 +880,7 @@ a {
 .w3-animate-input:focus {
   width: 100% !important; }
 
-.w3-opacity, #app-body #content .comment span, .w3-hover-opacity:hover, footer .logo a:hover, footer .sponsor a:hover {
+.w3-opacity, #app-body #content .comment span, .w3-hover-opacity:hover, footer div a:hover {
   opacity: 0.60; }
 
 .w3-opacity-off, .w3-hover-opacity-off:hover {
@@ -943,7 +943,7 @@ a {
 .w3-justify {
   text-align: justify !important; }
 
-.w3-center, #app-body #content #pagination, #app-body #right-column div, footer .logo, footer .sponsor {
+.w3-center, #app-body #content #pagination, #app-body #right-column div, footer div {
   text-align: center !important; }
 
 .w3-border-0 {
@@ -976,7 +976,7 @@ a {
 .w3-rightbar {
   border-right: 6px solid #ccc !important; }
 
-.w3-section, footer .logo, .w3-code {
+.w3-section, footer div, .w3-code {
   margin-top: 16px !important;
   margin-bottom: 16px !important; }
 
@@ -1024,10 +1024,10 @@ a {
   padding-top: 64px !important;
   padding-bottom: 64px !important; }
 
-.w3-left, #app-body #content .article > div p img, #app-body #content .comment img, footer .sponsor {
+.w3-left, #app-body #content .comment img {
   float: left !important; }
 
-.w3-right, #app-body #content .comment span, footer .logo {
+.w3-right, #app-body #content .comment span {
   float: right !important; }
 
 .w3-button:hover, #app-body button:hover, #app-body #content #pagination a:hover {
@@ -1361,17 +1361,20 @@ html, body, h1, h2, h3, h4, h5 {
     padding-right: 8px; }
     #app-body #content .article {
       margin-bottom: 8px; }
+      #app-body #content .article h5 a {
+        text-decoration: none; }
       #app-body #content .article .article-img {
         width: 100%;
         min-height: 200px;
         max-height: 480px;
         object-fit: cover;
         object-position: 50% 20%; }
-      #app-body #content .article > div p img {
+      #app-body #content .article > div img {
         padding: 8px;
         display: block;
-        width: 50% !important;
-        height: 50% !important; }
+        margin: 0 auto;
+        max-width: 75% !important;
+        height: auto !important; }
       #app-body #content .article > div iframe {
         display: block;
         margin: 0 auto; }
@@ -1404,10 +1407,11 @@ html, body, h1, h2, h3, h4, h5 {
 
 footer {
   padding-bottom: 8px; }
+  footer div a {
+    text-decoration: none; }
   footer .logo a {
-    text-decoration: none;
     padding: 0 8px; }
   footer .sponsor img {
-    height: 64px; }
+    width: 50%; }
 
 /*# sourceMappingURL=website.css.map */

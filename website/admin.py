@@ -11,11 +11,25 @@ class ArticleCategoryAdmin(admin.ModelAdmin):
 admin.site.register(ArticleCategory, ArticleCategoryAdmin)
 
 class ArticleAdmin(admin.ModelAdmin, AdminThumbnailMixin):
-    list_display = ["title", "date", "thumbnail"]
-    list_filter = ["M2M_category"]
-    #readonly_fields = ('date',)
+    list_display = ["title", "date", "created_by", "get_categories", "draft", "thumbnail"]
+    list_filter = ["M2M_category", "draft", "created_by"]
+    readonly_fields = ('created_by',)
     filter_horizontal = ["M2M_category"]
     thumbnail_image_field_name = 'image'
+
+    def get_categories(self, obj):
+        return ", ".join([x.title for x in obj.M2M_category.all()])
+    
+    def save_model(self, request, instance, form, change):
+        print("save_model")
+        user = request.user 
+        instance = form.save(commit=False)
+        if not change or not instance.created_by:
+            instance.created_by = user
+        instance.save()
+        form.save_m2m()
+        return instance
+
 admin.site.register(Article, ArticleAdmin)
 
 class EventAdmin(admin.ModelAdmin, AdminThumbnailMixin):

@@ -20,7 +20,7 @@
 <div class="article">
     <div>
         <h3><b>{{object}}</b></h3>
-        <h5>{{object.M2M_category.all|join:", "}}, <span class="w3-opacity">{{object.date}}</span></h5>
+        <h5>{% for category in object.M2M_category.all %}<a href="{{category.get_absolute_url}}">{{category|title}}</a>, {% endfor %}<span class="w3-opacity">{{object.date}}</span></h5>
         {{object.content|safe}}
     </div>
 </div>

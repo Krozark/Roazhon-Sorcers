@@ -27,7 +27,7 @@ class ArticleListView(ListView):
         return context
 
     def get_queryset(self):
-        queryset = self.model.objects.all()
+        queryset = self.model.objects.filter(draft=False)
         category = self.request.GET.get("category", None)
         if category:
             queryset = queryset.filter(M2M_category__slug=category)
@@ -49,7 +49,7 @@ def contactView(request):
         form = ContactForm (request.POST)
 
         if form.is_valid():
-            subject = form.cleaned_data['subject']
+            subject = "[Roazhon Sorcers website] " + form.cleaned_data['subject']
             email_from = form.cleaned_data['email_from']
             message = form.cleaned_data['message']
             cc_myself = form.cleaned_data['cc_myself']
