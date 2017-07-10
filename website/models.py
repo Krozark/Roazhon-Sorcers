@@ -17,6 +17,9 @@ from website.utils import file_cleanup
 class ArticleCategory(models.Model):
     title = models.CharField(_('Title'), max_length=255, unique=True)
     slug = models.SlugField(_("slug"),max_length=140, unique=True)
+    
+    class Meta:
+        ordering = ["tile"]
 
     def __str__(self):
         return "%s" % self.title
@@ -56,7 +59,7 @@ class Event(models.Model):
     content = FroalaField(blank=True)
 
     class Meta:
-        ordering = ["date"]
+        ordering = ["date", "time", "title"]
 
     def __str__(self):
         return "%s" % self.title
