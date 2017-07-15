@@ -19,7 +19,7 @@ class ArticleCategory(models.Model):
     slug = models.SlugField(_("slug"),max_length=140, unique=True)
     
     class Meta:
-        ordering = ["tile"]
+        ordering = ["title"]
 
     def __str__(self):
         return "%s" % self.title
@@ -35,7 +35,7 @@ class Article(models.Model):
     image  = ResizedImageField(upload_to='uploads/article',blank=True, size=[1920, 1080], crop=['middle', 'center'], quality=75)
     M2M_category = models.ManyToManyField(ArticleCategory)
     draft = models.BooleanField(_("Draft"), default=True, help_text=_("The post will no apear in the website in draft state"))
-    content = FroalaField()
+    content = FroalaField(help_text=_("You can use http://www.strawpoll.me/ to create polls"))
 
     class Meta:
         ordering = ["-date"]

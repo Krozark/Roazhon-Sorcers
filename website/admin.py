@@ -21,7 +21,6 @@ class ArticleAdmin(admin.ModelAdmin, AdminThumbnailMixin):
         return ", ".join([x.title for x in obj.M2M_category.all()])
     
     def save_model(self, request, instance, form, change):
-        print("save_model")
         user = request.user 
         instance = form.save(commit=False)
         if not change or not instance.created_by:

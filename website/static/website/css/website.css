@@ -1377,7 +1377,10 @@ html, body, h1, h2, h3, h4, h5 {
         height: auto !important; }
       #app-body #content .article > div iframe {
         display: block;
-        margin: 0 auto; }
+        margin: 0 auto;
+        height: 410px !important;
+        width: 690px !important;
+        max-width: 100%; }
     #app-body #content .article-row .w3-third {
       padding-left: 8px; }
     #app-body #content .article-row .w3-third:first-child {

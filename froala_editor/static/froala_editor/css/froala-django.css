@@ -7,6 +7,14 @@ form .fr-element p {
     padding-left: 0;
 }
 
+.aligned label:not(.vCheckboxLabel)::after {
+    height: 0px;
+}
+
+.fr-wrapper::after {
+    min-height: 200px;
+}
+
 .fr-box {
     clear: both;
 }
