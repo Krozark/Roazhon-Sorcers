@@ -139,5 +139,5 @@ FILE_UPLOAD_PATH = os.path.join(MEDIA_ROOT, 'uploads/')
 #FROALA_UPLOAD_PATH = FILE_UPLOAD_PATH
 
 ADMINS = (
-        ('maxime BARBIER', 'maxime.barbier1991@gmail.com'),
+        ('maxime BARBIER', 'dev.maxime.barbier1991@gmail.com'),
 )
