@@ -11,7 +11,7 @@ class ArticleCategoryAdmin(admin.ModelAdmin):
 admin.site.register(ArticleCategory, ArticleCategoryAdmin)
 
 class ArticleAdmin(admin.ModelAdmin, AdminThumbnailMixin):
-    list_display = ["title", "date", "created_by", "get_categories", "draft", "thumbnail"]
+    list_display = ["title", "date", "created_by", "get_categories", "draft", "get_hit_count", "thumbnail"]
     list_filter = ["M2M_category", "draft", "created_by"]
     readonly_fields = ('created_by',)
     filter_horizontal = ["M2M_category"]
@@ -19,6 +19,9 @@ class ArticleAdmin(admin.ModelAdmin, AdminThumbnailMixin):
 
     def get_categories(self, obj):
         return ", ".join([x.title for x in obj.M2M_category.all()])
+
+    def get_hit_count(self, obj):
+        return obj.hit_count.hits
     
     def save_model(self, request, instance, form, change):
         user = request.user 

@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'froala_editor',
     'sorl.thumbnail',    
     'django_resized',
+    'hitcount',
 
     'website',
 ]

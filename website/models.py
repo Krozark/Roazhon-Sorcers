@@ -10,6 +10,8 @@ from django.contrib.auth.models import User
 from froala_editor.fields import FroalaField
 from django_resized import ResizedImageField
 
+from hitcount.models import HitCountMixin
+
 from website.utils import file_cleanup
 
 
@@ -28,7 +30,7 @@ class ArticleCategory(models.Model):
         return reverse("website-home")+"?category="+self.slug
 
 
-class Article(models.Model):
+class Article(models.Model, HitCountMixin):
     title = models.CharField(_('Title'), max_length=255)
     date    = models.DateTimeField(_('Date'), default=datetime.now())
     created_by = models.ForeignKey(User)

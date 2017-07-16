@@ -922,13 +922,13 @@ a {
 .w3-large {
   font-size: 18px !important; }
 
-.w3-xlarge, #app-body #header-img > div div p, footer .logo a {
+.w3-xlarge, #app-body #header-img > div div p {
   font-size: 24px !important; }
 
 .w3-xxlarge {
   font-size: 36px !important; }
 
-.w3-xxxlarge {
+.w3-xxxlarge, footer .logo a {
   font-size: 48px !important; }
 
 .w3-jumbo, #app-body #header-img > div div h1 {

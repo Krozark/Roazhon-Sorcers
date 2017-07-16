@@ -38,9 +38,9 @@ class ArticleDetailView(DetailView):
     template_name = "website/article.html"
     model = Article
 
-    def get_context_data(self, **kwargs):
-        context = super(ArticleDetailView, self).get_context_data(**kwargs)
-        return context
+    #def get_context_data(self, **kwargs):
+    #    context = super(ArticleDetailView, self).get_context_data(**kwargs)
+    #    return context
 
 def contactView(request):
     form = None
