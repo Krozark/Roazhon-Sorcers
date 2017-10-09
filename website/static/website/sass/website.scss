@@ -2,6 +2,8 @@
 @import "w3.scss";
 @import "w3-theme-black.scss";
 
+$padding: 12px;
+
 
 html,body,h1,h2,h3,h4,h5 {
     font-family: "Open Sans", sans-serif
@@ -22,7 +24,7 @@ html,body,h1,h2,h3,h4,h5 {
     @extend .w3-content;
     @extend .w3-theme-l1;
     @extend .w3-row;
-    padding-bottom: 8px;
+    padding-bottom: $padding;
 
     button {
         @extend .w3-button;
@@ -35,7 +37,7 @@ html,body,h1,h2,h3,h4,h5 {
         @extend .w3-display-container;
         @extend .w3-animate-opacity;
         
-        padding-bottom: 8px;
+        padding-bottom: $padding;
 
         img {
             width:100%;
@@ -81,10 +83,14 @@ html,body,h1,h2,h3,h4,h5 {
         @extend .w3-col;
         @extend .m10;
 
-        padding-right: 8px;
+        padding-right: $padding;
+
+        @media (max-width:600px) {
+            padding-right: 0px;
+        } 
 
         .article {
-            margin-bottom: 8px;
+            margin-bottom: $padding;
 
             h5 {
                 a {
@@ -136,7 +142,7 @@ html,body,h1,h2,h3,h4,h5 {
 
         .article-row {
             .w3-third {
-                padding-left : 8px;
+                padding-left : $padding;
             }
             .w3-third:first-child {
                 padding-left : 0px;
@@ -151,7 +157,7 @@ html,body,h1,h2,h3,h4,h5 {
         }
 
         form {
-            padding : 8px;
+            padding : $padding;
 
             input, textarea {
                 @extend .w3-input;
@@ -182,7 +188,7 @@ html,body,h1,h2,h3,h4,h5 {
             @extend .w3-card-2;
             @extend .w3-white;
 
-            margin-top:8px;
+            margin-top: $padding;
 
             img {
                 @extend .w3-left;
@@ -210,7 +216,7 @@ html,body,h1,h2,h3,h4,h5 {
             @extend .w3-theme-l5;
             @extend .w3-center;
 
-            margin-bottom: 8px;
+            margin-bottom: $padding;
 
             h4 {
                 font-weight: bold;
@@ -239,7 +245,7 @@ html,body,h1,h2,h3,h4,h5 {
         @extend .w3-theme-d3;
         @extend .clearfix;
 
-        padding-bottom : 8px;
+        padding-bottom : $padding;
 
         div {
             @extend .w3-center;
@@ -257,7 +263,7 @@ html,body,h1,h2,h3,h4,h5 {
 
             a {
                 @extend .w3-xxxlarge;
-                padding : 0 8px;
+                padding : 0 $padding;
             }
         }
 

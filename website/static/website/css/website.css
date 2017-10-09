@@ -1343,9 +1343,9 @@ html, body, h1, h2, h3, h4, h5 {
   max-width: inherit; }
 
 #app-body {
-  padding-bottom: 8px; }
+  padding-bottom: 12px; }
   #app-body #header-img {
-    padding-bottom: 8px; }
+    padding-bottom: 12px; }
     #app-body #header-img img {
       width: 100%;
       min-height: 350px;
@@ -1358,9 +1358,12 @@ html, body, h1, h2, h3, h4, h5 {
       background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
       text-align: center; }
   #app-body #content {
-    padding-right: 8px; }
+    padding-right: 12px; }
+    @media (max-width: 600px) {
+      #app-body #content {
+        padding-right: 0px; } }
     #app-body #content .article {
-      margin-bottom: 8px; }
+      margin-bottom: 12px; }
       #app-body #content .article h5 a {
         text-decoration: none; }
       #app-body #content .article .article-img {
@@ -1382,21 +1385,21 @@ html, body, h1, h2, h3, h4, h5 {
         width: 690px !important;
         max-width: 100%; }
     #app-body #content .article-row .w3-third {
-      padding-left: 8px; }
+      padding-left: 12px; }
     #app-body #content .article-row .w3-third:first-child {
       padding-left: 0px; }
     #app-body #content .article-row .article img {
       max-height: 220px; }
     #app-body #content form {
-      padding: 8px; }
+      padding: 12px; }
       #app-body #content form #id_honeypot {
         display: none; }
     #app-body #content .comment {
-      margin-top: 8px; }
+      margin-top: 12px; }
       #app-body #content .comment img {
         width: 60px; }
   #app-body #right-column div {
-    margin-bottom: 8px; }
+    margin-bottom: 12px; }
     #app-body #right-column div h4 {
       font-weight: bold; }
     #app-body #right-column div .info {
@@ -1409,11 +1412,11 @@ html, body, h1, h2, h3, h4, h5 {
     margin-bottom: 0px; }
 
 footer {
-  padding-bottom: 8px; }
+  padding-bottom: 12px; }
   footer div a {
     text-decoration: none; }
   footer .logo a {
-    padding: 0 8px; }
+    padding: 0 12px; }
   footer .sponsor img {
     width: 50%; }
 
