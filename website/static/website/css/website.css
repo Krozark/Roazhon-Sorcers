@@ -251,7 +251,7 @@ a {
 .w3-table th:first-child, .w3-table td:first-child, .w3-table-all th:first-child, .w3-table-all td:first-child {
   padding-left: 16px; }
 
-.w3-btn, .w3-button, #app-body button, #app-body #content #pagination a {
+.w3-btn, .w3-button, #app-body button, #app-body .button2, #app-body #content #pagination a {
   border: none;
   display: inline-block;
   outline: 0;
@@ -268,7 +268,7 @@ a {
 .w3-btn:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
-.w3-btn, .w3-button, #app-body button, #app-body #content #pagination a {
+.w3-btn, .w3-button, #app-body button, #app-body .button2, #app-body #content #pagination a {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -276,7 +276,7 @@ a {
   -ms-user-select: none;
   user-select: none; }
 
-.w3-disabled, .w3-btn:disabled, .w3-button:disabled, #app-body button:disabled, #app-body #content #pagination a:disabled {
+.w3-disabled, .w3-btn:disabled, .w3-button:disabled, #app-body button:disabled, #app-body .button2:disabled, #app-body #content #pagination a:disabled {
   cursor: not-allowed;
   opacity: 0.3; }
 
@@ -309,7 +309,7 @@ a {
 .w3-ul li:last-child {
   border-bottom: none; }
 
-.w3-tooltip, .w3-display-container, #app-body #header-img {
+.w3-tooltip, .w3-display-container, #app-body #header-img, #app-body .article-preview {
   position: relative; }
 
 .w3-tooltip .w3-text {
@@ -350,7 +350,7 @@ a {
   background-color: #ccc;
   color: #000; }
 
-.w3-dropdown-hover:hover > .w3-button:first-child, #app-body .w3-dropdown-hover:hover > button:first-child, #app-body #content #pagination .w3-dropdown-hover:hover > a:first-child, .w3-dropdown-click:hover > .w3-button:first-child, #app-body .w3-dropdown-click:hover > button:first-child, #app-body #content #pagination .w3-dropdown-click:hover > a:first-child {
+.w3-dropdown-hover:hover > .w3-button:first-child, #app-body .w3-dropdown-hover:hover > button:first-child, #app-body .w3-dropdown-hover:hover > .button2:first-child, #app-body #content #pagination .w3-dropdown-hover:hover > a:first-child, .w3-dropdown-click:hover > .w3-button:first-child, #app-body .w3-dropdown-click:hover > button:first-child, #app-body .w3-dropdown-click:hover > .button2:first-child, #app-body #content #pagination .w3-dropdown-click:hover > a:first-child {
   background-color: #ccc;
   color: #000; }
 
@@ -384,7 +384,7 @@ a {
 .w3-bar-block .w3-dropdown-hover .w3-dropdown-content, .w3-bar-block .w3-dropdown-click .w3-dropdown-content {
   min-width: 100%; }
 
-.w3-bar-block .w3-dropdown-hover .w3-button, .w3-bar-block .w3-dropdown-hover #app-body button, #app-body .w3-bar-block .w3-dropdown-hover button, .w3-bar-block .w3-dropdown-hover #app-body #content #pagination a, #app-body #content #pagination .w3-bar-block .w3-dropdown-hover a, .w3-bar-block .w3-dropdown-click .w3-button, .w3-bar-block .w3-dropdown-click #app-body button, #app-body .w3-bar-block .w3-dropdown-click button, .w3-bar-block .w3-dropdown-click #app-body #content #pagination a, #app-body #content #pagination .w3-bar-block .w3-dropdown-click a {
+.w3-bar-block .w3-dropdown-hover .w3-button, .w3-bar-block .w3-dropdown-hover #app-body button, #app-body .w3-bar-block .w3-dropdown-hover button, .w3-bar-block .w3-dropdown-hover #app-body .button2, #app-body .w3-bar-block .w3-dropdown-hover .button2, .w3-bar-block .w3-dropdown-hover #app-body #content #pagination a, #app-body #content #pagination .w3-bar-block .w3-dropdown-hover a, .w3-bar-block .w3-dropdown-click .w3-button, .w3-bar-block .w3-dropdown-click #app-body button, #app-body .w3-bar-block .w3-dropdown-click button, .w3-bar-block .w3-dropdown-click #app-body .button2, #app-body .w3-bar-block .w3-dropdown-click .button2, .w3-bar-block .w3-dropdown-click #app-body #content #pagination a, #app-body #content #pagination .w3-bar-block .w3-dropdown-click a {
   width: 100%;
   text-align: left;
   padding: 8px 16px; }
@@ -433,7 +433,7 @@ a {
   position: static;
   float: left; }
 
-.w3-bar .w3-button, #app-body #content #pagination > div .w3-button, .w3-bar #app-body button, #app-body .w3-bar button, #app-body #content #pagination > div button, .w3-bar #app-body #content #pagination a, #app-body #content #pagination .w3-bar a, #app-body #content #pagination > div a {
+.w3-bar .w3-button, #app-body #content #pagination > div .w3-button, .w3-bar #app-body button, #app-body .w3-bar button, #app-body #content #pagination > div button, .w3-bar #app-body .button2, #app-body .w3-bar .button2, #app-body #content #pagination > div .button2, .w3-bar #app-body #content #pagination a, #app-body #content #pagination .w3-bar a, #app-body #content #pagination > div a {
   white-space: normal; }
 
 .w3-bar-block .w3-bar-item, .w3-bar-block #app-body #content #pagination a, #app-body #content #pagination .w3-bar-block a {
@@ -456,7 +456,7 @@ a {
 .w3-responsive {
   overflow-x: auto; }
 
-.w3-container:after, #app-body #header-img > div:after, #app-body #content .article > div:after, #app-body #content .comment:after, #app-body #right-column div:after, footer:after, .w3-container:before, #app-body #header-img > div:before, #app-body #content .article > div:before, #app-body #content .comment:before, #app-body #right-column div:before, footer:before, .w3-panel:after, .w3-panel:before, .w3-row:after, #app-body:after, #app-body #content .article > div > div:after, .w3-row:before, #app-body:before, #app-body #content .article > div > div:before, .w3-row-padding:after, .w3-row-padding:before,
+.w3-container:after, #app-body #header-img > div:after, #app-body .article-preview > div:after, #app-body #content .article > div:after, #app-body #content .comment:after, #app-body #right-column div:after, footer:after, .w3-container:before, #app-body #header-img > div:before, #app-body .article-preview > div:before, #app-body #content .article > div:before, #app-body #content .comment:before, #app-body #right-column div:before, footer:before, .w3-panel:after, .w3-panel:before, .w3-row:after, #app-body:after, #app-body #content .article > div > div:after, .w3-row:before, #app-body:before, #app-body #content .article > div > div:before, .w3-row-padding:after, .w3-row-padding:before,
 .w3-cell-row:before, .w3-cell-row:after, .w3-clear:after, .w3-clear:before, .w3-bar:before, #app-body #content #pagination > div:before, .w3-bar:after, #app-body #content #pagination > div:after {
   content: "";
   display: table;
@@ -627,7 +627,7 @@ a {
   .w3-bar-item.w3-mobile, #app-body #content #pagination a.w3-mobile, .w3-dropdown-hover.w3-mobile, .w3-dropdown-click.w3-mobile {
     text-align: center; }
 
-  .w3-dropdown-hover.w3-mobile, .w3-dropdown-hover.w3-mobile .w3-btn, .w3-dropdown-hover.w3-mobile .w3-button, .w3-dropdown-hover.w3-mobile #app-body button, #app-body .w3-dropdown-hover.w3-mobile button, .w3-dropdown-hover.w3-mobile #app-body #content #pagination a, #app-body #content #pagination .w3-dropdown-hover.w3-mobile a, .w3-dropdown-click.w3-mobile, .w3-dropdown-click.w3-mobile .w3-btn, .w3-dropdown-click.w3-mobile .w3-button, .w3-dropdown-click.w3-mobile #app-body button, #app-body .w3-dropdown-click.w3-mobile button, .w3-dropdown-click.w3-mobile #app-body #content #pagination a, #app-body #content #pagination .w3-dropdown-click.w3-mobile a {
+  .w3-dropdown-hover.w3-mobile, .w3-dropdown-hover.w3-mobile .w3-btn, .w3-dropdown-hover.w3-mobile .w3-button, .w3-dropdown-hover.w3-mobile #app-body button, #app-body .w3-dropdown-hover.w3-mobile button, .w3-dropdown-hover.w3-mobile #app-body .button2, #app-body .w3-dropdown-hover.w3-mobile .button2, .w3-dropdown-hover.w3-mobile #app-body #content #pagination a, #app-body #content #pagination .w3-dropdown-hover.w3-mobile a, .w3-dropdown-click.w3-mobile, .w3-dropdown-click.w3-mobile .w3-btn, .w3-dropdown-click.w3-mobile .w3-button, .w3-dropdown-click.w3-mobile #app-body button, #app-body .w3-dropdown-click.w3-mobile button, .w3-dropdown-click.w3-mobile #app-body .button2, #app-body .w3-dropdown-click.w3-mobile .button2, .w3-dropdown-click.w3-mobile #app-body #content #pagination a, #app-body #content #pagination .w3-dropdown-click.w3-mobile a {
     width: 100%; } }
 @media (max-width: 768px) {
   .w3-modal-content {
@@ -687,7 +687,7 @@ a {
   right: 0;
   top: 0; }
 
-.w3-display-bottomleft {
+.w3-display-bottomleft, #app-body .article-preview > div div {
   position: absolute;
   left: 0;
   bottom: 0; }
@@ -697,7 +697,7 @@ a {
   right: 0;
   bottom: 0; }
 
-.w3-display-middle, #app-body #header-img > div, #app-body #header-img > div div {
+.w3-display-middle, #app-body #header-img > div, #app-body #header-img > div div, #app-body .article-preview > div {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -732,10 +732,10 @@ a {
   transform: translate(-50%, 0%);
   -ms-transform: translate(-50%, 0%); }
 
-.w3-display-container:hover .w3-display-hover, #app-body #header-img:hover .w3-display-hover {
+.w3-display-container:hover .w3-display-hover, #app-body #header-img:hover .w3-display-hover, #app-body .article-preview:hover .w3-display-hover {
   display: block; }
 
-.w3-display-container:hover span.w3-display-hover, #app-body #header-img:hover span.w3-display-hover {
+.w3-display-container:hover span.w3-display-hover, #app-body #header-img:hover span.w3-display-hover, #app-body .article-preview:hover span.w3-display-hover {
   display: inline-block; }
 
 .w3-display-hover {
@@ -765,7 +765,7 @@ a {
 .w3-row-padding, .w3-row-padding > .w3-half, .w3-row-padding > .w3-third, .w3-row-padding > .w3-twothird, .w3-row-padding > .w3-threequarter, .w3-row-padding > .w3-quarter, .w3-row-padding > .w3-col, #app-body .w3-row-padding > #content, #app-body #content .article > div > div .w3-row-padding > div, #app-body .w3-row-padding > #right-column, footer .w3-row-padding > div {
   padding: 0 8px; }
 
-.w3-container, #app-body #header-img > div, #app-body #content .article > div, #app-body #content .comment, #app-body #right-column div, footer, .w3-panel {
+.w3-container, #app-body #header-img > div, #app-body .article-preview > div, #app-body #content .article > div, #app-body #content .comment, #app-body #right-column div, footer, .w3-panel {
   padding: 0.01em 16px; }
 
 .w3-panel {
@@ -814,7 +814,7 @@ a {
     opacity: 1; }
   100% {
     opacity: 0; } }
-.w3-animate-opacity, #app-body #header-img {
+.w3-animate-opacity, #app-body #header-img, #app-body .article-preview {
   animation: opac 0.8s; }
 
 @keyframes opac {
@@ -949,7 +949,7 @@ a {
 .w3-border-0 {
   border: 0 !important; }
 
-.w3-border, #app-body #content form input, #app-body #content form textarea {
+.w3-border, #app-body .button2, #app-body #content form input, #app-body #content form textarea {
   border: 1px solid #ccc !important; }
 
 .w3-border-top {
@@ -986,10 +986,10 @@ a {
 .w3-margin-top {
   margin-top: 16px !important; }
 
-.w3-margin-bottom, #app-body #header-img > div div {
+.w3-margin-bottom, #app-body #header-img > div div, #app-body .article-preview > div div {
   margin-bottom: 16px !important; }
 
-.w3-margin-left {
+.w3-margin-left, #app-body .article-preview > div div {
   margin-left: 16px !important; }
 
 .w3-margin-right, #app-body #content .comment img {
@@ -1030,7 +1030,7 @@ a {
 .w3-right, #app-body #content .comment span {
   float: right !important; }
 
-.w3-button:hover, #app-body button:hover, #app-body #content #pagination a:hover {
+.w3-button:hover, #app-body button:hover, #app-body .button2:hover, #app-body #content #pagination a:hover {
   color: #000 !important;
   background-color: #ccc !important; }
 
@@ -1125,7 +1125,7 @@ a {
   color: #000 !important;
   background-color: #ffeb3b !important; }
 
-.w3-white, #app-body #content .comment, .w3-hover-white:hover, #app-body button:hover, #app-body #content #pagination a:hover {
+.w3-white, #app-body #content .comment, .w3-hover-white:hover, #app-body button:hover, #app-body .button2:hover, #app-body #content #pagination a:hover {
   color: #000 !important;
   background-color: #fff !important; }
 
@@ -1304,7 +1304,7 @@ a {
   color: #000 !important;
   background-color: #f0f0f0 !important; }
 
-.w3-theme-dark {
+.w3-theme-dark, #app-body .button2 {
   color: #fff !important;
   background-color: #000000 !important; }
 
@@ -1345,7 +1345,7 @@ html, body, h1, h2, h3, h4, h5 {
 #app-body {
   padding-bottom: 12px; }
   #app-body #header-img {
-    padding-bottom: 12px; }
+    margin-bottom: 12px; }
     #app-body #header-img img {
       width: 100%;
       min-height: 350px;
@@ -1357,6 +1357,20 @@ html, body, h1, h2, h3, h4, h5 {
       height: 100%;
       background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
       text-align: center; }
+  #app-body .article-preview {
+    margin-bottom: 12px; }
+    #app-body .article-preview img {
+      width: 100%;
+      min-height: 200px;
+      max-height: 480px;
+      object-fit: cover;
+      object-position: 50% 20%; }
+    #app-body .article-preview > div {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0; }
+      #app-body .article-preview > div:hover {
+        cursor: pointer; }
   #app-body #content {
     padding-right: 12px; }
     @media (max-width: 600px) {

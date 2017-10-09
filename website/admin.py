@@ -13,7 +13,7 @@ admin.site.register(ArticleCategory, ArticleCategoryAdmin)
 class ArticleAdmin(admin.ModelAdmin, AdminThumbnailMixin):
     list_display = ["title", "date", "created_by", "get_categories", "draft", "get_hit_count", "thumbnail"]
     list_filter = ["M2M_category", "draft", "created_by"]
-    readonly_fields = ('created_by',)
+    #readonly_fields = ('created_by',)
     filter_horizontal = ["M2M_category"]
     thumbnail_image_field_name = 'image'
 
@@ -23,14 +23,14 @@ class ArticleAdmin(admin.ModelAdmin, AdminThumbnailMixin):
     def get_hit_count(self, obj):
         return obj.hit_count.hits
     
-    def save_model(self, request, instance, form, change):
-        user = request.user 
-        instance = form.save(commit=False)
-        if not change or not instance.created_by:
-            instance.created_by = user
-        instance.save()
-        form.save_m2m()
-        return instance
+    #def save_model(self, request, instance, form, change):
+    #    user = request.user 
+    #    instance = form.save(commit=False)
+    #    if not change or not instance.created_by:
+    #        instance.created_by = user
+    #    instance.save()
+    #    form.save_m2m()
+    #    return instance
 
 admin.site.register(Article, ArticleAdmin)
 

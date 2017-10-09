@@ -33,11 +33,19 @@ html,body,h1,h2,h3,h4,h5 {
         @extend .w3-hover-white;
     }
 
+    .button2 {
+        @extend .w3-button;
+        //@extend .w3-padding-large;
+        @extend .w3-theme-dark;
+        @extend .w3-border;
+        @extend .w3-hover-white;
+    }
+
     #header-img {
         @extend .w3-display-container;
         @extend .w3-animate-opacity;
         
-        padding-bottom: $padding;
+        margin-bottom: $padding;
 
         img {
             width:100%;
@@ -76,8 +84,44 @@ html,body,h1,h2,h3,h4,h5 {
                 }
             }
         }
-
     }
+
+    .article-preview {
+        @extend .w3-display-container;
+        @extend .w3-animate-opacity;
+
+        margin-bottom: $padding;
+
+        img {
+            width:100%;
+            min-height:200px;
+            max-height:480px;
+            object-fit: cover;
+            object-position: 50% 20%;
+        } 
+
+        & > div {
+
+            @extend .w3-container;
+            @extend .w3-display-middle;
+
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            div {
+                @extend .w3-display-bottomleft;
+                @extend .w3-margin-bottom;
+                @extend .w3-margin-left;
+            }
+        }
+        
+    }
+
 
     #content {
         @extend .w3-col;
@@ -240,43 +284,44 @@ html,body,h1,h2,h3,h4,h5 {
     }
 
 }
-    footer {
-        @extend .w3-container;
-        @extend .w3-theme-d3;
-        @extend .clearfix;
 
-        padding-bottom : $padding;
+footer {
+    @extend .w3-container;
+    @extend .w3-theme-d3;
+    @extend .clearfix;
 
-        div {
-            @extend .w3-center;
-            @extend .w3-section;
-            @extend .w3-col;
+    padding-bottom : $padding;
 
-            a {
-                @extend .w3-hover-opacity;
-                text-decoration: none;
-            }
+    div {
+        @extend .w3-center;
+        @extend .w3-section;
+        @extend .w3-col;
+
+        a {
+            @extend .w3-hover-opacity;
+            text-decoration: none;
         }
-
-        .logo {
-            @extend .m3;
-
-            a {
-                @extend .w3-xxxlarge;
-                padding : 0 $padding;
-            }
-        }
-
-        .juridic {
-            @extend .m6;
-        }
-
-        .sponsor {
-            @extend .m3;
-            
-            img {
-                width: 50%;
-            }
-        }
-
     }
+
+    .logo {
+        @extend .m3;
+
+        a {
+            @extend .w3-xxxlarge;
+            padding : 0 $padding;
+        }
+    }
+
+    .juridic {
+        @extend .m6;
+    }
+
+    .sponsor {
+        @extend .m3;
+        
+        img {
+            width: 50%;
+        }
+    }
+
+}
