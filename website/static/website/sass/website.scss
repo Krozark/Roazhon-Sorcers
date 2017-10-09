@@ -118,6 +118,16 @@ html,body,h1,h2,h3,h4,h5 {
                 @extend .w3-display-bottomleft;
                 @extend .w3-margin-bottom;
                 @extend .w3-margin-left;
+
+                h3 {
+                    @extend .w3-large;
+                    //font-size: 0.9em;
+                }
+
+                h5 {
+                    @extend .w3-medium;
+                    font-size: 1.2em;
+                }
             }
         }
         
