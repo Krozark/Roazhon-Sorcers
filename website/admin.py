@@ -5,6 +5,8 @@ from django.contrib.admin.sites import AlreadyRegistered
 from website.models import *
 from website.utils import AdminThumbnailMixin
 
+admin.site.site_header = 'Roazhon Sorcers administration'
+
 class ArticleCategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     list_display = ["title", "slug"]
