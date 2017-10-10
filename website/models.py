@@ -41,7 +41,7 @@ class Article(models.Model, HitCountMixin):
     content            = FroalaField(help_text=_("You can use http://www.strawpoll.me/ to create polls"))
 
     class Meta:
-        ordering = ["publishing_date"]
+        ordering = ["-publishing_date"]
 
     def __str__(self):
         return "%s" % self.title
