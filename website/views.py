@@ -4,7 +4,7 @@ from django.views.generic import TemplateView, DetailView, ListView
 from django.core.mail import send_mail
 from django.contrib.auth.models import User
 
-from website.models import ArticleCategory, Article
+from website.models import ArticleCategory, Article, Event
 from website.forms import ContactForm
 
 class ArticleListView(ListView):
@@ -13,6 +13,8 @@ class ArticleListView(ListView):
     paginate_by = 10
 
     def get_context_data(self, **kwargs):
+        events_number = Event.get_next_events().count() - 1
+        self.paginate_by = max(10, 1+3*events_number)
         # top bar
         context = super(ArticleListView, self).get_context_data(**kwargs)
         object_list = context["object_list"]

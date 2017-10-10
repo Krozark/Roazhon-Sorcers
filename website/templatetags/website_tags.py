@@ -4,7 +4,6 @@ from django import template
 from django.template import Library
 import urllib, hashlib,json
 from django.contrib.sites.models import Site
-from datetime import datetime, timedelta
 
 from website.models import Event, ArticleCategory
 
@@ -77,7 +76,7 @@ class GetEventsNode(template.Node):
         self.context_name = context_name
 
     def render(self, context):
-        context[self.context_name] = Event.objects.filter(date=None) | Event.objects.filter(date__gte= datetime.now() - timedelta(days=7))[:4]
+        context[self.context_name] = Event.get_next_events()
         return ""
         
 @register.tag

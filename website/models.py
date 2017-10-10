@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from django.db import models
 from django.db.models.signals import post_delete
@@ -65,4 +65,8 @@ class Event(models.Model):
 
     def __str__(self):
         return "%s" % self.title
+
+    @staticmethod
+    def get_next_events(limit=4, day_limit=7):
+        return Event.objects.filter(date=None) | Event.objects.filter(date__gte= datetime.now() - timedelta(days=day_limit))[:limit]
 
