@@ -27,12 +27,12 @@ jQuery(document).ready(function($) {
     <div>
         <div class="w3-hide-medium w3-hide-small">
             <h1 class="w3-xxxlarge">{{object}}</h1>
-            <h2><i>{{object.date}}</i> // par {{object.created_by|title}}</h2>
+            <h2><i>{{object.publishing_date}}</i> // par {{object.created_by|title}}</h2>
             <p>Cartégorie{{object.M2M_category.count|pluralize }}: {% for category in object.M2M_category.all %}<a href="{{category.get_absolute_url}}">{{category|title}}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
         </div>
         <div class="w3-hide-large">
             <h3>{{object}}</h3>
-            <h5><i>{{object.date}}</i></h5>
+            <h5><i>{{object.publishing_date}}</i></h5>
             <h6>par {{object.created_by|title}}</h6>
         </div>
     </div>

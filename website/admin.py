@@ -13,9 +13,9 @@ class ArticleCategoryAdmin(admin.ModelAdmin):
 admin.site.register(ArticleCategory, ArticleCategoryAdmin)
 
 class ArticleAdmin(admin.ModelAdmin, AdminThumbnailMixin):
-    list_display = ["title", "date", "created_by", "get_categories", "draft", "get_hit_count", "thumbnail"]
+    list_display = ["title", "publishing_date", "creation_date", "created_by", "get_categories", "draft", "get_hit_count", "thumbnail"]
     list_filter = ["M2M_category", "draft", "created_by"]
-    #readonly_fields = ('created_by',)
+    readonly_fields = ('creation_date',)
     filter_horizontal = ["M2M_category"]
     thumbnail_image_field_name = 'image'
 

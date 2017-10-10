@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.shortcuts import render
 from django.template.context import RequestContext
 from django.views.generic import TemplateView, DetailView, ListView
@@ -29,7 +31,8 @@ class ArticleListView(ListView):
         return context
 
     def get_queryset(self):
-        queryset = self.model.objects.filter(draft=False)
+        now = datetime.now()
+        queryset = self.model.objects.filter(draft=False, publishing_date__lte=now)
         category = self.request.GET.get("category", None)
         if category:
             queryset = queryset.filter(M2M_category__slug=category)
@@ -43,6 +46,11 @@ class ArticleDetailView(DetailView):
     #def get_context_data(self, **kwargs):
     #    context = super(ArticleDetailView, self).get_context_data(**kwargs)
     #    return context
+
+    #def get_queryset(self):
+    #    now = datetime.now()
+    #    queryset = self.model.objects.filter(publishing_date__lte=now)
+    #    return queryset
 
 def contactView(request):
     form = None
