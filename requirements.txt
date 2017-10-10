@@ -6,4 +6,3 @@ django-resized==0.3.5
 olefile==0.44
 pytz==2017.2
 sorl-thumbnail==12.3
-uWSGI==2.0.15
