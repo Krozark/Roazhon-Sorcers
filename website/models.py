@@ -34,7 +34,13 @@ class Article(models.Model, HitCountMixin):
     STATUS_DRAFT = 0
     STATUS_FINISHED = 1
     STATUS_HIDDEN = 2
-    STATUS = [(STATUS_DRAFT, _("Draft")), (STATUS_FINISHED, _("Finished")), (STATUS_HIDDEN, _("Hidden"))]
+    STATUS_ASK_FOR_REVIEW = 3
+    STATUS = [
+            (STATUS_DRAFT, _("Draft")),
+            (STATUS_FINISHED, _("Finished")),
+            (STATUS_ASK_FOR_REVIEW, _("ask for riview")),
+            (STATUS_HIDDEN, _("Hidden"))
+            ]
 
 
     title              = models.CharField(_('Title'), max_length=255)
