@@ -38,7 +38,7 @@ class Article(models.Model, HitCountMixin):
     STATUS = [
             (STATUS_DRAFT, _("Draft")),
             (STATUS_FINISHED, _("Finished")),
-            (STATUS_ASK_FOR_REVIEW, _("ask for riview")),
+            (STATUS_ASK_FOR_REVIEW, _("Ask for review")),
             (STATUS_HIDDEN, _("Hidden"))
             ]
 
