@@ -44,13 +44,17 @@ def image_upload(request):
         except FileExistsError:
             pass
 
-        filename = ''.join([random.choice(string.ascii_lowercase) for i in range(32)]) + ".jpg"
-        file_url_path = os.path.join(upload_to, filename)
-        full_path = os.path.join(media_path, filename)
+        if the_file.content_type == "image/gif":
+            filename = ''.join([random.choice(string.ascii_lowercase) for i in range(32)]) + ".gif"
+            file_url_path = os.path.join(upload_to, filename)
+            path = default_storage.save(file_url_path, the_file)
+        else:
+            filename = ''.join([random.choice(string.ascii_lowercase) for i in range(32)]) + ".jpg"
+            file_url_path = os.path.join(upload_to, filename)
+            image = resize_image(the_file)
+            full_path = os.path.join(media_path, filename)
+            image.save(full_path, format='JPEG')
 
-
-        image = resize_image(the_file)
-        image.save(full_path, format='JPEG')
         link = default_storage.url(file_url_path)
 
         return HttpResponse(json.dumps({'link': link}), content_type="application/json")
