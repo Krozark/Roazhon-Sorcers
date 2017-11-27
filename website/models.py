@@ -31,13 +31,19 @@ class ArticleCategory(models.Model):
 
 
 class Article(models.Model, HitCountMixin):
+    STATUS_DRAFT = 0
+    STATUS_FINISHED = 1
+    STATUS_HIDDEN = 2
+    STATUS = [(STATUS_DRAFT, _("Draft")), (STATUS_FINISHED, _("Finished")), (STATUS_HIDDEN, _("Hidden"))]
+
+
     title              = models.CharField(_('Title'), max_length=255)
-    creation_date               = models.DateTimeField(_('Creation date'), default=datetime.now())
+    creation_date      = models.DateTimeField(_('Creation date'), default=datetime.now())
     publishing_date    = models.DateTimeField(_('Publication date'), default=datetime.now(), help_text= _("This date specify the minimal date require to see the article"))
+    status             = models.IntegerField(_("Status"), default=STATUS_DRAFT, help_text=_("The post status. Will apear in the website in Finished state only"), choices=STATUS)
     created_by         = models.ForeignKey(User)
     image              = ResizedImageField(upload_to='uploads/article',blank=True, size=[1920, 1080], crop=['middle', 'center'], quality=75)
     M2M_category       = models.ManyToManyField(ArticleCategory)
-    draft              = models.BooleanField(_("Draft"), default=True, help_text=_("The post will no apear in the website in draft state"))
     content            = FroalaField(help_text=_("You can use http://www.strawpoll.me/ to create polls"))
 
     class Meta:

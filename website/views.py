@@ -32,7 +32,7 @@ class ArticleListView(ListView):
 
     def get_queryset(self):
         now = datetime.now()
-        queryset = self.model.objects.filter(draft=False, publishing_date__lte=now)
+        queryset = self.model.objects.filter(status=Article.STATUS_FINISHED, publishing_date__lte=now)
         category = self.request.GET.get("category", None)
         if category:
             queryset = queryset.filter(M2M_category__slug=category)
