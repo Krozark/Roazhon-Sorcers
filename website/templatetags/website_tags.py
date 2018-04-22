@@ -98,7 +98,7 @@ def GetEvents(parser, token):
     if len(tokens) != 1:
         error()
     context_name = tokens.pop()
-    return GetPopularArticlesNode(parser, context_name)
+    return GetEventsNode(parser, context_name)
 
 class GetPopularArticlesNode(template.Node):
     def __init__(self, parser, context_name):
@@ -106,7 +106,7 @@ class GetPopularArticlesNode(template.Node):
         self.context_name = context_name
 
     def render(self, context):
-        context[self.context_name] = Article.objects.order_by("hit_count_generic")[:5]
+        context[self.context_name] = Article.get_queryset().order_by("hit_count_generic")[:5]
         return ""
 
 @register.tag

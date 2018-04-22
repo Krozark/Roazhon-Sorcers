@@ -12,31 +12,11 @@ from website.forms import ContactForm
 class ArticleListView(ListView):
     template_name = "website/home.html"
     model = Article
-    paginate_by = 10
-
-    def get_context_data(self, **kwargs):
-        events_number = Event.get_next_events().count() - 1
-        self.paginate_by = max(5, 1+events_number)
-        # top bar
-        context = super(ArticleListView, self).get_context_data(**kwargs)
-        object_list = context["object_list"]
-        context['last_object'] = None
-        context['object_list'] = []
-        if object_list.count() > 0:
-            context['last_object'] = object_list[0]
-
-        if object_list.count() > 1:
-            context['object_list'] = object_list[1:]
-
-        return context
+    paginate_by = 5
 
     def get_queryset(self):
-        now = datetime.now()
-        queryset = self.model.objects.filter(status=Article.STATUS_FINISHED, publishing_date__lte=now)
         category = self.request.GET.get("category", None)
-        if category:
-            queryset = queryset.filter(M2M_category__slug=category)
-        return queryset
+        return self.model.get_queryset(category)
 
 
 class ArticleDetailView(DetailView):

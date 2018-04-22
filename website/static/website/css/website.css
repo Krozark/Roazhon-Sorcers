@@ -1,3 +1,302 @@
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
 /* W3.CSS 4.04 Apr 2017 by Jan Egil and Borge Refsnes */
 html {
   box-sizing: border-box; }
@@ -214,7 +513,7 @@ a {
 .w3-table-all tr:nth-child(even) {
   background-color: #f1f1f1; }
 
-.w3-hoverable tbody tr:hover, #content #content-side .side-block ul tbody tr:hover, .w3-ul.w3-hoverable li:hover, #content #content-side .side-block ul li:hover {
+.w3-hoverable tbody tr:hover, .w3-ul.w3-hoverable li:hover, #content #content-side .side-block ul.w3-hoverable li:hover {
   background-color: #ccc; }
 
 .w3-centered tr th, .w3-centered tr td {
@@ -229,7 +528,7 @@ a {
 .w3-table th:first-child, .w3-table td:first-child, .w3-table-all th:first-child, .w3-table-all td:first-child {
   padding-left: 16px; }
 
-.w3-btn, .w3-button, #content #content-main .blog-entry .read-more a {
+.w3-btn, .w3-button, #content #content-main .blog-entry .read-more a, #pagination a {
   border: none;
   display: inline-block;
   outline: 0;
@@ -246,7 +545,7 @@ a {
 .w3-btn:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
-.w3-btn, .w3-button, #content #content-main .blog-entry .read-more a {
+.w3-btn, .w3-button, #content #content-main .blog-entry .read-more a, #pagination a {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -254,7 +553,7 @@ a {
   -ms-user-select: none;
   user-select: none; }
 
-.w3-disabled, .w3-btn:disabled, .w3-button:disabled, #content #content-main .blog-entry .read-more a:disabled {
+.w3-disabled, .w3-btn:disabled, .w3-button:disabled, #content #content-main .blog-entry .read-more a:disabled, #pagination a:disabled {
   cursor: not-allowed;
   opacity: 0.3; }
 
@@ -328,7 +627,7 @@ a {
   background-color: #ccc;
   color: #000; }
 
-.w3-dropdown-hover:hover > .w3-button:first-child, #content #content-main .blog-entry .read-more .w3-dropdown-hover:hover > a:first-child, .w3-dropdown-click:hover > .w3-button:first-child, #content #content-main .blog-entry .read-more .w3-dropdown-click:hover > a:first-child {
+.w3-dropdown-hover:hover > .w3-button:first-child, #content #content-main .blog-entry .read-more .w3-dropdown-hover:hover > a:first-child, #pagination .w3-dropdown-hover:hover > a:first-child, .w3-dropdown-click:hover > .w3-button:first-child, #content #content-main .blog-entry .read-more .w3-dropdown-click:hover > a:first-child, #pagination .w3-dropdown-click:hover > a:first-child {
   background-color: #ccc;
   color: #000; }
 
@@ -362,7 +661,7 @@ a {
 .w3-bar-block .w3-dropdown-hover .w3-dropdown-content, .w3-bar-block .w3-dropdown-click .w3-dropdown-content {
   min-width: 100%; }
 
-.w3-bar-block .w3-dropdown-hover .w3-button, .w3-bar-block .w3-dropdown-hover #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-bar-block .w3-dropdown-hover a, .w3-bar-block .w3-dropdown-click .w3-button, .w3-bar-block .w3-dropdown-click #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-bar-block .w3-dropdown-click a {
+.w3-bar-block .w3-dropdown-hover .w3-button, .w3-bar-block .w3-dropdown-hover #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-bar-block .w3-dropdown-hover a, .w3-bar-block .w3-dropdown-hover #pagination a, #pagination .w3-bar-block .w3-dropdown-hover a, .w3-bar-block .w3-dropdown-click .w3-button, .w3-bar-block .w3-dropdown-click #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-bar-block .w3-dropdown-click a, .w3-bar-block .w3-dropdown-click #pagination a, #pagination .w3-bar-block .w3-dropdown-click a {
   width: 100%;
   text-align: left;
   padding: 8px 16px; }
@@ -391,15 +690,15 @@ a {
   outline: 0;
   width: 600px; }
 
-.w3-bar {
+.w3-bar, #pagination > div {
   width: 100%;
   overflow: hidden; }
 
-.w3-center .w3-bar, #body-wrapper header .w3-bar {
+.w3-center .w3-bar, #body-wrapper header .w3-bar, #pagination .w3-bar, footer div div .w3-bar, .w3-center #pagination > div, #body-wrapper header #pagination > div, #pagination > div, footer div div #pagination > div {
   display: inline-block;
   width: auto; }
 
-.w3-bar .w3-bar-item {
+.w3-bar .w3-bar-item, #pagination > div .w3-bar-item, .w3-bar #pagination a, #pagination .w3-bar a, #pagination > div a {
   padding: 8px 16px;
   float: left;
   width: auto;
@@ -407,14 +706,14 @@ a {
   outline: none;
   display: block; }
 
-.w3-bar .w3-dropdown-hover, .w3-bar .w3-dropdown-click {
+.w3-bar .w3-dropdown-hover, #pagination > div .w3-dropdown-hover, .w3-bar .w3-dropdown-click, #pagination > div .w3-dropdown-click {
   position: static;
   float: left; }
 
-.w3-bar .w3-button, .w3-bar #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-bar a {
+.w3-bar .w3-button, #pagination > div .w3-button, .w3-bar #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-bar a, #pagination > div #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more #pagination > div a, .w3-bar #pagination a, #pagination .w3-bar a, #pagination > div a {
   white-space: normal; }
 
-.w3-bar-block .w3-bar-item {
+.w3-bar-block .w3-bar-item, .w3-bar-block #pagination a, #pagination .w3-bar-block a {
   width: 100%;
   display: block;
   padding: 8px 16px;
@@ -424,7 +723,7 @@ a {
   white-space: normal;
   float: none; }
 
-.w3-bar-block.w3-center .w3-bar-item, #body-wrapper header.w3-bar-block .w3-bar-item {
+.w3-bar-block.w3-center .w3-bar-item, #body-wrapper header.w3-bar-block .w3-bar-item, .w3-bar-block#pagination .w3-bar-item, footer div div.w3-bar-block .w3-bar-item, .w3-bar-block.w3-center #pagination a, #pagination .w3-bar-block.w3-center a, #body-wrapper header.w3-bar-block #pagination a, #pagination #body-wrapper header.w3-bar-block a, .w3-bar-block#pagination a, footer div div.w3-bar-block #pagination a, #pagination footer div div.w3-bar-block a {
   text-align: center; }
 
 .w3-block {
@@ -434,125 +733,125 @@ a {
 .w3-responsive {
   overflow-x: auto; }
 
-.w3-container:after, #body-wrapper header:after, #content #content-side .side-block div:after, .w3-container:before, #body-wrapper header:before, #content #content-side .side-block div:before, .w3-panel:after, .w3-panel:before, .w3-row:after, #content:after, .w3-row:before, #content:before, .w3-row-padding:after, .w3-row-padding:before,
-.w3-cell-row:before, .w3-cell-row:after, .w3-clear:after, .w3-clear:before, .w3-bar:before, .w3-bar:after {
+.w3-container:after, #body-wrapper header:after, #content #content-side .side-block div:after, footer div:after, .w3-container:before, #body-wrapper header:before, #content #content-side .side-block div:before, footer div:before, .w3-panel:after, .w3-panel:before, .w3-row:after, #content:after, .w3-row:before, #content:before, .w3-row-padding:after, .w3-row-padding:before,
+.w3-cell-row:before, .w3-cell-row:after, .w3-clear:after, .w3-clear:before, .w3-bar:before, #pagination > div:before, .w3-bar:after, #pagination > div:after {
   content: "";
   display: table;
   clear: both; }
 
-.w3-col, #content #content-main, #content #content-main .blog-entry .read-more, #content #content-main .blog-entry .comment-nb, #content #content-side, .w3-half, .w3-third, .w3-twothird, .w3-threequarter, .w3-quarter {
+.w3-col, #content #content-main, #content #content-main .blog-entry .read-more, #content #content-main .blog-entry .comment-nb, #content #content-side, footer div div, .w3-half, .w3-third, .w3-twothird, .w3-threequarter, .w3-quarter {
   float: left;
   width: 100%; }
 
-.w3-col.s1, #content .s1#content-main, #content #content-main .blog-entry .s1.read-more, #content #content-main .blog-entry .s1.comment-nb, #content .s1#content-side {
+.w3-col.s1, #content .s1#content-main, #content #content-main .blog-entry .s1.read-more, #content #content-main .blog-entry .s1.comment-nb, #content .s1#content-side, footer div div.s1 {
   width: 8.33333%; }
 
-.w3-col.s2, #content .s2#content-main, #content #content-main .blog-entry .s2.read-more, #content #content-main .blog-entry .s2.comment-nb, #content .s2#content-side {
+.w3-col.s2, #content .s2#content-main, #content #content-main .blog-entry .s2.read-more, #content #content-main .blog-entry .s2.comment-nb, #content .s2#content-side, footer div div.s2 {
   width: 16.66666%; }
 
-.w3-col.s3, #content .s3#content-main, #content #content-main .blog-entry .s3.read-more, #content #content-main .blog-entry .s3.comment-nb, #content .s3#content-side {
+.w3-col.s3, #content .s3#content-main, #content #content-main .blog-entry .s3.read-more, #content #content-main .blog-entry .s3.comment-nb, #content .s3#content-side, footer div div.s3 {
   width: 24.99999%; }
 
-.w3-col.s4, #content .s4#content-main, #content #content-main .blog-entry .s4.read-more, #content #content-main .blog-entry .s4.comment-nb, #content .s4#content-side {
+.w3-col.s4, #content .s4#content-main, #content #content-main .blog-entry .s4.read-more, #content #content-main .blog-entry .s4.comment-nb, #content .s4#content-side, footer div div.s4 {
   width: 33.33333%; }
 
-.w3-col.s5, #content .s5#content-main, #content #content-main .blog-entry .s5.read-more, #content #content-main .blog-entry .s5.comment-nb, #content .s5#content-side {
+.w3-col.s5, #content .s5#content-main, #content #content-main .blog-entry .s5.read-more, #content #content-main .blog-entry .s5.comment-nb, #content .s5#content-side, footer div div.s5 {
   width: 41.66666%; }
 
-.w3-col.s6, #content .s6#content-main, #content #content-main .blog-entry .s6.read-more, #content #content-main .blog-entry .s6.comment-nb, #content .s6#content-side {
+.w3-col.s6, #content .s6#content-main, #content #content-main .blog-entry .s6.read-more, #content #content-main .blog-entry .s6.comment-nb, #content .s6#content-side, footer div div.s6 {
   width: 49.99999%; }
 
-.w3-col.s7, #content .s7#content-main, #content #content-main .blog-entry .s7.read-more, #content #content-main .blog-entry .s7.comment-nb, #content .s7#content-side {
+.w3-col.s7, #content .s7#content-main, #content #content-main .blog-entry .s7.read-more, #content #content-main .blog-entry .s7.comment-nb, #content .s7#content-side, footer div div.s7 {
   width: 58.33333%; }
 
-.w3-col.s8, #content .s8#content-main, #content #content-main .blog-entry .s8.read-more, #content #content-main .blog-entry .s8.comment-nb, #content .s8#content-side {
+.w3-col.s8, #content .s8#content-main, #content #content-main .blog-entry .s8.read-more, #content #content-main .blog-entry .s8.comment-nb, #content .s8#content-side, footer div div.s8 {
   width: 66.66666%; }
 
-.w3-col.s9, #content .s9#content-main, #content #content-main .blog-entry .s9.read-more, #content #content-main .blog-entry .s9.comment-nb, #content .s9#content-side {
+.w3-col.s9, #content .s9#content-main, #content #content-main .blog-entry .s9.read-more, #content #content-main .blog-entry .s9.comment-nb, #content .s9#content-side, footer div div.s9 {
   width: 74.99999%; }
 
-.w3-col.s10, #content .s10#content-main, #content #content-main .blog-entry .s10.read-more, #content #content-main .blog-entry .s10.comment-nb, #content .s10#content-side {
+.w3-col.s10, #content .s10#content-main, #content #content-main .blog-entry .s10.read-more, #content #content-main .blog-entry .s10.comment-nb, #content .s10#content-side, footer div div.s10 {
   width: 83.33333%; }
 
-.w3-col.s11, #content .s11#content-main, #content #content-main .blog-entry .s11.read-more, #content #content-main .blog-entry .s11.comment-nb, #content .s11#content-side {
+.w3-col.s11, #content .s11#content-main, #content #content-main .blog-entry .s11.read-more, #content #content-main .blog-entry .s11.comment-nb, #content .s11#content-side, footer div div.s11 {
   width: 91.66666%; }
 
-.w3-col.s12, #content #content-main, #content #content-main .blog-entry .read-more, #content #content-main .blog-entry .s12.comment-nb, #content #content-main .blog-entry .comment-nb#content-main, #content .s12#content-side {
+.w3-col.s12, #content #content-main, #content #content-main .blog-entry .read-more, #content #content-main .blog-entry .s12.comment-nb, #content #content-main .blog-entry .comment-nb#content-main, #content .s12#content-side, footer div div.s12 {
   width: 99.99999%; }
 
 @media (min-width: 601px) {
-  .w3-col.m1, #content .m1#content-main, #content #content-main .blog-entry .m1.read-more, #content #content-main .blog-entry .m1.comment-nb, #content .m1#content-side {
+  .w3-col.m1, #content .m1#content-main, #content #content-main .blog-entry .m1.read-more, #content #content-main .blog-entry .m1.comment-nb, #content .m1#content-side, footer div div.m1 {
     width: 8.33333%; }
 
-  .w3-col.m2, #content .m2#content-main, #content #content-main .blog-entry .m2.read-more, #content #content-main .blog-entry .m2.comment-nb, #content .m2#content-side {
+  .w3-col.m2, #content .m2#content-main, #content #content-main .blog-entry .m2.read-more, #content #content-main .blog-entry .m2.comment-nb, #content .m2#content-side, footer div div.m2 {
     width: 16.66666%; }
 
-  .w3-col.m3, #content .m3#content-main, #content #content-main .blog-entry .m3.read-more, #content #content-main .blog-entry .m3.comment-nb, #content .m3#content-side, .w3-quarter {
+  .w3-col.m3, #content .m3#content-main, #content footer div #content-main.logo, footer div #content #content-main.logo, #content footer div #content-main.sponsor, footer div #content #content-main.sponsor, #content #content-main .blog-entry .m3.read-more, #content #content-main .blog-entry footer div .read-more.logo, footer div #content #content-main .blog-entry .read-more.logo, #content #content-main .blog-entry footer div .read-more.sponsor, footer div #content #content-main .blog-entry .read-more.sponsor, #content #content-main .blog-entry .m3.comment-nb, #content #content-main .blog-entry footer div .comment-nb.logo, footer div #content #content-main .blog-entry .comment-nb.logo, #content #content-main .blog-entry footer div .comment-nb.sponsor, footer div #content #content-main .blog-entry .comment-nb.sponsor, #content .m3#content-side, #content footer div #content-side.logo, footer div #content #content-side.logo, #content footer div #content-side.sponsor, footer div #content #content-side.sponsor, footer div div.m3, footer div div.logo, footer div div.sponsor, footer div .w3-col.logo, footer div .w3-col.sponsor, .w3-quarter {
     width: 24.99999%; }
 
-  .w3-col.m4, #content .m4#content-main, #content #content-main .blog-entry .m4.read-more, #content #content-main .blog-entry .m4.comment-nb, #content .m4#content-side, .w3-third {
+  .w3-col.m4, #content .m4#content-main, #content #content-main .blog-entry .m4.read-more, #content #content-main .blog-entry .m4.comment-nb, #content .m4#content-side, footer div div.m4, .w3-third {
     width: 33.33333%; }
 
-  .w3-col.m5, #content .m5#content-main, #content #content-main .blog-entry .m5.read-more, #content #content-main .blog-entry .m5.comment-nb, #content .m5#content-side {
+  .w3-col.m5, #content .m5#content-main, #content #content-main .blog-entry .m5.read-more, #content #content-main .blog-entry .m5.comment-nb, #content .m5#content-side, footer div div.m5 {
     width: 41.66666%; }
 
-  .w3-col.m6, #content .m6#content-main, #content #content-main .blog-entry .read-more, #content #content-main .blog-entry .comment-nb, #content .m6#content-side, .w3-half {
+  .w3-col.m6, #content .m6#content-main, #content footer div #content-main.juridic, footer div #content #content-main.juridic, #content #content-main .blog-entry .read-more, #content #content-main .blog-entry .comment-nb, #content .m6#content-side, #content footer div #content-side.juridic, footer div #content #content-side.juridic, footer div div.m6, footer div div.juridic, footer div .w3-col.juridic, .w3-half {
     width: 49.99999%; }
 
-  .w3-col.m7, #content .m7#content-main, #content #content-main .blog-entry .m7.read-more, #content #content-main .blog-entry .m7.comment-nb, #content .m7#content-side {
+  .w3-col.m7, #content .m7#content-main, #content #content-main .blog-entry .m7.read-more, #content #content-main .blog-entry .m7.comment-nb, #content .m7#content-side, footer div div.m7 {
     width: 58.33333%; }
 
-  .w3-col.m8, #content .m8#content-main, #content #content-main .blog-entry .m8.read-more, #content #content-main .blog-entry .m8.comment-nb, #content .m8#content-side, .w3-twothird {
+  .w3-col.m8, #content .m8#content-main, #content #content-main .blog-entry .m8.read-more, #content #content-main .blog-entry .m8.comment-nb, #content .m8#content-side, footer div div.m8, .w3-twothird {
     width: 66.66666%; }
 
-  .w3-col.m9, #content .m9#content-main, #content #content-main .blog-entry .m9.read-more, #content #content-main .blog-entry .m9.comment-nb, #content .m9#content-side, .w3-threequarter {
+  .w3-col.m9, #content .m9#content-main, #content #content-main .blog-entry .m9.read-more, #content #content-main .blog-entry .m9.comment-nb, #content .m9#content-side, footer div div.m9, .w3-threequarter {
     width: 74.99999%; }
 
-  .w3-col.m10, #content .m10#content-main, #content #content-main .blog-entry .m10.read-more, #content #content-main .blog-entry .m10.comment-nb, #content .m10#content-side {
+  .w3-col.m10, #content .m10#content-main, #content #content-main .blog-entry .m10.read-more, #content #content-main .blog-entry .m10.comment-nb, #content .m10#content-side, footer div div.m10 {
     width: 83.33333%; }
 
-  .w3-col.m11, #content .m11#content-main, #content #content-main .blog-entry .m11.read-more, #content #content-main .blog-entry .m11.comment-nb, #content .m11#content-side {
+  .w3-col.m11, #content .m11#content-main, #content #content-main .blog-entry .m11.read-more, #content #content-main .blog-entry .m11.comment-nb, #content .m11#content-side, footer div div.m11 {
     width: 91.66666%; }
 
-  .w3-col.m12, #content .m12#content-main, #content #content-main .blog-entry .m12.read-more, #content #content-main .blog-entry .m12.comment-nb, #content .m12#content-side {
+  .w3-col.m12, #content .m12#content-main, #content #content-main .blog-entry .m12.read-more, #content #content-main .blog-entry .m12.comment-nb, #content .m12#content-side, footer div div.m12 {
     width: 99.99999%; } }
 @media (min-width: 993px) {
-  .w3-col.l1, #content .l1#content-main, #content #content-main .blog-entry .l1.read-more, #content #content-main .blog-entry .l1.comment-nb, #content .l1#content-side {
+  .w3-col.l1, #content .l1#content-main, #content #content-main .blog-entry .l1.read-more, #content #content-main .blog-entry .l1.comment-nb, #content .l1#content-side, footer div div.l1 {
     width: 8.33333%; }
 
-  .w3-col.l2, #content .l2#content-main, #content #content-main .blog-entry .l2.read-more, #content #content-main .blog-entry .l2.comment-nb, #content .l2#content-side {
+  .w3-col.l2, #content .l2#content-main, #content #content-main .blog-entry .l2.read-more, #content #content-main .blog-entry .l2.comment-nb, #content .l2#content-side, footer div div.l2 {
     width: 16.66666%; }
 
-  .w3-col.l3, #content .l3#content-main, #content #content-main .blog-entry .l3.read-more, #content #content-main .blog-entry .l3.comment-nb, #content .l3#content-side {
+  .w3-col.l3, #content .l3#content-main, #content #content-main .blog-entry .l3.read-more, #content #content-main .blog-entry .l3.comment-nb, #content .l3#content-side, footer div div.l3 {
     width: 24.99999%; }
 
-  .w3-col.l4, #content .l4#content-main, #content #content-main .blog-entry .l4.read-more, #content #content-main .blog-entry .read-more#content-side, #content #content-main .blog-entry .l4.comment-nb, #content #content-main .blog-entry .comment-nb#content-side, #content #content-side {
+  .w3-col.l4, #content .l4#content-main, #content #content-main .blog-entry .l4.read-more, #content #content-main .blog-entry .read-more#content-side, #content #content-main .blog-entry .l4.comment-nb, #content #content-main .blog-entry .comment-nb#content-side, #content #content-side, footer div div.l4 {
     width: 33.33333%; }
 
-  .w3-col.l5, #content .l5#content-main, #content #content-main .blog-entry .l5.read-more, #content #content-main .blog-entry .l5.comment-nb, #content .l5#content-side {
+  .w3-col.l5, #content .l5#content-main, #content #content-main .blog-entry .l5.read-more, #content #content-main .blog-entry .l5.comment-nb, #content .l5#content-side, footer div div.l5 {
     width: 41.66666%; }
 
-  .w3-col.l6, #content .l6#content-main, #content #content-main .blog-entry .l6.read-more, #content #content-main .blog-entry .l6.comment-nb, #content .l6#content-side {
+  .w3-col.l6, #content .l6#content-main, #content #content-main .blog-entry .l6.read-more, #content #content-main .blog-entry .l6.comment-nb, #content .l6#content-side, footer div div.l6 {
     width: 49.99999%; }
 
-  .w3-col.l7, #content .l7#content-main, #content #content-main .blog-entry .l7.read-more, #content #content-main .blog-entry .l7.comment-nb, #content .l7#content-side {
+  .w3-col.l7, #content .l7#content-main, #content #content-main .blog-entry .l7.read-more, #content #content-main .blog-entry .l7.comment-nb, #content .l7#content-side, footer div div.l7 {
     width: 58.33333%; }
 
-  .w3-col.l8, #content #content-main, #content #content-main .blog-entry .l8.read-more, #content #content-main .blog-entry .read-more#content-main, #content #content-main .blog-entry .l8.comment-nb, #content #content-main .blog-entry .comment-nb#content-main, #content .l8#content-side {
+  .w3-col.l8, #content #content-main, #content #content-main .blog-entry .l8.read-more, #content #content-main .blog-entry .read-more#content-main, #content #content-main .blog-entry .l8.comment-nb, #content #content-main .blog-entry .comment-nb#content-main, #content .l8#content-side, footer div div.l8 {
     width: 66.66666%; }
 
-  .w3-col.l9, #content .l9#content-main, #content #content-main .blog-entry .l9.read-more, #content #content-main .blog-entry .l9.comment-nb, #content .l9#content-side {
+  .w3-col.l9, #content .l9#content-main, #content #content-main .blog-entry .l9.read-more, #content #content-main .blog-entry .l9.comment-nb, #content .l9#content-side, footer div div.l9 {
     width: 74.99999%; }
 
-  .w3-col.l10, #content .l10#content-main, #content #content-main .blog-entry .l10.read-more, #content #content-main .blog-entry .l10.comment-nb, #content .l10#content-side {
+  .w3-col.l10, #content .l10#content-main, #content #content-main .blog-entry .l10.read-more, #content #content-main .blog-entry .l10.comment-nb, #content .l10#content-side, footer div div.l10 {
     width: 83.33333%; }
 
-  .w3-col.l11, #content .l11#content-main, #content #content-main .blog-entry .l11.read-more, #content #content-main .blog-entry .l11.comment-nb, #content .l11#content-side {
+  .w3-col.l11, #content .l11#content-main, #content #content-main .blog-entry .l11.read-more, #content #content-main .blog-entry .l11.comment-nb, #content .l11#content-side, footer div div.l11 {
     width: 91.66666%; }
 
-  .w3-col.l12, #content .l12#content-main, #content #content-main .blog-entry .l12.read-more, #content #content-main .blog-entry .l12.comment-nb, #content .l12#content-side {
+  .w3-col.l12, #content .l12#content-main, #content #content-main .blog-entry .l12.read-more, #content #content-main .blog-entry .l12.comment-nb, #content .l12#content-side, footer div div.l12 {
     width: 99.99999%; } }
-.w3-content, #body-wrapper {
+.w3-content, #body-wrapper, footer div {
   max-width: 980px;
   margin: auto; }
 
@@ -602,10 +901,10 @@ a {
     display: block;
     width: 100% !important; }
 
-  .w3-bar-item.w3-mobile, .w3-dropdown-hover.w3-mobile, .w3-dropdown-click.w3-mobile {
+  .w3-bar-item.w3-mobile, #pagination a.w3-mobile, .w3-dropdown-hover.w3-mobile, .w3-dropdown-click.w3-mobile {
     text-align: center; }
 
-  .w3-dropdown-hover.w3-mobile, .w3-dropdown-hover.w3-mobile .w3-btn, .w3-dropdown-hover.w3-mobile .w3-button, .w3-dropdown-hover.w3-mobile #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-dropdown-hover.w3-mobile a, .w3-dropdown-click.w3-mobile, .w3-dropdown-click.w3-mobile .w3-btn, .w3-dropdown-click.w3-mobile .w3-button, .w3-dropdown-click.w3-mobile #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-dropdown-click.w3-mobile a {
+  .w3-dropdown-hover.w3-mobile, .w3-dropdown-hover.w3-mobile .w3-btn, .w3-dropdown-hover.w3-mobile .w3-button, .w3-dropdown-hover.w3-mobile #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-dropdown-hover.w3-mobile a, .w3-dropdown-hover.w3-mobile #pagination a, #pagination .w3-dropdown-hover.w3-mobile a, .w3-dropdown-click.w3-mobile, .w3-dropdown-click.w3-mobile .w3-btn, .w3-dropdown-click.w3-mobile .w3-button, .w3-dropdown-click.w3-mobile #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-dropdown-click.w3-mobile a, .w3-dropdown-click.w3-mobile #pagination a, #pagination .w3-dropdown-click.w3-mobile a {
     width: 100%; } }
 @media (max-width: 768px) {
   .w3-modal-content {
@@ -740,10 +1039,10 @@ a {
 .w3-round-xxlarge {
   border-radius: 32px; }
 
-.w3-row-padding, .w3-row-padding > .w3-half, .w3-row-padding > .w3-third, .w3-row-padding > .w3-twothird, .w3-row-padding > .w3-threequarter, .w3-row-padding > .w3-quarter, .w3-row-padding > .w3-col, #content .w3-row-padding > #content-main, #content #content-main .blog-entry .w3-row-padding > .read-more, #content #content-main .blog-entry .w3-row-padding > .comment-nb, #content .w3-row-padding > #content-side {
+.w3-row-padding, .w3-row-padding > .w3-half, .w3-row-padding > .w3-third, .w3-row-padding > .w3-twothird, .w3-row-padding > .w3-threequarter, .w3-row-padding > .w3-quarter, .w3-row-padding > .w3-col, #content .w3-row-padding > #content-main, #content #content-main .blog-entry .w3-row-padding > .read-more, #content #content-main .blog-entry .w3-row-padding > .comment-nb, #content .w3-row-padding > #content-side, footer div .w3-row-padding > div {
   padding: 0 8px; }
 
-.w3-container, #body-wrapper header, #content #content-side .side-block div, .w3-panel {
+.w3-container, #body-wrapper header, #content #content-side .side-block div, footer div, .w3-panel {
   padding: 0.01em 16px; }
 
 .w3-panel {
@@ -858,7 +1157,7 @@ a {
 .w3-animate-input:focus {
   width: 100% !important; }
 
-.w3-opacity, .w3-hover-opacity:hover {
+.w3-opacity, .w3-hover-opacity:hover, footer div div a:hover {
   opacity: 0.60; }
 
 .w3-opacity-off, .w3-hover-opacity-off:hover {
@@ -906,7 +1205,7 @@ a {
 .w3-xxlarge {
   font-size: 36px !important; }
 
-.w3-xxxlarge {
+.w3-xxxlarge, footer div .logo a {
   font-size: 48px !important; }
 
 .w3-jumbo {
@@ -921,7 +1220,7 @@ a {
 .w3-justify {
   text-align: justify !important; }
 
-.w3-center, #body-wrapper header {
+.w3-center, #body-wrapper header, #pagination, footer div div {
   text-align: center !important; }
 
 .w3-border-0 {
@@ -954,7 +1253,7 @@ a {
 .w3-rightbar {
   border-right: 6px solid #ccc !important; }
 
-.w3-section, .w3-code {
+.w3-section, footer div div, .w3-code {
   margin-top: 16px !important;
   margin-bottom: 16px !important; }
 
@@ -990,7 +1289,7 @@ a {
   padding-top: 24px !important;
   padding-bottom: 24px !important; }
 
-.w3-padding-32, #body-wrapper header {
+.w3-padding-32, #body-wrapper header, #pagination {
   padding-top: 32px !important;
   padding-bottom: 32px !important; }
 
@@ -1008,7 +1307,7 @@ a {
 .w3-right, #content #content-main .blog-entry .comment-nb > span {
   float: right !important; }
 
-.w3-button:hover, #content #content-main .blog-entry .read-more a:hover {
+.w3-button:hover, #content #content-main .blog-entry .read-more a:hover, #pagination a:hover {
   color: #000 !important;
   background-color: #ccc !important; }
 
@@ -1103,7 +1402,7 @@ a {
   color: #000 !important;
   background-color: #ffeb3b !important; }
 
-.w3-white, #content #content-main .blog-entry, #content #content-main .blog-entry .read-more a, #content #content-side .side-block ul, .w3-hover-white:hover {
+.w3-white, #content #content-main .blog-entry, #content #content-main .blog-entry .read-more a, #content #content-side .side-block ul, .w3-hover-white:hover, #pagination a:hover {
   color: #000 !important;
   background-color: #fff !important; }
 
@@ -1266,7 +1565,7 @@ a {
   color: #fff !important;
   background-color: #000000 !important; }
 
-.w3-theme-d3 {
+.w3-theme-d3, footer div {
   color: #fff !important;
   background-color: #000000 !important; }
 
@@ -1290,7 +1589,7 @@ a {
   color: #fff !important;
   background-color: #000000 !important; }
 
-.w3-theme {
+.w3-theme, footer {
   color: #fff !important;
   background-color: #000000 !important; }
 
@@ -1310,18 +1609,43 @@ a {
 .w3-hover-border-theme:hover {
   border-color: #000000 !important; }
 
+/*
+SCSS3 (c) 2011 Maxime Barbier
+Inspired by http://css3please.com/
+*/
+.clearfix, footer div {
+  zoom: 1; }
+  .clearfix:before, footer div:before, .clearfix:after, footer div:after {
+    content: '.';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0; }
+  .clearfix:after, footer div:after {
+    clear: both; }
+
+.reset-box {
+  margin: 0;
+  padding: 0; }
+
 body, h1, h2, h3, h4, h5 {
   font-family: "Raleway", sans-serif; }
 
 h1, h2, h3, h4, h5 {
   font-weight: bold; }
 
-.w3-content, #body-wrapper {
+.w3-content, #body-wrapper, footer div {
   max-width: 960px;
   margin: auto; }
 
 .tag {
   text-decoration: none; }
+
+.link {
+  cursor: pointer; }
 
 #content #content-main .blog-entry img {
   width: 100%; }
@@ -1333,5 +1657,17 @@ h1, h2, h3, h4, h5 {
   width: 100%; }
 #content #content-side .side-block ul li img {
   width: 50px; }
+#content #content-side .side-block ul li p {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+footer div {
+  padding-bottom: 12px; }
+  footer div div a {
+    text-decoration: none; }
+  footer div .logo a {
+    padding: 0 12px; }
+  footer div .sponsor img {
+    width: 50%; }
 
 /*# sourceMappingURL=website.css.map */

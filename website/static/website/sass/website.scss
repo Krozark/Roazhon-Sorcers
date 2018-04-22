@@ -1,5 +1,9 @@
+@import "normalize.scss";
 @import "w3.scss";
 @import "w3-theme-black.scss";
+@import "css3.scss";
+
+$padding: 12px;
 
 body, h1, h2, h3, h4, h5 {
     font-family: "Raleway", sans-serif
@@ -34,6 +38,10 @@ body {
     @extend .w3-black;
     @extend .w3-margin-bottom;
     text-decoration: none;
+}
+
+.link {
+    cursor: pointer;
 }
 
 #content {
@@ -109,7 +117,7 @@ body {
 
             ul {
                 @extend .w3-ul;
-                @extend .w3-hoverable;
+                //@extend .w3-hoverable;
                 @extend .w3-white;
 
                 li {
@@ -121,7 +129,72 @@ body {
                         width: 50px;
                     }
 
+                    p {
+                        margin-top : 5px;
+                        margin-bottom : 5px;
+                    }
+
                 }
+            }
+        }
+    }
+}
+
+#pagination {
+    @extend .w3-center;
+    @extend .w3-padding-32;
+
+    & > div {
+        @extend .w3-bar;
+    }
+
+    a {
+        @extend .w3-bar-item;
+        @extend .w3-button;
+        @extend .w3-hover-white;
+    }
+}
+
+footer {
+    @extend .w3-theme;
+
+    div {
+        @extend .w3-content;
+        @extend .w3-container;
+        @extend .w3-theme-d3;
+        @extend .clearfix;
+
+        padding-bottom : $padding;
+
+        div {
+            @extend .w3-center;
+            @extend .w3-section;
+            @extend .w3-col;
+
+            a {
+                @extend .w3-hover-opacity;
+                text-decoration: none;
+            }
+        }
+
+        .logo {
+            @extend .m3;
+
+            a {
+                @extend .w3-xxxlarge;
+                padding : 0 $padding;
+            }
+        }
+
+        .juridic {
+            @extend .m6;
+        }
+
+        .sponsor {
+            @extend .m3;
+
+            img {
+                width: 50%;
             }
         }
     }

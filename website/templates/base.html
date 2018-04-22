@@ -1,4 +1,5 @@
-{% load website_tags generic_flatblocks mkrange hitcount_tags %}
+{% load website_tags generic_flatblocks mkrange hitcount_tags humanize %}
+{% spaceless %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{STATIC_URL}}website/css/website.css?{% now "Ymd-hi" %}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         {% block app.headstyles %}{% endblock %}
         {% block app.headscripts %}{% endblock %}
         {% block app.headextra %} {% endblock %}
@@ -18,6 +20,40 @@
 
     <body>
         {% GetArticleCategories as article_categories %}
+        <!-- Navbar -->
+        <div class="w3-bar w3-theme w3-left-align">
+            <div class="w3-content">
+                <!-- for small screens -->
+                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+                <!-- for all screens -->
+                <a href="{% url "website-home" %}" class="w3-bar-item w3-button w3-hover-white">
+                    <i class="fa fa-home w3-margin-right"></i>Accueil
+                </a>
+                <!-- for non small screens -->
+                <div class="w3-dropdown-hover w3-hide-small">
+                    <button class="w3-button" title="Notifications">Articles <i class="fa fa-caret-down"></i></button>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                        {% for object in article_categories %}
+                        <a href="{{object.get_absolute_url}}" class="w3-bar-item w3-button">{{object|title}}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+                <a href="{% url "website-contact" %}" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+            </div>
+        </div>
+        <!-- Navbar on small screens show with JS -->
+        <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+            <div class="w3-dropdown-hover w3-bar-item">
+                <button class="w3-button" title="Notifications">Articles <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                    {% for object in article_categories %}
+                    <a href="{{object.get_absolute_url}}" class="w3-bar-item w3-button">{{object|title}}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <a href="{% url "website-contact" %}" class="w3-bar-item w3-button">Contact</a>
+        </div>
+
         <div id="body-wrapper">
             <!-- Header -->
             {% gblock "home-image" for "gblocks.TitleTextAndImage" into "home_image" %}
@@ -27,13 +63,13 @@
 
             <!-- Grid -->
             <div id="content">
-                <!-- Blog entries -->
+                <!-- entries -->
                 <div id="content-main">
                     {% block app.content %}{% endblock %}
                 </div>
 
                 <div id="content-side">
-                    <!-- About Card -->
+                    <!-- About -->
                     <div id="about">
                         <img src="{{home_image.image.url}}">
                         <div class="w3-container w3-white">
@@ -43,27 +79,24 @@
                             {% endif %}
                         </div>
                     </div>
-                    <hr>
-
                     <!-- Posts -->
                     <div class="side-block">
                         <div><h4>Articles Populaires</h4></div>
-                        <ul>
+                        <ul class="w3-hoverable">
                             {% GetPopularArticles as popular_posts %}
                             {% for object in popular_posts %}
-                            <li onclick="window.location.href='{{object.get_absolute_url}}'">
+                            <li onclick="window.location.href='{{object.get_absolute_url}}'" class="link">
                                 <img src="{{object.image.url}}" alt="{{object}}">
-                                <span class="w3-large">{{object}}</span><br/>
-                                <span>{% get_hit_count for object %} vus</span>
+                                <span class="w3-large">{{object}}</span>
+                                <p>{% get_hit_count for object %} vus</p>
                             </li>
                             {% endfor %}
                         </ul>
                     </div>
-                    <hr>
-
+                    {% comment %}
                     <!-- Labels / tags -->
                     <div class="side-block">
-                        <div><h4>Tags</h4></div>
+                        <div><h4>Catégories</h4></div>
                         <div class="w3-white">
                             <p>
                             {% for object in article_categories %}
@@ -72,22 +105,87 @@
                             </p>
                         </div>
                     </div>
+                    {% endcomment %}
 
-                    <!-- END Introduction Menu -->
+
+                    <div class="side-block">
+                        <div><h4>Évènements</h4></div>
+                        <ul>
+                            {% GetEvents as event_list %}
+                            {% for object in event_list %}
+                            <li>
+                                <img src="{{object.image.url}}" alt="{{object}}">
+                                <span class="w3-large">{{object}}</span>
+                                {% if object.place %}<p>{{object.place}}</p>{% endif %}
+                                <p>{% if object.date %}Le {{object.date|naturalday}}&nbsp;{% endif %}
+                                    {% if object.frequency %}{{object.frequency}}&nbsp;{% endif %}
+                                    à {{object.time|time:"H\hi"}}
+                                </p>
+                                {% if object.content%}<p>{{object.content|safe}}</p>{% endif %}
+                                {% if object.url %}<a href="{{object.url}}" target="_blank">Plus d'info</a>{% endif %}
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
                 </div>
-
-                <!-- END GRID -->
-            </div><br>
-
-                <!-- END w3-content -->
+            </div>
         </div>
 
         <!-- Footer -->
-        <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-            <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
-            <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
-            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        <footer>
+            <div>
+                <div class="sponsor">
+                    <p>Équipe sponsorisée par Ultimate Guard. Retrouvez tous leurs produits sur leur site</p>
+                    <a href="http://www.ultimateguard.com/" target="_blank"><img src="{{STATIC_URL}}/website/img/UltimateGuard.png"/></a>
+                </div>
+
+                <div class="juridic">
+                    {% gblock "home-juridic" for "gblocks.Text" into "block" %}
+                    <p>{{block.text|safe}}</p>
+                    {% if block_admin_url %}<p><a href="{{ block_admin_url }}">edit</a></p>{% endif %}
+                </div>
+                <div class="logo">
+                    <p>Retrouvez nous également sur les réseaux sociaux</p>
+                    <a class="fa fa-facebook-official" target="_blank" href="https://www.facebook.com/roazhon.sorcers/"></a>
+                    <a class="fa fa-twitter" target="_blank" href="https://twitter.com/RoazhonSorcers"></a>
+                    <a class="fa fa-instagram" target="_blank" href="https://www.instagram.com/roazhonsorcersofficiel/"></a>
+                    <a class="fa fa-youtube" target="_blank" href="https://www.youtube.com/channel/UC0fPJXfIaf1scqGkNi5PE2g"></a>
+                    {% comment %}
+                    <i class="fa fa-snapchat w3-hover-opacity"></i>
+                    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                    <i class="fa fa-linkedin w3-hover-opacity"></i>
+                    {% endcomment %}
+                </div>
+            </div>
         </footer>
+
+        <script>
+            // Accordion
+            function myFunction(id) {
+                var x = document.getElementById(id);
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                    x.previousElementSibling.className += " w3-theme-d1";
+                } else {
+                    x.className = x.className.replace("w3-show", "");
+                    x.previousElementSibling.className =
+                        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+                }
+            }
+
+            // Used to toggle the menu on smaller screens when clicking on the menu button
+            function openNav() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+        </script>
+
+        {% block app.scripts %}{% endblock %}
 
     </body>
 </html>
+{% endspaceless %}

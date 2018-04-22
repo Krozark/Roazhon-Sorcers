@@ -59,6 +59,14 @@ class Article(models.Model, HitCountMixin):
 
     def get_absolute_url(self):
         return reverse("website-article", kwargs={"pk": self.pk})
+
+    @staticmethod
+    def get_queryset(category=None):
+        now = datetime.now()
+        queryset = Article.objects.filter(status=Article.STATUS_FINISHED, publishing_date__lte=now)
+        if category:
+            queryset = queryset.filter(M2M_category__slug=category)
+        return queryset
 post_delete.connect(file_cleanup, sender=Article, dispatch_uid="Article.file_cleanup")
 
 class Event(models.Model):
