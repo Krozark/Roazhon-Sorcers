@@ -81,6 +81,9 @@
                         <span>{% if event.date %}{{event.date|naturalday}}&nbsp;{% endif %}{% if event.frequency %}{{event.frequency}}&nbsp;{% endif %}à {{event.time|time:"H\hi"}}</span>
                     </div>
                     {{event.content|safe}}
+                    {% if event.url %}
+                    <a href="{{event.url}}" target="_blank">Plus d'info</a>
+                   {% endif %}
                 </div>
                 {% endfor %}
             </div>

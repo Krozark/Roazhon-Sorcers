@@ -29,6 +29,7 @@
 # others
 */migrations
 *.map
+.idea/
 website/static/website/.sass-cache/
 public/
 roazhon_sorcers/settings/prod.py
