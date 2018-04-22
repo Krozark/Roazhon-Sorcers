@@ -29,7 +29,50 @@ body {
     header {
         @extend .w3-container;
         @extend .w3-center;
-        @extend .w3-padding-32;
+        padding-top : $padding;
+
+        #header-img {
+            @extend .w3-display-container;
+            @extend .w3-animate-opacity;
+            @extend .w3-text-white;
+
+            img {
+                width:100%;
+                min-height: 350px;
+                max-height: 600px;
+                object-fit: cover;
+                object-position: 50% 20%;
+            }
+
+            & > div {
+                @extend .w3-container;
+                @extend .w3-display-middle;
+
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+                text-align: center;
+
+                div {
+                    @extend .w3-display-middle;
+                    @extend .w3-margin-bottom;
+
+                    h1 {
+                        @extend .w3-margin;
+                        @extend .w3-jumbo;
+                    }
+
+                    h2 {
+                        @extend .w3-margin;
+                    }
+
+
+                    p {
+                        @extend .w3-xlarge;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -46,6 +89,7 @@ body {
 
 #content {
     @extend .w3-row;
+    padding-bottom : $padding;
 
     #content-main {
         @extend .w3-col;
@@ -92,7 +136,50 @@ body {
         }
 
         .article {
-            @extend .w3-margin;
+            @extend .w3-padding;
+            //@extend .w3-card;
+
+
+            iframe {
+                display: block;
+                margin: 0 auto;
+                height: 410px!important;
+                width: 690px!important;
+                max-width: 100%;
+            }
+
+            p {
+                @extend .clearfix;
+            }
+
+            img {
+                padding: 8px;
+                display: block;
+                margin: 0 auto;
+                max-width : 75%!important;
+                height : auto!important;
+            }
+        }
+
+        .comment {
+            @extend .w3-container;
+            @extend .w3-card-2;
+            @extend .w3-padding;
+
+            margin-bottom: $padding;
+
+            img {
+                @extend .w3-left;
+                @extend .w3-circle;
+                @extend .w3-margin-right;
+
+                width: 60px;
+            }
+
+            span {
+               @extend .w3-right;
+               @extend .w3-opacity;
+            }
         }
     }
 

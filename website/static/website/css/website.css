@@ -586,7 +586,7 @@ a {
 .w3-ul li:last-child, #content #content-side .side-block ul li:last-child {
   border-bottom: none; }
 
-.w3-tooltip, .w3-display-container {
+.w3-tooltip, .w3-display-container, #body-wrapper header #header-img {
   position: relative; }
 
 .w3-tooltip .w3-text {
@@ -733,7 +733,7 @@ a {
 .w3-responsive {
   overflow-x: auto; }
 
-.w3-container:after, #body-wrapper header:after, #content #content-side .side-block div:after, footer div:after, .w3-container:before, #body-wrapper header:before, #content #content-side .side-block div:before, footer div:before, .w3-panel:after, .w3-panel:before, .w3-row:after, #content:after, .w3-row:before, #content:before, .w3-row-padding:after, .w3-row-padding:before,
+.w3-container:after, #body-wrapper header:after, #body-wrapper header #header-img > div:after, #content #content-main .comment:after, #content #content-side .side-block div:after, footer div:after, .w3-container:before, #body-wrapper header:before, #body-wrapper header #header-img > div:before, #content #content-main .comment:before, #content #content-side .side-block div:before, footer div:before, .w3-panel:after, .w3-panel:before, .w3-row:after, #content:after, .w3-row:before, #content:before, .w3-row-padding:after, .w3-row-padding:before,
 .w3-cell-row:before, .w3-cell-row:after, .w3-clear:after, .w3-clear:before, .w3-bar:before, #pagination > div:before, .w3-bar:after, #pagination > div:after {
   content: "";
   display: table;
@@ -974,7 +974,7 @@ a {
   right: 0;
   bottom: 0; }
 
-.w3-display-middle {
+.w3-display-middle, #body-wrapper header #header-img > div, #body-wrapper header #header-img > div div {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1009,10 +1009,10 @@ a {
   transform: translate(-50%, 0%);
   -ms-transform: translate(-50%, 0%); }
 
-.w3-display-container:hover .w3-display-hover {
+.w3-display-container:hover .w3-display-hover, #body-wrapper header #header-img:hover .w3-display-hover {
   display: block; }
 
-.w3-display-container:hover span.w3-display-hover {
+.w3-display-container:hover span.w3-display-hover, #body-wrapper header #header-img:hover span.w3-display-hover {
   display: inline-block; }
 
 .w3-display-hover {
@@ -1021,7 +1021,7 @@ a {
 .w3-display-position {
   position: absolute; }
 
-.w3-circle {
+.w3-circle, #content #content-main .comment img {
   border-radius: 50%; }
 
 .w3-round-small {
@@ -1042,7 +1042,7 @@ a {
 .w3-row-padding, .w3-row-padding > .w3-half, .w3-row-padding > .w3-third, .w3-row-padding > .w3-twothird, .w3-row-padding > .w3-threequarter, .w3-row-padding > .w3-quarter, .w3-row-padding > .w3-col, #content .w3-row-padding > #content-main, #content #content-main .blog-entry .w3-row-padding > .read-more, #content #content-main .blog-entry .w3-row-padding > .comment-nb, #content .w3-row-padding > #content-side, form .w3-row-padding > button, footer div .w3-row-padding > div {
   padding: 0 8px; }
 
-.w3-container, #body-wrapper header, #content #content-side .side-block div, footer div, .w3-panel {
+.w3-container, #body-wrapper header, #body-wrapper header #header-img > div, #content #content-main .comment, #content #content-side .side-block div, footer div, .w3-panel {
   padding: 0.01em 16px; }
 
 .w3-panel {
@@ -1067,7 +1067,7 @@ a {
   padding-right: 4px;
   font-size: 110%; }
 
-.w3-card, #content #content-side #about, #content #content-side .side-block, form, .w3-card-2 {
+.w3-card, #content #content-side #about, #content #content-side .side-block, form, .w3-card-2, #content #content-main .comment {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 .w3-card-4, #content #content-main .blog-entry, .w3-hover-shadow:hover {
@@ -1091,7 +1091,7 @@ a {
     opacity: 1; }
   100% {
     opacity: 0; } }
-.w3-animate-opacity {
+.w3-animate-opacity, #body-wrapper header #header-img {
   animation: opac 0.8s; }
 
 @keyframes opac {
@@ -1157,7 +1157,7 @@ a {
 .w3-animate-input:focus {
   width: 100% !important; }
 
-.w3-opacity, .w3-hover-opacity:hover, footer div div a:hover {
+.w3-opacity, #content #content-main .comment span, .w3-hover-opacity:hover, footer div div a:hover {
   opacity: 0.60; }
 
 .w3-opacity-off, .w3-hover-opacity-off:hover {
@@ -1199,7 +1199,7 @@ a {
 .w3-large {
   font-size: 18px !important; }
 
-.w3-xlarge {
+.w3-xlarge, #body-wrapper header #header-img > div div p {
   font-size: 24px !important; }
 
 .w3-xxlarge {
@@ -1208,7 +1208,7 @@ a {
 .w3-xxxlarge, footer div .logo a {
   font-size: 48px !important; }
 
-.w3-jumbo {
+.w3-jumbo, #body-wrapper header #header-img > div div h1 {
   font-size: 64px !important; }
 
 .w3-left-align {
@@ -1257,25 +1257,25 @@ a {
   margin-top: 16px !important;
   margin-bottom: 16px !important; }
 
-.w3-margin, #content #content-main .blog-entry, #content #content-main .article, #content #content-side #about, #content #content-side .side-block {
+.w3-margin, #body-wrapper header #header-img > div div h1, #body-wrapper header #header-img > div div h2, #content #content-main .blog-entry, #content #content-side #about, #content #content-side .side-block {
   margin: 16px !important; }
 
 .w3-margin-top, #content #content-side #about {
   margin-top: 16px !important; }
 
-.w3-margin-bottom, .tag, form button {
+.w3-margin-bottom, #body-wrapper header #header-img > div div, .tag, form button {
   margin-bottom: 16px !important; }
 
 .w3-margin-left {
   margin-left: 16px !important; }
 
-.w3-margin-right, #content #content-side .side-block ul li img {
+.w3-margin-right, #content #content-main .comment img, #content #content-side .side-block ul li img {
   margin-right: 16px !important; }
 
 .w3-padding-small {
   padding: 4px 8px !important; }
 
-.w3-padding, #content #content-side .side-block div, form {
+.w3-padding, #content #content-main .article, #content #content-main .comment, #content #content-side .side-block div, form {
   padding: 8px 16px !important; }
 
 .w3-padding-large, #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .comment-nb > span {
@@ -1289,7 +1289,7 @@ a {
   padding-top: 24px !important;
   padding-bottom: 24px !important; }
 
-.w3-padding-32, #body-wrapper header, #pagination {
+.w3-padding-32, #pagination {
   padding-top: 32px !important;
   padding-bottom: 32px !important; }
 
@@ -1301,10 +1301,10 @@ a {
   padding-top: 64px !important;
   padding-bottom: 64px !important; }
 
-.w3-left, #content #content-side .side-block ul li img {
+.w3-left, #content #content-main .comment img, #content #content-side .side-block ul li img {
   float: left !important; }
 
-.w3-right, #content #content-main .blog-entry .comment-nb > span {
+.w3-right, #content #content-main .blog-entry .comment-nb > span, #content #content-main .comment span {
   float: right !important; }
 
 .w3-button:hover, #content #content-main .blog-entry .read-more a:hover, form button:hover, #pagination a:hover {
@@ -1450,7 +1450,7 @@ a {
 .w3-text-yellow, .w3-hover-text-yellow:hover {
   color: #ffeb3b !important; }
 
-.w3-text-white, .w3-hover-text-white:hover {
+.w3-text-white, #body-wrapper header #header-img, .w3-hover-text-white:hover {
   color: #fff !important; }
 
 .w3-text-black, .w3-hover-text-black:hover {
@@ -1613,9 +1613,9 @@ a {
 SCSS3 (c) 2011 Maxime Barbier
 Inspired by http://css3please.com/
 */
-.clearfix, footer div {
+.clearfix, #content #content-main .article p, footer div {
   zoom: 1; }
-  .clearfix:before, footer div:before, .clearfix:after, footer div:after {
+  .clearfix:before, #content #content-main .article p:before, footer div:before, .clearfix:after, #content #content-main .article p:after, footer div:after {
     content: '.';
     display: block;
     overflow: hidden;
@@ -1624,7 +1624,7 @@ Inspired by http://css3please.com/
     line-height: 0;
     width: 0;
     height: 0; }
-  .clearfix:after, footer div:after {
+  .clearfix:after, #content #content-main .article p:after, footer div:after {
     clear: both; }
 
 .reset-box {
@@ -1641,25 +1641,57 @@ h1, h2, h3, h4, h5 {
   max-width: 1200px;
   margin: auto; }
 
+#body-wrapper header {
+  padding-top: 16px; }
+  #body-wrapper header #header-img img {
+    width: 100%;
+    min-height: 350px;
+    max-height: 600px;
+    object-fit: cover;
+    object-position: 50% 20%; }
+  #body-wrapper header #header-img > div {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    text-align: center; }
+
 .tag {
   text-decoration: none; }
 
 .link {
   cursor: pointer; }
 
-#content #content-main .blog-entry img {
-  width: 100%; }
-#content #content-main .blog-entry .read-more a {
-  font-weight: bold; }
-#content #content-main .blog-entry .comment-nb > span {
-  font-weight: bold; }
-#content #content-side #about img {
-  width: 100%; }
-#content #content-side .side-block ul li img {
-  width: 50px; }
-#content #content-side .side-block ul li p {
-  margin-top: 5px;
-  margin-bottom: 5px; }
+#content {
+  padding-bottom: 16px; }
+  #content #content-main .blog-entry img {
+    width: 100%; }
+  #content #content-main .blog-entry .read-more a {
+    font-weight: bold; }
+  #content #content-main .blog-entry .comment-nb > span {
+    font-weight: bold; }
+  #content #content-main .article iframe {
+    display: block;
+    margin: 0 auto;
+    height: 410px !important;
+    width: 690px !important;
+    max-width: 100%; }
+  #content #content-main .article img {
+    padding: 8px;
+    display: block;
+    margin: 0 auto;
+    max-width: 75% !important;
+    height: auto !important; }
+  #content #content-main .comment {
+    margin-bottom: 16px; }
+    #content #content-main .comment img {
+      width: 60px; }
+  #content #content-side #about img {
+    width: 100%; }
+  #content #content-side .side-block ul li img {
+    width: 50px; }
+  #content #content-side .side-block ul li p {
+    margin-top: 5px;
+    margin-bottom: 5px; }
 
 form #id_honeypot {
   display: none; }

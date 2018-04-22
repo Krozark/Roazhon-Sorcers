@@ -1,7 +1,13 @@
 {% extends "base.html" %}
-
 {% load generic_flatblocks %}
 
+{% block app.header %}
+{% if not sent %}
+    {% gblock "contact-text" for "gblocks.TitleAndText" into "block" %}
+    <h1>{{block.title}}</h1>
+    {% if block_admin_url %}<p><a href="{{ block_admin_url }}">edit</a></p>{% endif %}
+{% endif %}
+{% endblock %}
 
 {% block app.content %}
 {% if sent %}
@@ -11,9 +17,7 @@
 {% else %}
 <div class="article">
     {% gblock "contact-text" for "gblocks.TitleAndText" into "block" %}
-    <h2>{{block.title}}</h2>
     {{block.text|linebreaks}}
-    {% if block_admin_url %}<p><a href="{{ block_admin_url }}">edit</a></p>{% endif %}
 </div>
 
 <div class="article">

@@ -58,7 +58,9 @@
             <!-- Header -->
             {% gblock "home-image" for "gblocks.TitleTextAndImage" into "home_image" %}
             <header>
+            {% block app.header %}
                 <h1>{{home_image.title}}</h1>
+            {% endblock %}
             </header>
 
             <!-- Grid -->
