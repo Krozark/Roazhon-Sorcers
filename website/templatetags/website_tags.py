@@ -5,7 +5,7 @@ from django.template import Library
 import urllib, hashlib,json
 from django.contrib.sites.models import Site
 
-from website.models import Event, ArticleCategory
+from website.models import Event, ArticleCategory, Article
 
 register = Library()
 ######################### GRAVATAR ############################
@@ -78,7 +78,8 @@ class GetEventsNode(template.Node):
     def render(self, context):
         context[self.context_name] = Event.get_next_events()
         return ""
-        
+
+
 @register.tag
 def GetEvents(parser, token):
 
@@ -86,7 +87,7 @@ def GetEvents(parser, token):
     fnctl = tokens.pop(0)
 
     def error():
-        raise TemplateSyntaxError("GetEvents accepts the syntax: {%% GetEvents as context_name %%}")
+        raise template.TemplateSyntaxError("GetEvents accepts the syntax: {%% GetEvents as context_name %%}")
 
     while True:
         if len(tokens) < 2:
@@ -97,7 +98,36 @@ def GetEvents(parser, token):
     if len(tokens) != 1:
         error()
     context_name = tokens.pop()
-    return GetEventsNode(parser, context_name)
+    return GetPopularArticlesNode(parser, context_name)
+
+class GetPopularArticlesNode(template.Node):
+    def __init__(self, parser, context_name):
+        self.template_parser = parser
+        self.context_name = context_name
+
+    def render(self, context):
+        context[self.context_name] = Article.objects.order_by("hit_count_generic")[:5]
+        return ""
+
+@register.tag
+def GetPopularArticles(parser, token):
+
+    tokens = token.split_contents()
+    fnctl = tokens.pop(0)
+
+    def error():
+        raise template.TemplateSyntaxError("GetPopularArticles accepts the syntax: {%% GetPopularArticles as context_name %%}")
+
+    while True:
+        if len(tokens) < 2:
+            error()
+        token = tokens.pop(0)
+        if token == "as":
+            break
+    if len(tokens) != 1:
+        error()
+    context_name = tokens.pop()
+    return GetPopularArticlesNode(parser, context_name)
 
 @register.tag
 def gravatar_profile(parser, token):
@@ -110,7 +140,7 @@ def gravatar_profile(parser, token):
     return GravatarProfileNode(email)
 
 
-class GetNavigationNode(template.Node):
+class GetArticleCategoriesNode(template.Node):
     def __init__(self, parser, context_name):
         self.template_parser = parser
         self.context_name = context_name
@@ -120,13 +150,13 @@ class GetNavigationNode(template.Node):
         return ""
         
 @register.tag
-def GetNavigation(parser, token):
+def GetArticleCategories(parser, token):
 
     tokens = token.split_contents()
     fnctl = tokens.pop(0)
 
     def error():
-        raise TemplateSyntaxError("GetNavigation accepts the syntax: {%% GetNavigation as context_name %%}")
+        raise template.TemplateSyntaxError("GetArticleCategories accepts the syntax: {%% GetNavigation as context_name %%}")
 
     while True:
         if len(tokens) < 2:
@@ -137,7 +167,7 @@ def GetNavigation(parser, token):
     if len(tokens) != 1:
         error()
     context_name = tokens.pop()
-    return GetNavigationNode(parser, context_name)
+    return GetArticleCategoriesNode(parser, context_name)
 
 
 @register.filter

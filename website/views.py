@@ -16,7 +16,7 @@ class ArticleListView(ListView):
 
     def get_context_data(self, **kwargs):
         events_number = Event.get_next_events().count() - 1
-        self.paginate_by = max(10, 1+3*events_number)
+        self.paginate_by = max(5, 1+events_number)
         # top bar
         context = super(ArticleListView, self).get_context_data(**kwargs)
         object_list = context["object_list"]

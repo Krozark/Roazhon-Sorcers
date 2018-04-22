@@ -1,41 +1,43 @@
 {% extends "base.html" %}
-{% load website_tags generic_flatblocks mkrange %}
+{% load website_tags generic_flatblocks comments %}
 
-
-{% block app.header %}
-<div id="header-img">
-    {% gblock "home-image" for "gblocks.TitleTextAndImage" into "home_image" %}
-    <img src="{{MEDIA_URL}}{{home_image.image}}">
-    <div>
-        <div>  
-            <h1>{{home_image.title}}</h1>
-            <p>{{home_image.text|safe}}</p>
-            {% if home_image_admin_url %}<p><a href="{{ home_image_admin_url }}">edit</a></p>{% endif %}
-        </div>
-    </div>
-</div>
-{% endblock%}
 
 {% block app.content %}
+    {% for object in object_list %}
+    {% get_comment_count for object as comment_count %}
 
-{% if last_object %}
-{% with object=last_object %}
-{% include "website/include/article.html" %}
-{% endwith %}
-{% endif %}
+    <div class="blog-entry">
+        {% if object.image %}
+        <img src="{{object.image.url}}" alt="{{object}}">
+        {% endif %}
 
-<div class="w3-row article-row">
-    {% mkrange 0 3 as range %}
-    {% for i in range %}
-        <div class="w3-third">
-        {% for object in object_list|even_divide:i %}
-            {% include "website/include/article.html" %}
-        {% endfor %}
+        <div class="w3-container">
+            <h3><b>{{object}}</b></h3>
+            <h5>{{object.created_by|title}} - <span class="w3-opacity">{{object.publishing_date}}</span></h5>
+            <div class="w3-hide-small">
+            {% for category in object.M2M_category.all %}
+                <span class="tag">{{category|title}}</span>&nbsp;
+            {% endfor %}
+            </div>
         </div>
+
+        <div class="w3-container">
+            <p>{{object.content|safe|striptags|truncatewords:"25"}}</p>
+
+            <div class="w3-row">
+                <div class="w3-col m8 s12">
+                    <a class="read-more" href="{{object.get_absolute_url}}">READ MORE »</a>
+                </div>
+                <div class="w3-col m4 w3-hide-small">
+                    <span class="comment-nb">Comments&nbsp;<span class="w3-tag">{{comment_count}}</span></span>
+                </div>
+            </div>
+            <br/>
+        </div>
+    </div>
+    <hr>
     {% endfor %}
-</div>
 
-{% include "website/include/pagination.html" %}
-
+    {% include "website/include/pagination.html" %}
 
 {% endblock %}
