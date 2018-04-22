@@ -62,14 +62,14 @@
                     <hr>
 
                     <!-- Labels / tags -->
-                    <div class="w3-card w3-margin">
-                        <div class="w3-container w3-padding">
-                            <h4>Tags</h4>
-                        </div>
-                        <div class="w3-container w3-white">
+                    <div class="side-block">
+                        <div><h4>Tags</h4></div>
+                        <div class="w3-white">
+                            <p>
                             {% for object in article_categories %}
                                 <a href="{{object.get_absolute_url}}" class="tag">{{object|title}}</a>
                             {% endfor %}
+                            </p>
                         </div>
                     </div>
 

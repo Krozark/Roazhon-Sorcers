@@ -25,11 +25,11 @@
             <p>{{object.content|safe|striptags|truncatewords:"25"}}</p>
 
             <div class="w3-row">
-                <div class="w3-col m8 s12">
-                    <a class="read-more" href="{{object.get_absolute_url}}">READ MORE »</a>
+                <div class="read-more">
+                    <a href="{{object.get_absolute_url}}">Lire la suite »</a>
                 </div>
-                <div class="w3-col m4 w3-hide-small">
-                    <span class="comment-nb">Comments&nbsp;<span class="w3-tag">{{comment_count}}</span></span>
+                <div class="comment-nb">
+                    <span>Commentaire{{ comment_count|pluralize}}&nbsp;<span>{{comment_count}}</span></span>
                 </div>
             </div>
             <br/>

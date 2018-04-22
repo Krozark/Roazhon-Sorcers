@@ -54,17 +54,32 @@ body {
             }
 
             .read-more {
-                @extend .w3-button;
-                @extend .w3-padding-large;
-                @extend .w3-white;
-                @extend .w3-border;
-                font-weight: bold;
+                @extend .w3-col;
+                @extend .m6;
+                @extend .s12;
+                a {
+                    @extend .w3-button;
+                    @extend .w3-padding-large;
+                    @extend .w3-white;
+                    @extend .w3-border;
+                    font-weight: bold;
+                }
             }
 
             .comment-nb {
-                @extend .w3-padding-large;
-                @extend .w3-right;
-                font-weight: bold;
+                @extend .w3-col;
+                @extend .m6;
+                @extend .w3-hide-small;
+
+                &>span {
+                    @extend .w3-padding-large;
+                    @extend .w3-right;
+                    font-weight: bold;
+
+                    span {
+                        @extend .w3-tag;
+                    }
+                }
             }
         }
     }
