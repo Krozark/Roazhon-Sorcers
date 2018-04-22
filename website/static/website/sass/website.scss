@@ -3,7 +3,7 @@
 @import "w3-theme-black.scss";
 @import "css3.scss";
 
-$padding: 12px;
+$padding: 16px;
 
 body, h1, h2, h3, h4, h5 {
     font-family: "Raleway", sans-serif
@@ -18,8 +18,8 @@ body {
 }
 
 .w3-content{
-    max-width:960px;
-    //max-width:1400px;
+    //max-width:960px;
+    max-width:1200px;
     margin:auto;
 }
 
@@ -90,6 +90,10 @@ body {
                 }
             }
         }
+
+        .article {
+            @extend .w3-margin;
+        }
     }
 
     #content-side {
@@ -138,6 +142,39 @@ body {
             }
         }
     }
+}
+
+ form {
+    @extend .w3-padding;
+    @extend .w3-card;
+
+    input, textarea {
+        @extend .w3-input;
+        @extend  .w3-border;
+    }
+
+    #id_honeypot {
+        display: none;
+    }
+
+    div {
+        @extend .w3-section;
+    }
+
+    button {
+        @extend .w3-button;
+        @extend .w3-black;
+        @extend .w3-margin-bottom;
+
+        @extend .w3-col;
+        @extend .m3;
+    }
+
+    [type=checkbox] {
+        //@extend .w3-left;
+        width : 15px;
+    }
+
 }
 
 #pagination {

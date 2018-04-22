@@ -528,7 +528,7 @@ a {
 .w3-table th:first-child, .w3-table td:first-child, .w3-table-all th:first-child, .w3-table-all td:first-child {
   padding-left: 16px; }
 
-.w3-btn, .w3-button, #content #content-main .blog-entry .read-more a, #pagination a {
+.w3-btn, .w3-button, #content #content-main .blog-entry .read-more a, form button, #pagination a {
   border: none;
   display: inline-block;
   outline: 0;
@@ -545,7 +545,7 @@ a {
 .w3-btn:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
-.w3-btn, .w3-button, #content #content-main .blog-entry .read-more a, #pagination a {
+.w3-btn, .w3-button, #content #content-main .blog-entry .read-more a, form button, #pagination a {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -553,7 +553,7 @@ a {
   -ms-user-select: none;
   user-select: none; }
 
-.w3-disabled, .w3-btn:disabled, .w3-button:disabled, #content #content-main .blog-entry .read-more a:disabled, #pagination a:disabled {
+.w3-disabled, .w3-btn:disabled, .w3-button:disabled, #content #content-main .blog-entry .read-more a:disabled, form button:disabled, #pagination a:disabled {
   cursor: not-allowed;
   opacity: 0.3; }
 
@@ -601,7 +601,7 @@ a {
 .w3-ripple {
   transition: opacity 0s; }
 
-.w3-input {
+.w3-input, form input, form textarea {
   padding: 8px;
   display: block;
   border: none;
@@ -627,7 +627,7 @@ a {
   background-color: #ccc;
   color: #000; }
 
-.w3-dropdown-hover:hover > .w3-button:first-child, #content #content-main .blog-entry .read-more .w3-dropdown-hover:hover > a:first-child, #pagination .w3-dropdown-hover:hover > a:first-child, .w3-dropdown-click:hover > .w3-button:first-child, #content #content-main .blog-entry .read-more .w3-dropdown-click:hover > a:first-child, #pagination .w3-dropdown-click:hover > a:first-child {
+.w3-dropdown-hover:hover > .w3-button:first-child, #content #content-main .blog-entry .read-more .w3-dropdown-hover:hover > a:first-child, form .w3-dropdown-hover:hover > button:first-child, #pagination .w3-dropdown-hover:hover > a:first-child, .w3-dropdown-click:hover > .w3-button:first-child, #content #content-main .blog-entry .read-more .w3-dropdown-click:hover > a:first-child, form .w3-dropdown-click:hover > button:first-child, #pagination .w3-dropdown-click:hover > a:first-child {
   background-color: #ccc;
   color: #000; }
 
@@ -661,7 +661,7 @@ a {
 .w3-bar-block .w3-dropdown-hover .w3-dropdown-content, .w3-bar-block .w3-dropdown-click .w3-dropdown-content {
   min-width: 100%; }
 
-.w3-bar-block .w3-dropdown-hover .w3-button, .w3-bar-block .w3-dropdown-hover #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-bar-block .w3-dropdown-hover a, .w3-bar-block .w3-dropdown-hover #pagination a, #pagination .w3-bar-block .w3-dropdown-hover a, .w3-bar-block .w3-dropdown-click .w3-button, .w3-bar-block .w3-dropdown-click #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-bar-block .w3-dropdown-click a, .w3-bar-block .w3-dropdown-click #pagination a, #pagination .w3-bar-block .w3-dropdown-click a {
+.w3-bar-block .w3-dropdown-hover .w3-button, .w3-bar-block .w3-dropdown-hover #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-bar-block .w3-dropdown-hover a, .w3-bar-block .w3-dropdown-hover form button, form .w3-bar-block .w3-dropdown-hover button, .w3-bar-block .w3-dropdown-hover #pagination a, #pagination .w3-bar-block .w3-dropdown-hover a, .w3-bar-block .w3-dropdown-click .w3-button, .w3-bar-block .w3-dropdown-click #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-bar-block .w3-dropdown-click a, .w3-bar-block .w3-dropdown-click form button, form .w3-bar-block .w3-dropdown-click button, .w3-bar-block .w3-dropdown-click #pagination a, #pagination .w3-bar-block .w3-dropdown-click a {
   width: 100%;
   text-align: left;
   padding: 8px 16px; }
@@ -710,7 +710,7 @@ a {
   position: static;
   float: left; }
 
-.w3-bar .w3-button, #pagination > div .w3-button, .w3-bar #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-bar a, #pagination > div #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more #pagination > div a, .w3-bar #pagination a, #pagination .w3-bar a, #pagination > div a {
+.w3-bar .w3-button, #pagination > div .w3-button, .w3-bar #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-bar a, #pagination > div #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more #pagination > div a, .w3-bar form button, form .w3-bar button, #pagination > div form button, form #pagination > div button, .w3-bar #pagination a, #pagination .w3-bar a, #pagination > div a {
   white-space: normal; }
 
 .w3-bar-block .w3-bar-item, .w3-bar-block #pagination a, #pagination .w3-bar-block a {
@@ -739,117 +739,117 @@ a {
   display: table;
   clear: both; }
 
-.w3-col, #content #content-main, #content #content-main .blog-entry .read-more, #content #content-main .blog-entry .comment-nb, #content #content-side, footer div div, .w3-half, .w3-third, .w3-twothird, .w3-threequarter, .w3-quarter {
+.w3-col, #content #content-main, #content #content-main .blog-entry .read-more, #content #content-main .blog-entry .comment-nb, #content #content-side, form button, footer div div, .w3-half, .w3-third, .w3-twothird, .w3-threequarter, .w3-quarter {
   float: left;
   width: 100%; }
 
-.w3-col.s1, #content .s1#content-main, #content #content-main .blog-entry .s1.read-more, #content #content-main .blog-entry .s1.comment-nb, #content .s1#content-side, footer div div.s1 {
+.w3-col.s1, #content .s1#content-main, #content #content-main .blog-entry .s1.read-more, #content #content-main .blog-entry .s1.comment-nb, #content .s1#content-side, form button.s1, footer div div.s1 {
   width: 8.33333%; }
 
-.w3-col.s2, #content .s2#content-main, #content #content-main .blog-entry .s2.read-more, #content #content-main .blog-entry .s2.comment-nb, #content .s2#content-side, footer div div.s2 {
+.w3-col.s2, #content .s2#content-main, #content #content-main .blog-entry .s2.read-more, #content #content-main .blog-entry .s2.comment-nb, #content .s2#content-side, form button.s2, footer div div.s2 {
   width: 16.66666%; }
 
-.w3-col.s3, #content .s3#content-main, #content #content-main .blog-entry .s3.read-more, #content #content-main .blog-entry .s3.comment-nb, #content .s3#content-side, footer div div.s3 {
+.w3-col.s3, #content .s3#content-main, #content #content-main .blog-entry .s3.read-more, #content #content-main .blog-entry .s3.comment-nb, #content .s3#content-side, form button.s3, footer div div.s3 {
   width: 24.99999%; }
 
-.w3-col.s4, #content .s4#content-main, #content #content-main .blog-entry .s4.read-more, #content #content-main .blog-entry .s4.comment-nb, #content .s4#content-side, footer div div.s4 {
+.w3-col.s4, #content .s4#content-main, #content #content-main .blog-entry .s4.read-more, #content #content-main .blog-entry .s4.comment-nb, #content .s4#content-side, form button.s4, footer div div.s4 {
   width: 33.33333%; }
 
-.w3-col.s5, #content .s5#content-main, #content #content-main .blog-entry .s5.read-more, #content #content-main .blog-entry .s5.comment-nb, #content .s5#content-side, footer div div.s5 {
+.w3-col.s5, #content .s5#content-main, #content #content-main .blog-entry .s5.read-more, #content #content-main .blog-entry .s5.comment-nb, #content .s5#content-side, form button.s5, footer div div.s5 {
   width: 41.66666%; }
 
-.w3-col.s6, #content .s6#content-main, #content #content-main .blog-entry .s6.read-more, #content #content-main .blog-entry .s6.comment-nb, #content .s6#content-side, footer div div.s6 {
+.w3-col.s6, #content .s6#content-main, #content #content-main .blog-entry .s6.read-more, #content #content-main .blog-entry .s6.comment-nb, #content .s6#content-side, form button.s6, footer div div.s6 {
   width: 49.99999%; }
 
-.w3-col.s7, #content .s7#content-main, #content #content-main .blog-entry .s7.read-more, #content #content-main .blog-entry .s7.comment-nb, #content .s7#content-side, footer div div.s7 {
+.w3-col.s7, #content .s7#content-main, #content #content-main .blog-entry .s7.read-more, #content #content-main .blog-entry .s7.comment-nb, #content .s7#content-side, form button.s7, footer div div.s7 {
   width: 58.33333%; }
 
-.w3-col.s8, #content .s8#content-main, #content #content-main .blog-entry .s8.read-more, #content #content-main .blog-entry .s8.comment-nb, #content .s8#content-side, footer div div.s8 {
+.w3-col.s8, #content .s8#content-main, #content #content-main .blog-entry .s8.read-more, #content #content-main .blog-entry .s8.comment-nb, #content .s8#content-side, form button.s8, footer div div.s8 {
   width: 66.66666%; }
 
-.w3-col.s9, #content .s9#content-main, #content #content-main .blog-entry .s9.read-more, #content #content-main .blog-entry .s9.comment-nb, #content .s9#content-side, footer div div.s9 {
+.w3-col.s9, #content .s9#content-main, #content #content-main .blog-entry .s9.read-more, #content #content-main .blog-entry .s9.comment-nb, #content .s9#content-side, form button.s9, footer div div.s9 {
   width: 74.99999%; }
 
-.w3-col.s10, #content .s10#content-main, #content #content-main .blog-entry .s10.read-more, #content #content-main .blog-entry .s10.comment-nb, #content .s10#content-side, footer div div.s10 {
+.w3-col.s10, #content .s10#content-main, #content #content-main .blog-entry .s10.read-more, #content #content-main .blog-entry .s10.comment-nb, #content .s10#content-side, form button.s10, footer div div.s10 {
   width: 83.33333%; }
 
-.w3-col.s11, #content .s11#content-main, #content #content-main .blog-entry .s11.read-more, #content #content-main .blog-entry .s11.comment-nb, #content .s11#content-side, footer div div.s11 {
+.w3-col.s11, #content .s11#content-main, #content #content-main .blog-entry .s11.read-more, #content #content-main .blog-entry .s11.comment-nb, #content .s11#content-side, form button.s11, footer div div.s11 {
   width: 91.66666%; }
 
-.w3-col.s12, #content #content-main, #content #content-main .blog-entry .read-more, #content #content-main .blog-entry .s12.comment-nb, #content #content-main .blog-entry .comment-nb#content-main, #content .s12#content-side, footer div div.s12 {
+.w3-col.s12, #content #content-main, #content #content-main .blog-entry .read-more, #content #content-main .blog-entry .s12.comment-nb, #content #content-main .blog-entry .comment-nb#content-main, #content .s12#content-side, form button.s12, footer div div.s12 {
   width: 99.99999%; }
 
 @media (min-width: 601px) {
-  .w3-col.m1, #content .m1#content-main, #content #content-main .blog-entry .m1.read-more, #content #content-main .blog-entry .m1.comment-nb, #content .m1#content-side, footer div div.m1 {
+  .w3-col.m1, #content .m1#content-main, #content #content-main .blog-entry .m1.read-more, #content #content-main .blog-entry .m1.comment-nb, #content .m1#content-side, form button.m1, footer div div.m1 {
     width: 8.33333%; }
 
-  .w3-col.m2, #content .m2#content-main, #content #content-main .blog-entry .m2.read-more, #content #content-main .blog-entry .m2.comment-nb, #content .m2#content-side, footer div div.m2 {
+  .w3-col.m2, #content .m2#content-main, #content #content-main .blog-entry .m2.read-more, #content #content-main .blog-entry .m2.comment-nb, #content .m2#content-side, form button.m2, footer div div.m2 {
     width: 16.66666%; }
 
-  .w3-col.m3, #content .m3#content-main, #content footer div #content-main.logo, footer div #content #content-main.logo, #content footer div #content-main.sponsor, footer div #content #content-main.sponsor, #content #content-main .blog-entry .m3.read-more, #content #content-main .blog-entry footer div .read-more.logo, footer div #content #content-main .blog-entry .read-more.logo, #content #content-main .blog-entry footer div .read-more.sponsor, footer div #content #content-main .blog-entry .read-more.sponsor, #content #content-main .blog-entry .m3.comment-nb, #content #content-main .blog-entry footer div .comment-nb.logo, footer div #content #content-main .blog-entry .comment-nb.logo, #content #content-main .blog-entry footer div .comment-nb.sponsor, footer div #content #content-main .blog-entry .comment-nb.sponsor, #content .m3#content-side, #content footer div #content-side.logo, footer div #content #content-side.logo, #content footer div #content-side.sponsor, footer div #content #content-side.sponsor, footer div div.m3, footer div div.logo, footer div div.sponsor, footer div .w3-col.logo, footer div .w3-col.sponsor, .w3-quarter {
+  .w3-col.m3, #content .m3#content-main, #content form button#content-main, form #content button#content-main, #content footer div #content-main.logo, footer div #content #content-main.logo, #content footer div #content-main.sponsor, footer div #content #content-main.sponsor, #content #content-main .blog-entry .m3.read-more, #content #content-main .blog-entry form button.read-more, form #content #content-main .blog-entry button.read-more, #content #content-main .blog-entry footer div .read-more.logo, footer div #content #content-main .blog-entry .read-more.logo, #content #content-main .blog-entry footer div .read-more.sponsor, footer div #content #content-main .blog-entry .read-more.sponsor, #content #content-main .blog-entry .m3.comment-nb, #content #content-main .blog-entry form button.comment-nb, form #content #content-main .blog-entry button.comment-nb, #content #content-main .blog-entry footer div .comment-nb.logo, footer div #content #content-main .blog-entry .comment-nb.logo, #content #content-main .blog-entry footer div .comment-nb.sponsor, footer div #content #content-main .blog-entry .comment-nb.sponsor, #content .m3#content-side, #content form button#content-side, form #content button#content-side, #content footer div #content-side.logo, footer div #content #content-side.logo, #content footer div #content-side.sponsor, footer div #content #content-side.sponsor, form button, footer div div.m3, footer div div.logo, footer div div.sponsor, footer div .w3-col.logo, footer div form button.logo, form footer div button.logo, footer div .w3-col.sponsor, footer div form button.sponsor, form footer div button.sponsor, .w3-quarter {
     width: 24.99999%; }
 
-  .w3-col.m4, #content .m4#content-main, #content #content-main .blog-entry .m4.read-more, #content #content-main .blog-entry .m4.comment-nb, #content .m4#content-side, footer div div.m4, .w3-third {
+  .w3-col.m4, #content .m4#content-main, #content #content-main .blog-entry .m4.read-more, #content #content-main .blog-entry .m4.comment-nb, #content .m4#content-side, form button.m4, footer div div.m4, .w3-third {
     width: 33.33333%; }
 
-  .w3-col.m5, #content .m5#content-main, #content #content-main .blog-entry .m5.read-more, #content #content-main .blog-entry .m5.comment-nb, #content .m5#content-side, footer div div.m5 {
+  .w3-col.m5, #content .m5#content-main, #content #content-main .blog-entry .m5.read-more, #content #content-main .blog-entry .m5.comment-nb, #content .m5#content-side, form button.m5, footer div div.m5 {
     width: 41.66666%; }
 
-  .w3-col.m6, #content .m6#content-main, #content footer div #content-main.juridic, footer div #content #content-main.juridic, #content #content-main .blog-entry .read-more, #content #content-main .blog-entry .comment-nb, #content .m6#content-side, #content footer div #content-side.juridic, footer div #content #content-side.juridic, footer div div.m6, footer div div.juridic, footer div .w3-col.juridic, .w3-half {
+  .w3-col.m6, #content .m6#content-main, #content footer div #content-main.juridic, footer div #content #content-main.juridic, #content #content-main .blog-entry .read-more, #content #content-main .blog-entry .comment-nb, #content .m6#content-side, #content footer div #content-side.juridic, footer div #content #content-side.juridic, form button.m6, form footer div button.juridic, footer div form button.juridic, footer div div.m6, footer div div.juridic, footer div .w3-col.juridic, .w3-half {
     width: 49.99999%; }
 
-  .w3-col.m7, #content .m7#content-main, #content #content-main .blog-entry .m7.read-more, #content #content-main .blog-entry .m7.comment-nb, #content .m7#content-side, footer div div.m7 {
+  .w3-col.m7, #content .m7#content-main, #content #content-main .blog-entry .m7.read-more, #content #content-main .blog-entry .m7.comment-nb, #content .m7#content-side, form button.m7, footer div div.m7 {
     width: 58.33333%; }
 
-  .w3-col.m8, #content .m8#content-main, #content #content-main .blog-entry .m8.read-more, #content #content-main .blog-entry .m8.comment-nb, #content .m8#content-side, footer div div.m8, .w3-twothird {
+  .w3-col.m8, #content .m8#content-main, #content #content-main .blog-entry .m8.read-more, #content #content-main .blog-entry .m8.comment-nb, #content .m8#content-side, form button.m8, footer div div.m8, .w3-twothird {
     width: 66.66666%; }
 
-  .w3-col.m9, #content .m9#content-main, #content #content-main .blog-entry .m9.read-more, #content #content-main .blog-entry .m9.comment-nb, #content .m9#content-side, footer div div.m9, .w3-threequarter {
+  .w3-col.m9, #content .m9#content-main, #content #content-main .blog-entry .m9.read-more, #content #content-main .blog-entry .m9.comment-nb, #content .m9#content-side, form button.m9, footer div div.m9, .w3-threequarter {
     width: 74.99999%; }
 
-  .w3-col.m10, #content .m10#content-main, #content #content-main .blog-entry .m10.read-more, #content #content-main .blog-entry .m10.comment-nb, #content .m10#content-side, footer div div.m10 {
+  .w3-col.m10, #content .m10#content-main, #content #content-main .blog-entry .m10.read-more, #content #content-main .blog-entry .m10.comment-nb, #content .m10#content-side, form button.m10, footer div div.m10 {
     width: 83.33333%; }
 
-  .w3-col.m11, #content .m11#content-main, #content #content-main .blog-entry .m11.read-more, #content #content-main .blog-entry .m11.comment-nb, #content .m11#content-side, footer div div.m11 {
+  .w3-col.m11, #content .m11#content-main, #content #content-main .blog-entry .m11.read-more, #content #content-main .blog-entry .m11.comment-nb, #content .m11#content-side, form button.m11, footer div div.m11 {
     width: 91.66666%; }
 
-  .w3-col.m12, #content .m12#content-main, #content #content-main .blog-entry .m12.read-more, #content #content-main .blog-entry .m12.comment-nb, #content .m12#content-side, footer div div.m12 {
+  .w3-col.m12, #content .m12#content-main, #content #content-main .blog-entry .m12.read-more, #content #content-main .blog-entry .m12.comment-nb, #content .m12#content-side, form button.m12, footer div div.m12 {
     width: 99.99999%; } }
 @media (min-width: 993px) {
-  .w3-col.l1, #content .l1#content-main, #content #content-main .blog-entry .l1.read-more, #content #content-main .blog-entry .l1.comment-nb, #content .l1#content-side, footer div div.l1 {
+  .w3-col.l1, #content .l1#content-main, #content #content-main .blog-entry .l1.read-more, #content #content-main .blog-entry .l1.comment-nb, #content .l1#content-side, form button.l1, footer div div.l1 {
     width: 8.33333%; }
 
-  .w3-col.l2, #content .l2#content-main, #content #content-main .blog-entry .l2.read-more, #content #content-main .blog-entry .l2.comment-nb, #content .l2#content-side, footer div div.l2 {
+  .w3-col.l2, #content .l2#content-main, #content #content-main .blog-entry .l2.read-more, #content #content-main .blog-entry .l2.comment-nb, #content .l2#content-side, form button.l2, footer div div.l2 {
     width: 16.66666%; }
 
-  .w3-col.l3, #content .l3#content-main, #content #content-main .blog-entry .l3.read-more, #content #content-main .blog-entry .l3.comment-nb, #content .l3#content-side, footer div div.l3 {
+  .w3-col.l3, #content .l3#content-main, #content #content-main .blog-entry .l3.read-more, #content #content-main .blog-entry .l3.comment-nb, #content .l3#content-side, form button.l3, footer div div.l3 {
     width: 24.99999%; }
 
-  .w3-col.l4, #content .l4#content-main, #content #content-main .blog-entry .l4.read-more, #content #content-main .blog-entry .read-more#content-side, #content #content-main .blog-entry .l4.comment-nb, #content #content-main .blog-entry .comment-nb#content-side, #content #content-side, footer div div.l4 {
+  .w3-col.l4, #content .l4#content-main, #content #content-main .blog-entry .l4.read-more, #content #content-main .blog-entry .read-more#content-side, #content #content-main .blog-entry .l4.comment-nb, #content #content-main .blog-entry .comment-nb#content-side, #content #content-side, form button.l4, footer div div.l4 {
     width: 33.33333%; }
 
-  .w3-col.l5, #content .l5#content-main, #content #content-main .blog-entry .l5.read-more, #content #content-main .blog-entry .l5.comment-nb, #content .l5#content-side, footer div div.l5 {
+  .w3-col.l5, #content .l5#content-main, #content #content-main .blog-entry .l5.read-more, #content #content-main .blog-entry .l5.comment-nb, #content .l5#content-side, form button.l5, footer div div.l5 {
     width: 41.66666%; }
 
-  .w3-col.l6, #content .l6#content-main, #content #content-main .blog-entry .l6.read-more, #content #content-main .blog-entry .l6.comment-nb, #content .l6#content-side, footer div div.l6 {
+  .w3-col.l6, #content .l6#content-main, #content #content-main .blog-entry .l6.read-more, #content #content-main .blog-entry .l6.comment-nb, #content .l6#content-side, form button.l6, footer div div.l6 {
     width: 49.99999%; }
 
-  .w3-col.l7, #content .l7#content-main, #content #content-main .blog-entry .l7.read-more, #content #content-main .blog-entry .l7.comment-nb, #content .l7#content-side, footer div div.l7 {
+  .w3-col.l7, #content .l7#content-main, #content #content-main .blog-entry .l7.read-more, #content #content-main .blog-entry .l7.comment-nb, #content .l7#content-side, form button.l7, footer div div.l7 {
     width: 58.33333%; }
 
-  .w3-col.l8, #content #content-main, #content #content-main .blog-entry .l8.read-more, #content #content-main .blog-entry .read-more#content-main, #content #content-main .blog-entry .l8.comment-nb, #content #content-main .blog-entry .comment-nb#content-main, #content .l8#content-side, footer div div.l8 {
+  .w3-col.l8, #content #content-main, #content #content-main .blog-entry .l8.read-more, #content #content-main .blog-entry .read-more#content-main, #content #content-main .blog-entry .l8.comment-nb, #content #content-main .blog-entry .comment-nb#content-main, #content .l8#content-side, form button.l8, footer div div.l8 {
     width: 66.66666%; }
 
-  .w3-col.l9, #content .l9#content-main, #content #content-main .blog-entry .l9.read-more, #content #content-main .blog-entry .l9.comment-nb, #content .l9#content-side, footer div div.l9 {
+  .w3-col.l9, #content .l9#content-main, #content #content-main .blog-entry .l9.read-more, #content #content-main .blog-entry .l9.comment-nb, #content .l9#content-side, form button.l9, footer div div.l9 {
     width: 74.99999%; }
 
-  .w3-col.l10, #content .l10#content-main, #content #content-main .blog-entry .l10.read-more, #content #content-main .blog-entry .l10.comment-nb, #content .l10#content-side, footer div div.l10 {
+  .w3-col.l10, #content .l10#content-main, #content #content-main .blog-entry .l10.read-more, #content #content-main .blog-entry .l10.comment-nb, #content .l10#content-side, form button.l10, footer div div.l10 {
     width: 83.33333%; }
 
-  .w3-col.l11, #content .l11#content-main, #content #content-main .blog-entry .l11.read-more, #content #content-main .blog-entry .l11.comment-nb, #content .l11#content-side, footer div div.l11 {
+  .w3-col.l11, #content .l11#content-main, #content #content-main .blog-entry .l11.read-more, #content #content-main .blog-entry .l11.comment-nb, #content .l11#content-side, form button.l11, footer div div.l11 {
     width: 91.66666%; }
 
-  .w3-col.l12, #content .l12#content-main, #content #content-main .blog-entry .l12.read-more, #content #content-main .blog-entry .l12.comment-nb, #content .l12#content-side, footer div div.l12 {
+  .w3-col.l12, #content .l12#content-main, #content #content-main .blog-entry .l12.read-more, #content #content-main .blog-entry .l12.comment-nb, #content .l12#content-side, form button.l12, footer div div.l12 {
     width: 99.99999%; } }
 .w3-content, #body-wrapper, footer div {
   max-width: 980px;
@@ -904,7 +904,7 @@ a {
   .w3-bar-item.w3-mobile, #pagination a.w3-mobile, .w3-dropdown-hover.w3-mobile, .w3-dropdown-click.w3-mobile {
     text-align: center; }
 
-  .w3-dropdown-hover.w3-mobile, .w3-dropdown-hover.w3-mobile .w3-btn, .w3-dropdown-hover.w3-mobile .w3-button, .w3-dropdown-hover.w3-mobile #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-dropdown-hover.w3-mobile a, .w3-dropdown-hover.w3-mobile #pagination a, #pagination .w3-dropdown-hover.w3-mobile a, .w3-dropdown-click.w3-mobile, .w3-dropdown-click.w3-mobile .w3-btn, .w3-dropdown-click.w3-mobile .w3-button, .w3-dropdown-click.w3-mobile #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-dropdown-click.w3-mobile a, .w3-dropdown-click.w3-mobile #pagination a, #pagination .w3-dropdown-click.w3-mobile a {
+  .w3-dropdown-hover.w3-mobile, .w3-dropdown-hover.w3-mobile .w3-btn, .w3-dropdown-hover.w3-mobile .w3-button, .w3-dropdown-hover.w3-mobile #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-dropdown-hover.w3-mobile a, .w3-dropdown-hover.w3-mobile form button, form .w3-dropdown-hover.w3-mobile button, .w3-dropdown-hover.w3-mobile #pagination a, #pagination .w3-dropdown-hover.w3-mobile a, .w3-dropdown-click.w3-mobile, .w3-dropdown-click.w3-mobile .w3-btn, .w3-dropdown-click.w3-mobile .w3-button, .w3-dropdown-click.w3-mobile #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .read-more .w3-dropdown-click.w3-mobile a, .w3-dropdown-click.w3-mobile form button, form .w3-dropdown-click.w3-mobile button, .w3-dropdown-click.w3-mobile #pagination a, #pagination .w3-dropdown-click.w3-mobile a {
     width: 100%; } }
 @media (max-width: 768px) {
   .w3-modal-content {
@@ -1039,7 +1039,7 @@ a {
 .w3-round-xxlarge {
   border-radius: 32px; }
 
-.w3-row-padding, .w3-row-padding > .w3-half, .w3-row-padding > .w3-third, .w3-row-padding > .w3-twothird, .w3-row-padding > .w3-threequarter, .w3-row-padding > .w3-quarter, .w3-row-padding > .w3-col, #content .w3-row-padding > #content-main, #content #content-main .blog-entry .w3-row-padding > .read-more, #content #content-main .blog-entry .w3-row-padding > .comment-nb, #content .w3-row-padding > #content-side, footer div .w3-row-padding > div {
+.w3-row-padding, .w3-row-padding > .w3-half, .w3-row-padding > .w3-third, .w3-row-padding > .w3-twothird, .w3-row-padding > .w3-threequarter, .w3-row-padding > .w3-quarter, .w3-row-padding > .w3-col, #content .w3-row-padding > #content-main, #content #content-main .blog-entry .w3-row-padding > .read-more, #content #content-main .blog-entry .w3-row-padding > .comment-nb, #content .w3-row-padding > #content-side, form .w3-row-padding > button, footer div .w3-row-padding > div {
   padding: 0 8px; }
 
 .w3-container, #body-wrapper header, #content #content-side .side-block div, footer div, .w3-panel {
@@ -1067,7 +1067,7 @@ a {
   padding-right: 4px;
   font-size: 110%; }
 
-.w3-card, #content #content-side #about, #content #content-side .side-block, .w3-card-2 {
+.w3-card, #content #content-side #about, #content #content-side .side-block, form, .w3-card-2 {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 .w3-card-4, #content #content-main .blog-entry, .w3-hover-shadow:hover {
@@ -1226,7 +1226,7 @@ a {
 .w3-border-0 {
   border: 0 !important; }
 
-.w3-border, #content #content-main .blog-entry .read-more a {
+.w3-border, #content #content-main .blog-entry .read-more a, form input, form textarea {
   border: 1px solid #ccc !important; }
 
 .w3-border-top {
@@ -1253,17 +1253,17 @@ a {
 .w3-rightbar {
   border-right: 6px solid #ccc !important; }
 
-.w3-section, footer div div, .w3-code {
+.w3-section, form div, footer div div, .w3-code {
   margin-top: 16px !important;
   margin-bottom: 16px !important; }
 
-.w3-margin, #content #content-main .blog-entry, #content #content-side #about, #content #content-side .side-block {
+.w3-margin, #content #content-main .blog-entry, #content #content-main .article, #content #content-side #about, #content #content-side .side-block {
   margin: 16px !important; }
 
 .w3-margin-top, #content #content-side #about {
   margin-top: 16px !important; }
 
-.w3-margin-bottom, .tag {
+.w3-margin-bottom, .tag, form button {
   margin-bottom: 16px !important; }
 
 .w3-margin-left {
@@ -1275,7 +1275,7 @@ a {
 .w3-padding-small {
   padding: 4px 8px !important; }
 
-.w3-padding, #content #content-side .side-block div {
+.w3-padding, #content #content-side .side-block div, form {
   padding: 8px 16px !important; }
 
 .w3-padding-large, #content #content-main .blog-entry .read-more a, #content #content-main .blog-entry .comment-nb > span {
@@ -1307,7 +1307,7 @@ a {
 .w3-right, #content #content-main .blog-entry .comment-nb > span {
   float: right !important; }
 
-.w3-button:hover, #content #content-main .blog-entry .read-more a:hover, #pagination a:hover {
+.w3-button:hover, #content #content-main .blog-entry .read-more a:hover, form button:hover, #pagination a:hover {
   color: #000 !important;
   background-color: #ccc !important; }
 
@@ -1406,7 +1406,7 @@ a {
   color: #000 !important;
   background-color: #fff !important; }
 
-.w3-black, .tag, .w3-hover-black:hover {
+.w3-black, .tag, form button, .w3-hover-black:hover {
   color: #fff !important;
   background-color: #000 !important; }
 
@@ -1638,7 +1638,7 @@ h1, h2, h3, h4, h5 {
   font-weight: bold; }
 
 .w3-content, #body-wrapper, footer div {
-  max-width: 960px;
+  max-width: 1200px;
   margin: auto; }
 
 .tag {
@@ -1661,12 +1661,17 @@ h1, h2, h3, h4, h5 {
   margin-top: 5px;
   margin-bottom: 5px; }
 
+form #id_honeypot {
+  display: none; }
+form [type=checkbox] {
+  width: 15px; }
+
 footer div {
-  padding-bottom: 12px; }
+  padding-bottom: 16px; }
   footer div div a {
     text-decoration: none; }
   footer div .logo a {
-    padding: 0 12px; }
+    padding: 0 16px; }
   footer div .sponsor img {
     width: 50%; }
 

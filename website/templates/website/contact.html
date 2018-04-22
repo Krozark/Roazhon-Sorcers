@@ -6,56 +6,54 @@
 {% block app.content %}
 {% if sent %}
 <div class="article">
-    <div>
-    <h2> Your message have been sent. </h2>
-    </div>
+    <h2> Le message a bien été envoyé. </h2>
 </div>
 {% else %}
 <div class="article">
     {% gblock "contact-text" for "gblocks.TitleAndText" into "block" %}
-    <div>
-        <h2>{{block.title}}</h2>
-        {{block.text|linebreaks}}
-        {% if block_admin_url %}<p><a href="{{ block_admin_url }}">edit</a></p>{% endif %}
-    </div>
+    <h2>{{block.title}}</h2>
+    {{block.text|linebreaks}}
+    {% if block_admin_url %}<p><a href="{{ block_admin_url }}">edit</a></p>{% endif %}
 </div>
 
-<div class="w3-container w3-theme-l2">
-    
+<div class="article">
     <form action="{{ request.path }}" method="post">
         {% csrf_token %}
 
-        <div class="w3-section">
-        {{form.subject.errors}}
-        <label for="{{form.subject.id_for_label}}">Sujet</label>
-        {{form.subject}}
+        <div>
+            {{form.subject.errors}}
+            <label for="{{form.subject.id_for_label}}">Sujet</label>
+            {{form.subject}}
         </div>
 
-        <div class="w3-section">
-        {{form.email_from.errors}}
-        <label for="{{form.email_from.id_for_label}}">Email</label>
-        {{form.email_from}}
+        <div>
+            {{form.email_from.errors}}
+            <label for="{{form.email_from.id_for_label}}">Email</label>
+            {{form.email_from}}
         </div>
 
-        <div class="w3-section">
-        {{form.message.errors}}
-        {{form.message}}
-        <label for="{{form.message.id_for_label}}">Message</label>
+        <div>
+            {{form.message.errors}}
+            <label for="{{form.message.id_for_label}}">Message</label>
+            {{form.message}}
         </div>
 
-        <div class="w3-section">
-        {{form.cc_myself.errors}}
-        <label for="{{form.cc_myself.id_for_label}}">M'envoyer une copie?</label>
-        {{form.cc_myself}}
+        <div>
+            {{form.cc_myself.errors}}
+            <span for="{{form.cc_myself.id_for_label}}">M'envoyer une copie?</span>
+            {{form.cc_myself}}
         </div>
 
-        <button type="submit" class="w3-button w3-black w3-margin-bottom" value="Post">
-            <i class="fa fa-paper-plane w3-margin-right"></i>Envoyer
-        </button>
+        <div class="w3-row">
+            <button type="submit" value="Post">
+                <i class="fa fa-paper-plane w3-margin-right"></i>Envoyer
+            </button>
 
-        <button name="reset" type="reset" id="reset" tabindex="5" value="Reset">
-            Effacer
-        </button>
+            <button name="reset" type="reset" id="reset" class="w3-right" value="Reset">
+                Effacer
+            </button>
+        </div>
+
     </form>
 </div>
 {% endif %}
