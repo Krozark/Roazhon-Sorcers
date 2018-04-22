@@ -39,17 +39,19 @@ def contactView(request):
         form = ContactForm (request.POST)
 
         if form.is_valid():
-            subject = "[Roazhon Sorcers website] " + form.cleaned_data['subject']
-            email_from = form.cleaned_data['email_from']
-            message = form.cleaned_data['message']
-            cc_myself = form.cleaned_data['cc_myself']
+            honeypot = form.cleaned_data['honeypot']
+            if not honeypot:
+                subject = "[Roazhon Sorcers website] " + form.cleaned_data['subject']
+                email_from = form.cleaned_data['email_from']
+                message = form.cleaned_data['message']
+                cc_myself = form.cleaned_data['cc_myself']
 
-            email_to = [User.objects.get(username="admin").email,]
+                email_to = [User.objects.get(username="admin").email,]
 
-            if cc_myself :
-                email_to.append(email_from)
+                if cc_myself :
+                    email_to.append(email_from)
 
-            send_mail(subject, message, email_from, email_to, fail_silently=False)
+                send_mail(subject, message, email_from, email_to, fail_silently=False)
 
             form = ContactForm()
             sent = True

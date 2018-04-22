@@ -23,7 +23,6 @@
 <div class="article">
     <form action="{{ request.path }}" method="post">
         {% csrf_token %}
-
         <div>
             {{form.subject.errors}}
             <label for="{{form.subject.id_for_label}}">Sujet</label>
@@ -47,6 +46,8 @@
             <span for="{{form.cc_myself.id_for_label}}">M'envoyer une copie?</span>
             {{form.cc_myself}}
         </div>
+
+        {{form.honeypot}}
 
         <div class="w3-row">
             <button type="submit" value="Post">
