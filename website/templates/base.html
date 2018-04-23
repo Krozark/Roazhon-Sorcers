@@ -90,7 +90,6 @@
                             <li onclick="window.location.href='{{object.get_absolute_url}}'" class="link">
                                 <img src="{{object.image.url}}" alt="{{object}}">
                                 <span class="w3-large">{{object}}</span>
-                                <p>{% get_hit_count for object %} vus</p>
                             </li>
                             {% endfor %}
                         </ul>
