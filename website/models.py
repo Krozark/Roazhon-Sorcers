@@ -77,7 +77,7 @@ class Event(models.Model):
     frequency = models.CharField(_('frequence'), max_length=255, blank=True, help_text=_("Use thi field or date but not both"))
 
     place   = models.CharField(_('Place'), max_length=255, blank=True)
-    image   = ResizedImageField(upload_to='uploads/event', blank=True, size=[350, 300], quality=75)
+    image   = ResizedImageField(upload_to='uploads/event', blank=False, size=[350, 300], quality=75)
     url     = models.URLField("url", blank=True, null=True)
     content = FroalaField(blank=True)
 
