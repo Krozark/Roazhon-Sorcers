@@ -115,7 +115,9 @@
                             {% GetEvents as event_list %}
                             {% for object in event_list %}
                             <li>
+                                {% if object.image %}
                                 <img src="{{object.image.url}}" alt="{{object}}">
+                                {% endif %}
                                 <span class="w3-large">{{object}}</span>
                                 {% if object.place %}<p>{{object.place}}</p>{% endif %}
                                 <p>{% if object.date %}Le {{object.date|naturalday}}&nbsp;{% endif %}
