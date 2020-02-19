@@ -137,11 +137,12 @@
         <!-- Footer -->
         <footer>
             <div>
+                {% comment %}
                 <div class="sponsor">
                     <p>Équipe sponsorisée par Ultimate Guard. Retrouvez tous leurs produits sur leur site</p>
                     <a href="http://www.ultimateguard.com/" target="_blank"><img src="{{STATIC_URL}}/website/img/UltimateGuard.png"/></a>
                 </div>
-
+                {% endcomment %}
                 <div class="juridic">
                     {% gblock "home-juridic" for "gblocks.Text" into "block" %}
                     <p>{{block.text|safe}}</p>
