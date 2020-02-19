@@ -8,7 +8,7 @@ For developers only
 
 ```
 gem install sass
-python manage.py runserver --settings=roazhon_rcers.settings.dev
+python manage.py runserver --settings=roazhon_sorcers.settings.dev
 ```
 
 # For everyone
