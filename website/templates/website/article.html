@@ -7,6 +7,9 @@
 <script src="{{STATIC_URL}}hitcount/jquery.postcsrf.js"></script>
 {% endblock %}
 
+{% block app.title %}- {{object}}{% endblock %}
+
+
 {% block app.scripts %}
 
 {% get_hit_count_js_variables for object as hitcount %}
