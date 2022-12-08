@@ -129,10 +129,10 @@ DJANGORESIZED_DEFAULT_KEEP_META = False
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,"public/static")
+STATIC_ROOT = os.path.join(BASE_DIR, "public/static")
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,"public/media")
+MEDIA_ROOT = os.path.join(BASE_DIR, "public/media")
 
 FILE_UPLOAD_PATH = os.path.join(MEDIA_ROOT, 'uploads/')
 
@@ -141,3 +141,10 @@ FILE_UPLOAD_PATH = os.path.join(MEDIA_ROOT, 'uploads/')
 ADMINS = (
         ('maxime BARBIER', 'dev.maxime.barbier1991@gmail.com'),
 )
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}

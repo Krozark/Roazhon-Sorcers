@@ -14,18 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 import django
-from django.conf.urls import url, include
+from django.urls import path, include, re_path
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^comments/', include('django_comments.urls')),
-    url(r'^froala_editor/', include('froala_editor.urls')),
-    url(r'hitcount/', include('hitcount.urls', namespace='hitcount')),
-    url(r'^', include("website.urls")),
+    path('admin/', admin.site.urls),
+    path('comments/', include('django_comments.urls')),
+    path('froala_editor/', include('froala_editor.urls')),
+    path('hitcount/', include('hitcount.urls')),
+    path('', include("website.urls")),
 ]
 
 if settings.DEV:
-    urlpatterns.append(url(r'^media/(.*)$', django.views.static.serve, {'document_root': settings.MEDIA_ROOT}))
+    urlpatterns.append(re_path(r'^media/(.*)$', django.views.static.serve, {'document_root': settings.MEDIA_ROOT}))

@@ -1,4 +1,4 @@
-from django.core.urlresolvers import reverse, NoReverseMatch
+from django.urls import reverse, NoReverseMatch
 from django.forms import widgets, Media
 from django.utils.safestring import mark_safe
 from django.conf import settings

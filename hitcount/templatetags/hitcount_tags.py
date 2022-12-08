@@ -4,7 +4,7 @@ from collections import namedtuple
 
 from django import template
 from django.contrib.contenttypes.models import ContentType
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 from hitcount.models import HitCount
 
@@ -219,7 +219,7 @@ class GetHitCountJavascriptVariables(template.Node):
         hit_count = get_hit_count_from_obj_variable(context, self.obj_variable, 'get_hit_count_js_variables')
 
         context[self.as_varname] = HitcountVariables(
-            hit_count.pk, str(reverse('hitcount:hit_ajax')), str(hit_count.hits))
+            hit_count.pk, str(reverse('hit_ajax')), str(hit_count.hits))
 
         return ''
 

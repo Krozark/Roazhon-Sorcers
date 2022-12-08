@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 
 from django.contrib.auth.models import User
 from django.contrib.contenttypes.fields import GenericRelation
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.db import models
 from django.db.models.signals import post_delete
 from django.utils.translation import ugettext_lazy as _
@@ -44,7 +44,7 @@ class Article(models.Model, HitCountMixin):
     creation_date      = models.DateTimeField(_('Creation date'), default=datetime.now())
     publishing_date    = models.DateTimeField(_('Publication date'), default=datetime.now(), help_text= _("This date specify the minimal date require to see the article"))
     status             = models.IntegerField(_("Status"), default=STATUS_DRAFT, help_text=_("The post status. Will apear in the website in Finished state only"), choices=STATUS)
-    created_by         = models.ForeignKey(User)
+    created_by         = models.ForeignKey(User, on_delete=models.CASCADE)
     image              = ResizedImageField(upload_to='uploads/article',blank=True, size=[1920, 1080], crop=['middle', 'center'], quality=75)
     M2M_category       = models.ManyToManyField(ArticleCategory)
     content            = FroalaField(help_text=_("You can use http://www.strawpoll.me/ to create polls"))
@@ -68,6 +68,7 @@ class Article(models.Model, HitCountMixin):
             queryset = queryset.filter(M2M_category__slug=category)
         return queryset
 post_delete.connect(file_cleanup, sender=Article, dispatch_uid="Article.file_cleanup")
+
 
 class Event(models.Model):
     title = models.CharField(_('Title'), max_length=255)

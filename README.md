@@ -14,7 +14,7 @@ python manage.py runserver --settings=roazhon_sorcers.settings.dev
 # For everyone
 
 ```
-mkvirtualenv raozhon_sorcers --python=python3.6
+mkvirtualenv raozhon_sorcers --python=python3.10
 pip install -r requirements.txt
 python manage.py makemigrations
 python manage.py makemigrations website
